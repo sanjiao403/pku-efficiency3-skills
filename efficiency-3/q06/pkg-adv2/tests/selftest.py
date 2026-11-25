@@ -24,8 +24,11 @@ sys.dont_write_bytecode = True  # keep the submitted tree free of __pycache__
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PKG = os.path.dirname(HERE)
+SCRIPTS = os.path.join(PKG, "scripts")
 if HERE not in sys.path:
     sys.path.insert(0, HERE)
+if SCRIPTS not in sys.path:
+    sys.path.insert(0, SCRIPTS)
 
 RESULTS: list[dict] = []
 AUDITS: list[dict] = []
