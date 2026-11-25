@@ -15,11 +15,11 @@
     "skill_version": "1.0.0"
   },
   "summary": {
-    "passed": 9,
-    "total": 9,
+    "passed": 8,
+    "total": 8,
     "failed": [],
-    "seconds": 6.22,
-    "quick": false
+    "seconds": 0.47,
+    "quick": true
   },
   "checks": [
     {
@@ -30,7 +30,7 @@
         "segments": 16,
         "text_layer": true
       },
-      "seconds": 0.003
+      "seconds": 0.004
     },
     {
       "check": "inventory_units",
@@ -78,7 +78,7 @@
           "REF_NOT_IN_SOURCE"
         ]
       },
-      "seconds": 0.01
+      "seconds": 0.008
     },
     {
       "check": "layout_floor_and_overflow_action",
@@ -89,7 +89,7 @@
         "overflow_action": "split",
         "floor_pt": 16
       },
-      "seconds": 0.01
+      "seconds": 0.014
     },
     {
       "check": "notes_separated_from_slide",
@@ -108,220 +108,16 @@
       "detail": {
         "shapes_handled": 4
       },
-      "seconds": 0.002
-    },
-    {
-      "check": "end_to_end_run",
-      "asserts": "one full run on the PDF example: deck.pptx + gates + honest result.json",
-      "status": "pass",
-      "detail": {
-        "seconds": 5.7,
-        "status": "success",
-        "slides": 9,
-        "gates_passed": "6/6",
-        "evidence_coverage": 1.0,
-        "pptx_bytes": 56631,
-        "render_engine": "powerpoint-com",
-        "preview_mode": "real",
-        "pdf": "deck.pdf",
-        "png_pages": 9,
-        "result_json_fields": [
-          "audit",
-          "audit_deck",
-          "case_id",
-          "changes",
-          "contract",
-          "deck",
-          "deliverable",
-          "evidence_map",
-          "inventory",
-          "notes",
-          "outputs",
-          "performance",
-          "render",
-          "runtime",
-          "skill",
-          "slides",
-          "sources",
-          "status",
-          "template",
-          "uncertainty",
-          "validation"
-        ],
-        "pdf_bytes": 243740,
-        "real_render": true,
-        "independent_audit": {
-          "auditor": "scripts/audit_deck.py",
-          "passed": 8,
-          "total": 8,
-          "checks": [
-            {
-              "id": "A1",
-              "verdict": "pass"
-            },
-            {
-              "id": "A2",
-              "verdict": "pass"
-            },
-            {
-              "id": "A3",
-              "verdict": "pass"
-            },
-            {
-              "id": "A4",
-              "verdict": "pass"
-            },
-            {
-              "id": "A5",
-              "verdict": "pass"
-            },
-            {
-              "id": "A6",
-              "verdict": "pass"
-            },
-            {
-              "id": "A7",
-              "verdict": "pass"
-            },
-            {
-              "id": "A8",
-              "verdict": "pass"
-            }
-          ],
-          "declared_outputs": 24,
-          "result_json_in_outputs": false
-        }
-      },
-      "seconds": 6.03
+      "seconds": 0.003
     }
   ],
-  "independent_audits": [
-    {
-      "out_dir": "selftest-e2e",
-      "deck": {
-        "pptx": "deck.pptx",
-        "slides": 9,
-        "size_in": {
-          "w": 13.333,
-          "h": 7.5
-        },
-        "min_font_pt": 11.0
-      },
-      "passed": 8,
-      "failed": 0,
-      "checks": [
-        {
-          "id": "A1",
-          "check": "result.json: every contract field present and non-null",
-          "verdict": "pass",
-          "expected": {
-            "fields": 5
-          },
-          "actual": {
-            "present": 5,
-            "nulls": []
-          },
-          "detail": []
-        },
-        {
-          "id": "A2",
-          "check": "outputs[]: every declared artefact exists with matching bytes and sha256",
-          "verdict": "pass",
-          "expected": {
-            "entries": 24
-          },
-          "actual": {
-            "verified": 24
-          },
-          "detail": []
-        },
-        {
-          "id": "A3",
-          "check": "page count: pptx == result.slides and within slide_limit",
-          "verdict": "pass",
-          "expected": {
-            "limit": 12
-          },
-          "actual": {
-            "pptx": 9,
-            "result.json": 9
-          },
-          "detail": []
-        },
-        {
-          "id": "A4",
-          "check": "every Figure/Table number and number in the pptx exists in the material",
-          "verdict": "pass",
-          "expected": {
-            "material_numbers": 53,
-            "material_captions": 2
-          },
-          "actual": {
-            "bad_refs": 0,
-            "bad_numbers": 0
-          },
-          "detail": []
-        },
-        {
-          "id": "A5",
-          "check": "each content page has a verified material locator or a declared reason",
-          "verdict": "pass",
-          "expected": {
-            "content_pages": 8
-          },
-          "actual": {
-            "unresolved": 0
-          },
-          "detail": []
-        },
-        {
-          "id": "A6",
-          "check": "notes exist and stay under 0.34 4-gram overlap",
-          "verdict": "pass",
-          "expected": {
-            "pages": 9
-          },
-          "actual": {
-            "bad": 0
-          },
-          "detail": []
-        },
-        {
-          "id": "A7",
-          "check": "no shape outside the page, type >= 11pt, slide numbers present",
-          "verdict": "pass",
-          "expected": {
-            "floor_pt": 11.0
-          },
-          "actual": {
-            "min_font_pt": 11.0,
-            "overflow": 0,
-            "pages_without_number": 0
-          },
-          "detail": []
-        },
-        {
-          "id": "A8",
-          "check": "status is consistent with the audit findings",
-          "verdict": "pass",
-          "expected": {
-            "expected": "success only if every check passes"
-          },
-          "actual": {
-            "status": "success",
-            "failed_checks": []
-          },
-          "detail": []
-        }
-      ]
-    }
-  ],
+  "independent_audits": [],
   "independent_audit_summary": {
     "auditor": "scripts/audit_deck.py",
     "note": "Recomputed from deck.pptx + result.json + the case material only; plan.json / inventory.json / validation.json / layout.json are not read, so the expected-vs-actual verdicts below are independent of the plan layer that produced the deck.",
-    "cases": 1,
-    "checks_per_case": 8,
-    "passed": 8,
+    "cases": 0,
+    "checks_per_case": 0,
+    "passed": 0,
     "failed": 0
   }
 }
