@@ -1,0 +1,1398 @@
+{
+  "case_id": "example-not-a-formal-case",
+  "task": "biological mechanism / pathway figure",
+  "status": "success",
+  "status_reason": "12/12 checks pass, 0 advisory warning(s)",
+  "summary": "11 entities, 7 edges, 1 excluded, 1 unresolved -> editable layered SVG + vector PDF + 300 dpi PNG + result.json",
+  "figure": {
+    "title": "EXAMPLE ONLY · EGF-stimulated MAPK signalling",
+    "dpi": 300
+  },
+  "deliverables": [
+    {
+      "kind": "editable_source",
+      "format": "svg",
+      "path": "figure.svg",
+      "editable": true,
+      "note": "layered, named, live text, data-entity-id / data-edge-id"
+    },
+    {
+      "kind": "export",
+      "format": "pdf",
+      "path": "figure.pdf",
+      "editable": false,
+      "note": "vector PDF, page box = the figure's own coordinate system, text written as Tj operators (selectable)"
+    },
+    {
+      "kind": "preview",
+      "format": "png",
+      "path": "figure.png",
+      "editable": false,
+      "note": "300 dpi raster preview, measured from the file's IHDR/pHYs"
+    }
+  ],
+  "entities": [
+    {
+      "id": "E01",
+      "key": "egf",
+      "canonical": "EGF",
+      "label": "EGF",
+      "surfaces": [
+        "EGF",
+        "EGF"
+      ],
+      "type": "protein",
+      "role": "receptor",
+      "italic": false,
+      "compartment": "plasma_membrane",
+      "compartment_source": "role: transmembrane receptor",
+      "ambiguous": true,
+      "count": 2,
+      "first": [
+        386,
+        389
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane.",
+          "span": [
+            386,
+            389
+          ]
+        },
+        {
+          "source": "mat01",
+          "locator": "mat01#L10",
+          "quote": "EGF does not activate the PI3K-AKT pathway in these cells.",
+          "span": [
+            695,
+            698
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "key": "egfr",
+      "canonical": "EGFR",
+      "label": "EGFR",
+      "surfaces": [
+        "EGFR",
+        "EGFR"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "plasma_membrane",
+      "compartment_source": "explicit localisation phrase",
+      "ambiguous": false,
+      "count": 2,
+      "first": [
+        423,
+        427
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane.",
+          "span": [
+            423,
+            427
+          ]
+        },
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+          "span": [
+            452,
+            456
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "key": "map2k1",
+      "canonical": "MAP2K1",
+      "label": "MAP2K1",
+      "surfaces": [
+        "MAP2K1"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        472,
+        478
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+          "span": [
+            472,
+            478
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "key": "mapk1",
+      "canonical": "MAPK1",
+      "label": "MAPK1",
+      "surfaces": [
+        "MAPK1",
+        "MAPK1"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 2,
+      "first": [
+        501,
+        506
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+          "span": [
+            501,
+            506
+          ]
+        },
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+          "span": [
+            518,
+            523
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "key": "fos",
+      "canonical": "FOS",
+      "label": "FOS",
+      "surfaces": [
+        "FOS"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "nucleus",
+      "compartment_source": "explicit localisation phrase",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        582,
+        585
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+          "span": [
+            582,
+            585
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "key": "mtor",
+      "canonical": "MTOR",
+      "label": "MTOR",
+      "surfaces": [
+        "MTOR"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        587,
+        591
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+          "span": [
+            587,
+            591
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "key": "rptor",
+      "canonical": "RPTOR",
+      "label": "RPTOR",
+      "surfaces": [
+        "RPTOR"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        613,
+        618
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+          "span": [
+            613,
+            618
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "key": "s6k1",
+      "canonical": "S6K1",
+      "label": "S6K1",
+      "surfaces": [
+        "S6K1",
+        "S6K1"
+      ],
+      "type": "protein",
+      "role": "kinase",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 2,
+      "first": [
+        638,
+        642
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+          "span": [
+            638,
+            642
+          ]
+        },
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway.",
+          "span": [
+            644,
+            648
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "key": "irs1",
+      "canonical": "IRS1",
+      "label": "IRS1",
+      "surfaces": [
+        "IRS1"
+      ],
+      "type": "protein",
+      "role": "",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        658,
+        662
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway.",
+          "span": [
+            658,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "key": "pi3k-akt",
+      "canonical": "PI3K-AKT",
+      "label": "PI3K-AKT",
+      "surfaces": [
+        "PI3K-AKT"
+      ],
+      "type": "protein",
+      "role": "",
+      "italic": false,
+      "compartment": "cytosol",
+      "compartment_source": "type default",
+      "ambiguous": true,
+      "count": 1,
+      "first": [
+        721,
+        729
+      ],
+      "data": {},
+      "data_source": "",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L10",
+          "quote": "EGF does not activate the PI3K-AKT pathway in these cells.",
+          "span": [
+            721,
+            729
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "key": "compartment:nucleus",
+      "canonical": "Nucleus",
+      "label": "Nucleus",
+      "surfaces": [
+        "Nucleus"
+      ],
+      "type": "compartment",
+      "role": "",
+      "italic": false,
+      "compartment": "nucleus",
+      "compartment_source": "compartment target of a transport statement",
+      "ambiguous": false,
+      "count": 1,
+      "first": [
+        0,
+        0
+      ],
+      "data": {},
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "E01",
+      "target": "E02",
+      "type": "binds",
+      "label": "",
+      "line": "solid",
+      "arrow": "circ",
+      "color": "#1565C0",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'binds'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R01"
+    },
+    {
+      "source": "E02",
+      "target": "E03",
+      "type": "modifies",
+      "label": "",
+      "line": "dash",
+      "arrow": "tri",
+      "color": "#6A1B9A",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "P",
+      "voice": "active",
+      "origin": "cue 'phosphorylates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R02"
+    },
+    {
+      "source": "E03",
+      "target": "E04",
+      "type": "activates",
+      "label": "",
+      "line": "solid",
+      "arrow": "tri",
+      "color": "#2E7D32",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'activates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R03"
+    },
+    {
+      "source": "E04",
+      "target": "E05",
+      "type": "activates",
+      "label": "",
+      "line": "solid",
+      "arrow": "tri",
+      "color": "#2E7D32",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'drives'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R04"
+    },
+    {
+      "source": "E06",
+      "target": "E08",
+      "type": "modifies",
+      "label": "",
+      "line": "dash",
+      "arrow": "tri",
+      "color": "#6A1B9A",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "P",
+      "voice": "active",
+      "origin": "cue 'phosphorylates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R05"
+    },
+    {
+      "source": "E08",
+      "target": "E09",
+      "type": "inhibits",
+      "label": "",
+      "line": "solid",
+      "arrow": "tbar",
+      "color": "#C62828",
+      "strength": "moderate",
+      "feedback": true,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'inhibits'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R06"
+    },
+    {
+      "id": "R07",
+      "source": "E04",
+      "target": "E11",
+      "type": "transports",
+      "label": "translocation",
+      "line": "dashdot",
+      "arrow": "tri_o",
+      "color": "#EF6C00",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "origin": "transport cue 'translocates' with a compartment object",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ],
+      "uncertainty": "target is a compartment, not a molecule"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "source": "E01",
+      "target": "E10",
+      "type": "activates",
+      "label": "",
+      "line": "solid",
+      "arrow": "tri",
+      "color": "#2E7D32",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'activates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L10",
+          "quote": "EGF does not activate the PI3K-AKT pathway in these cells."
+        }
+      ],
+      "uncertainty": "",
+      "removed_because": "negated by 'does not'",
+      "locator": "mat01#L10",
+      "id": "X01"
+    }
+  ],
+  "unresolved_statements": [
+    {
+      "sentence": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+      "cue": "activates",
+      "type": "activates",
+      "source": "E04",
+      "target": "",
+      "locator": "mat01#L8",
+      "why": "could not resolve both arguments to known entities",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ]
+    }
+  ],
+  "legend": [
+    {
+      "token": "compartment",
+      "channel": "shape",
+      "meaning": "Compartment target"
+    },
+    {
+      "token": "protein",
+      "channel": "shape",
+      "meaning": "Protein"
+    },
+    {
+      "token": "activates",
+      "channel": "arrow",
+      "meaning": "activation",
+      "sample": "tri/solid"
+    },
+    {
+      "token": "binds",
+      "channel": "arrow",
+      "meaning": "binding / association",
+      "sample": "circ/solid"
+    },
+    {
+      "token": "inhibits",
+      "channel": "arrow",
+      "meaning": "inhibition",
+      "sample": "tbar/solid"
+    },
+    {
+      "token": "modifies",
+      "channel": "arrow",
+      "meaning": "covalent modification",
+      "sample": "tri/dash"
+    },
+    {
+      "token": "transports",
+      "channel": "arrow",
+      "meaning": "transport / translocation",
+      "sample": "tri_o/dashdot"
+    },
+    {
+      "token": "moderate",
+      "channel": "line-width",
+      "meaning": "moderate",
+      "sample": "width=1.9"
+    }
+  ],
+  "data_encoding": {
+    "rows_matched": 0
+  },
+  "sources": [
+    {
+      "id": "mat01",
+      "path": "materials.example.md",
+      "kind": "md",
+      "notes": [],
+      "declared": true,
+      "lines": 11,
+      "bytes": 775,
+      "sha256": "sha256:7cb30dc5febf6d34fe72ac94fd0c7d6f5f67cdf6aeb9bbfa00b4f897258fcd94",
+      "reader": "",
+      "resolved_from": "case_dir"
+    }
+  ],
+  "materials_resolution": [
+    {
+      "path": "materials.example.md",
+      "resolved_from": "case_dir",
+      "kind": "md",
+      "declared": true,
+      "lines": 11,
+      "bytes": 775,
+      "sha256": "sha256:7cb30dc5febf6d34fe72ac94fd0c7d6f5f67cdf6aeb9bbfa00b4f897258fcd94",
+      "chars": 754
+    }
+  ],
+  "graph_source": "prose extraction from 1 material file(s)",
+  "materials_skipped": [
+    {
+      "path": "case.example.json",
+      "why": "case descriptor / template, not material"
+    }
+  ],
+  "materials_missing": [],
+  "material_discovery": {
+    "mode": "declared+directory-scan",
+    "declared_entries": 1,
+    "scan_disabled_by": "",
+    "instruction_files_never_read": [
+      "environment.yaml",
+      "grading.md",
+      "instruction.md",
+      "instructions.md",
+      "meta.json",
+      "prompt.md",
+      "prompt.txt",
+      "resources.yaml",
+      "rubric.md",
+      "rubrics.md",
+      "task.json",
+      "task.md",
+      "task.txt",
+      "work-order.md",
+      "workorder.md"
+    ]
+  },
+  "evidence": [
+    {
+      "source": "mat01",
+      "locator": "mat01#L7",
+      "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane.",
+      "span": [
+        386,
+        389
+      ],
+      "what": "entity E01"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L10",
+      "quote": "EGF does not activate the PI3K-AKT pathway in these cells.",
+      "span": [
+        695,
+        698
+      ],
+      "what": "entity E01"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L7",
+      "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane.",
+      "span": [
+        423,
+        427
+      ],
+      "what": "entity E02"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L7",
+      "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+      "span": [
+        452,
+        456
+      ],
+      "what": "entity E02"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L8",
+      "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+      "span": [
+        472,
+        478
+      ],
+      "what": "entity E03"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L8",
+      "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1.",
+      "span": [
+        501,
+        506
+      ],
+      "what": "entity E04"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L8",
+      "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+      "span": [
+        518,
+        523
+      ],
+      "what": "entity E04"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+      "span": [
+        582,
+        585
+      ],
+      "what": "entity E05"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+      "span": [
+        587,
+        591
+      ],
+      "what": "entity E06"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+      "span": [
+        613,
+        618
+      ],
+      "what": "entity E07"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1.",
+      "span": [
+        638,
+        642
+      ],
+      "what": "entity E08"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway.",
+      "span": [
+        644,
+        648
+      ],
+      "what": "entity E08"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L9",
+      "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway.",
+      "span": [
+        658,
+        662
+      ],
+      "what": "entity E09"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L10",
+      "quote": "EGF does not activate the PI3K-AKT pathway in these cells.",
+      "span": [
+        721,
+        729
+      ],
+      "what": "entity E10"
+    },
+    {
+      "source": "mat01",
+      "locator": "mat01#L8",
+      "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS.",
+      "what": "entity E11"
+    }
+  ],
+  "change_log": [
+    {
+      "what": "materials",
+      "detail": "materials.example.md"
+    },
+    {
+      "what": "graph_source",
+      "detail": "prose extraction from 1 material file(s)"
+    },
+    {
+      "what": "graph",
+      "detail": "11 entities / 7 edges"
+    }
+  ],
+  "checks": {
+    "ok": true,
+    "n_checks": 12,
+    "n_errors": 0,
+    "n_warnings": 0,
+    "errors": [],
+    "warnings": [],
+    "checks": [
+      {
+        "id": "entities.unique",
+        "ok": true,
+        "level": "error",
+        "detail": "entity ids unique"
+      },
+      {
+        "id": "entities.typed",
+        "ok": true,
+        "level": "error",
+        "detail": "every entity typed/labelled"
+      },
+      {
+        "id": "trace.entities",
+        "ok": true,
+        "level": "error",
+        "detail": "every entity has a source locator"
+      },
+      {
+        "id": "trace.edges",
+        "ok": true,
+        "level": "error",
+        "detail": "every edge has a source locator"
+      },
+      {
+        "id": "semantics.distinct",
+        "ok": true,
+        "level": "error",
+        "detail": "one arrow shape per interaction type"
+      },
+      {
+        "id": "semantics.matches",
+        "ok": true,
+        "level": "error",
+        "detail": "arrow geometry equals the grammar"
+      },
+      {
+        "id": "direction.forward",
+        "ok": true,
+        "level": "warning",
+        "detail": "non-feedback edges point rightwards"
+      },
+      {
+        "id": "honesty.negated",
+        "ok": true,
+        "level": "error",
+        "detail": "1 negated claim(s) recorded and not drawn"
+      },
+      {
+        "id": "honesty.reasons",
+        "ok": true,
+        "level": "error",
+        "detail": "excluded edges state why"
+      },
+      {
+        "id": "localisation.receptor",
+        "ok": true,
+        "level": "error",
+        "detail": "transmembrane receptors on the membrane band"
+      },
+      {
+        "id": "legend.coverage",
+        "ok": true,
+        "level": "error",
+        "detail": "legend covers every token drawn"
+      },
+      {
+        "id": "data.sourced",
+        "ok": true,
+        "level": "error",
+        "detail": "painted values have a source"
+      }
+    ]
+  },
+  "exports": {
+    "svg": {
+      "path": "figure.svg",
+      "bytes": 25470,
+      "editable": true,
+      "sha256": "sha256:8da146038fff88fd3b26ff70479fe9ac17b9ff92fe5d5f769288e74fd387f9ba"
+    },
+    "pdf": {
+      "path": "figure.pdf",
+      "bytes": 27274,
+      "sha256": "sha256:5e9c735b9b258f349165c245b3147298d07fb5f7a535e92d64d7897e22e543b3",
+      "header": "%PDF-1.4",
+      "pages": 1,
+      "text_show_ops": 28,
+      "fonts": [
+        "Helvetica",
+        "STSong-Light"
+      ],
+      "font_embedded": false,
+      "to_unicode": true,
+      "image_xobjects": 0,
+      "vector": true,
+      "media_box_pt": [
+        1240.0,
+        902.0
+      ],
+      "media_box_mm": [
+        437.4,
+        318.2
+      ],
+      "media_box_in": [
+        17.22,
+        12.53
+      ],
+      "writer": {
+        "engine": "stdlib-vector",
+        "non_ascii_dropped": [],
+        "cjk_chars_written": 0,
+        "rounded_corners_flattened": true,
+        "note": "text is written as real Tj operators; the CJK base font is not embedded (no font file may ship), so a viewer without CJK packs substitutes it — the ToUnicode CMap keeps the text extractable and selectable either way"
+      },
+      "page_is_the_figure_coordinate_system": true
+    },
+    "png": {
+      "path": "figure.png",
+      "bytes": 283928,
+      "sha256": "sha256:fdf5549f3c8c5be197bac4ea2610f75403bdfdd422d42cfffe8968907d263e38",
+      "signature_ok": true,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "pHYs",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "width_px": 5166,
+      "height_px": 3758,
+      "bit_depth": 8,
+      "colour_type": 6,
+      "dpi_metadata": [
+        300.0,
+        300.0
+      ],
+      "writer": {
+        "engine": "matplotlib (real font rasterisation) with Microsoft YaHei",
+        "glyph_substitutions": 0,
+        "substitutions": [],
+        "rounded_corners_flattened": true
+      },
+      "dpi_requested": 300,
+      "pixels_expected": [
+        5167,
+        3758
+      ]
+    },
+    "raster": {
+      "produced": true,
+      "backend": "matplotlib (real font rasterisation) with Microsoft YaHei",
+      "why": "PDF and PNG are written at run time from the same primitive list as the SVG, then re-read and measured (MediaBox / Tj count / image xobjects / IHDR + pHYs); no binary ships inside the Skill package"
+    },
+    "checks": {
+      "pdf_is_vector": true,
+      "pdf_page_matches_canvas": true,
+      "pdf_has_selectable_text": true,
+      "pdf_fonts_embedded": false,
+      "png_size_matches_dpi": true,
+      "png_dpi_metadata_matches": true
+    }
+  },
+  "uncertainty": [
+    {
+      "item": "EGF: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "MAP2K1: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "MAPK1: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "FOS: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "MTOR: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "RPTOR: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "S6K1: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "IRS1: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "PI3K-AKT: gene or protein",
+      "why": "context does not decide",
+      "handling": "drawn as protein"
+    },
+    {
+      "item": "unresolved statement",
+      "why": "could not resolve both arguments to known entities",
+      "locator": "mat01#L8"
+    }
+  ],
+  "gaps": [
+    {
+      "item": "unresolved statements",
+      "why": "1 clause(s) not converted"
+    }
+  ],
+  "not_reported": [],
+  "metrics": {
+    "n_entities": 11,
+    "n_edges": 7,
+    "n_excluded": 1,
+    "n_unresolved": 1,
+    "n_materials_read": 1,
+    "n_materials_skipped": 1,
+    "n_checks": 12,
+    "n_errors": 0,
+    "export_checks": {
+      "pdf_is_vector": true,
+      "pdf_page_matches_canvas": true,
+      "pdf_has_selectable_text": true,
+      "pdf_fonts_embedded": false,
+      "png_size_matches_dpi": true,
+      "png_dpi_metadata_matches": true
+    }
+  },
+  "output_contract": {
+    "figure_svg": "layered editable SVG source of the mechanism figure",
+    "preview_png": "raster preview produced at run time (this arm has none: the SVG is the preview)",
+    "entities": "entity table with type, compartment and source locator",
+    "interactions": "typed directed interaction table with evidence",
+    "legend": "legend rows binding each visual token to its meaning",
+    "status": "success | partial | failed with reason"
+  },
+  "generated_at": "2026-11-24T13:16:34+08:00",
+  "generator": "pathway.py 1.3.0-adv4",
+  "self_scored": false,
+  "figure_svg": [
+    "figure.svg",
+    "figure.pdf",
+    "figure.png"
+  ],
+  "preview_png": {
+    "path": "figure.png",
+    "bytes": 283928,
+    "sha256": "sha256:fdf5549f3c8c5be197bac4ea2610f75403bdfdd422d42cfffe8968907d263e38",
+    "signature_ok": true,
+    "chunks": [
+      "IHDR",
+      "tEXt",
+      "pHYs",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "width_px": 5166,
+    "height_px": 3758,
+    "bit_depth": 8,
+    "colour_type": 6,
+    "dpi_metadata": [
+      300.0,
+      300.0
+    ],
+    "writer": {
+      "engine": "matplotlib (real font rasterisation) with Microsoft YaHei",
+      "glyph_substitutions": 0,
+      "substitutions": [],
+      "rounded_corners_flattened": true
+    },
+    "dpi_requested": 300,
+    "pixels_expected": [
+      5167,
+      3758
+    ]
+  },
+  "interactions": [
+    {
+      "source": "E01",
+      "target": "E02",
+      "type": "binds",
+      "label": "",
+      "line": "solid",
+      "arrow": "circ",
+      "color": "#1565C0",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'binds'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "Extracellular EGF binds the transmembrane receptor EGFR at the plasma membrane."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R01"
+    },
+    {
+      "source": "E02",
+      "target": "E03",
+      "type": "modifies",
+      "label": "",
+      "line": "dash",
+      "arrow": "tri",
+      "color": "#6A1B9A",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "P",
+      "voice": "active",
+      "origin": "cue 'phosphorylates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L7",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R02"
+    },
+    {
+      "source": "E03",
+      "target": "E04",
+      "type": "activates",
+      "label": "",
+      "line": "solid",
+      "arrow": "tri",
+      "color": "#2E7D32",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'activates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "EGFR phosphorylates MAP2K1, which then activates MAPK1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R03"
+    },
+    {
+      "source": "E04",
+      "target": "E05",
+      "type": "activates",
+      "label": "",
+      "line": "solid",
+      "arrow": "tri",
+      "color": "#2E7D32",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'drives'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R04"
+    },
+    {
+      "source": "E06",
+      "target": "E08",
+      "type": "modifies",
+      "label": "",
+      "line": "dash",
+      "arrow": "tri",
+      "color": "#6A1B9A",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "P",
+      "voice": "active",
+      "origin": "cue 'phosphorylates'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "MTOR forms a complex with RPTOR and phosphorylates S6K1."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R05"
+    },
+    {
+      "source": "E08",
+      "target": "E09",
+      "type": "inhibits",
+      "label": "",
+      "line": "solid",
+      "arrow": "tbar",
+      "color": "#C62828",
+      "strength": "moderate",
+      "feedback": true,
+      "modification_tag": "",
+      "voice": "active",
+      "origin": "cue 'inhibits'",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L9",
+          "quote": "S6K1 inhibits IRS1, a feedback arm of the pathway."
+        }
+      ],
+      "uncertainty": "",
+      "id": "R06"
+    },
+    {
+      "id": "R07",
+      "source": "E04",
+      "target": "E11",
+      "type": "transports",
+      "label": "translocation",
+      "line": "dashdot",
+      "arrow": "tri_o",
+      "color": "#EF6C00",
+      "strength": "moderate",
+      "feedback": false,
+      "modification_tag": "",
+      "origin": "transport cue 'translocates' with a compartment object",
+      "evidence": [
+        {
+          "source": "mat01",
+          "locator": "mat01#L8",
+          "quote": "Activated MAPK1 translocates into the nucleus and drives transcription of FOS."
+        }
+      ],
+      "uncertainty": "target is a compartment, not a molecule"
+    }
+  ],
+  "repo_hashes": {
+    "figure.svg": "sha256:9e49abbc6fea798e9753674e71d0b97edc65df68425eaf6210606de08ca69ee7",
+    "figure.pdf": "sha256:cd4192c7fdb4a6e640e5d1998ad9c1c75f22b07cceab0a7d1583b3ab66f9af93",
+    "figure.png": "sha256:6d1e730265939d93d0436e7f738db0651eb73ca52b53407d99f3ae1557b7bc4b",
+    "spec.json": "sha256:29a12030f7dee9ee5bf1cd01cb43a57faf6a5adf0b8aacafd74274392227eaef",
+    "check-report.json": "sha256:e9960886aa6c7889aa844f6d5e9f513128f53d4c6de800dfa7cafea950f822f3"
+  },
+  "reproducibility": {
+    "deterministic_parts": [
+      "figure.svg",
+      "figure.pdf",
+      "figure.png",
+      "spec.json",
+      "check-report.json"
+    ],
+    "non_deterministic_parts": [
+      "result.json:generated_at"
+    ],
+    "set_SOURCE_DATE_EPOCH": "pins generated_at as well",
+    "note": "the PDF/PNG bytes depend on the engine named in exports.png.writer.engine; the fingerprint is computed from what was actually written",
+    "artefact_fingerprint": "sha256:2723c054e0e9e49d84e7fef005de7c2d17baa865594d903f551a344c586cdf6e"
+  }
+}

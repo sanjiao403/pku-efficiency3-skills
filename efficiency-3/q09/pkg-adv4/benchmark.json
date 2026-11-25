@@ -1,0 +1,59 @@
+{
+ "what": "real baseline vs Skill on the shipped example (same material, same slide_count, same machine, one run each); both arms are measured from their own .pptx with the same functions",
+ "reproduce": "python3 tests/bench.py --report benchmark.json",
+ "baseline_definition": "minimal direct implementation: split the material into N equal character chunks and paste one chunk per page; no ledger, anchors, footer, notes or verification (tests/bench.py: baseline_deck)",
+ "baseline": {
+  "slides": 8,
+  "slides_match_instruction": true,
+  "evidence_page_coverage": 0.0,
+  "citation_footer_coverage": 0.0,
+  "sentence_integrity": 0.0,
+  "failed_mechanical_checks": 2,
+  "checks_not_applicable": [
+   "C02",
+   "C06",
+   "C07",
+   "C10",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16"
+  ],
+  "seconds": 0.52
+ },
+ "skill": {
+  "slides": 8,
+  "slides_match_instruction": true,
+  "evidence_page_coverage": 0.857,
+  "citation_footer_coverage": 1.0,
+  "sentence_integrity": 1.0,
+  "failed_mechanical_checks": 0,
+  "checks_not_applicable": [
+   "C02",
+   "C06",
+   "C07",
+   "C10",
+   "C16"
+  ],
+  "seconds": 8.41,
+  "status": "success"
+ },
+ "delta": {
+  "slides": 0,
+  "slides_match_instruction": 0,
+  "evidence_page_coverage": 0.857,
+  "citation_footer_coverage": 1.0,
+  "sentence_integrity": 1.0,
+  "failed_mechanical_checks": -2,
+  "checks_not_applicable": null
+ },
+ "limitations": [
+  "baseline is one honest minimal implementation, not a tuned competitor",
+  "one run per path; wall-clock is host-dependent",
+  "the shipped example material is synthetic text (no figures, no scanned pages)",
+  "failed_mechanical_checks reuses scripts/verify.py, an estimator for overflow and a byte-level re-measurement for the export",
+  "sentence_integrity only counts anchored bullets, so a deck with no anchors scores 0 by construction"
+ ],
+ "workdir": "temporary (not shipped)"
+}

@@ -1,0 +1,24 @@
+{
+  "_note": "EXAMPLE ONLY - example case input (output_contract as a JSON Schema). Shows that a Schema-style contract is handled the same way.",
+  "case_id": "example-latex",
+  "task": "Prepare a 10-minute conference talk deck from the LaTeX source; every page must carry a locator.",
+  "language": "en",
+  "audience": "Sustainable computing workshop",
+  "duration_min": 10,
+  "slide_limit": 12,
+  "materials": ["."],
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "deliverable": {"type": "string", "description": "deck outline with the claim ladder"},
+      "deck": {"type": "object", "description": "pptx + rendered preview"},
+      "slides": {"type": "array", "description": "page plan"},
+      "evidence_map": {"type": "array", "description": "page-level locators"},
+      "notes": {"type": "string", "description": "speaker notes"},
+      "render": {"type": "object", "description": "render engine and files"},
+      "uncertainty": {"type": "array"},
+      "status": {"type": "string"}
+    },
+    "required": ["deliverable", "slides", "evidence_map", "status"]
+  }
+}

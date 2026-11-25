@@ -1,0 +1,259 @@
+{
+ "_example": true,
+ "_note": "示例（非正式答案）：用 examples/case.example.json + examples/paper.example.md（均合成示例）真实跑出的 result.json 形状摘录。字段名与真实运行一致，数值只属于这份示例，不是组织方固定案例的答案；长数组已截断以控体积。",
+ "_source_policy_negative_control": "scripts/verify.py 每次运行都跑 source_policy_probe()：在同时放着 case.json、task.md、*.template.json、*.example.json、自身输出目录和一份真论文的目录里，只允许那份论文被当作来源。本示例声明了 materials[]，因此 inputs_refused_as_non_evidence 为空是正常的。",
+ "_how_to_reproduce": "python3 scripts/talkplan.py --case examples/case.example.json --out /tmp/o --work /tmp/w",
+ "case_id": "example-groupmeeting-6min",
+ "status": "success",
+ "status_reason": "page plan + editable deck + anchors produced",
+ "summary": "5 pages + 3 backup; 17 anchored atom(s) from 1 readable file(s)",
+ "outline": {
+  "file": "outline.json",
+  "pages": 5,
+  "backup_slides": 3
+ },
+ "editable_deck": {
+  "file": "deck.pptx",
+  "slides": 8,
+  "engine": "stdlib-ooxml",
+  "editable": true
+ },
+ "render": {
+  "engine": "minipdf-geometric",
+  "preview": "preview.pdf",
+  "pages": 8,
+  "page_size_pt": [
+   960.0,
+   540.0
+  ],
+  "font_embedded": false,
+  "editable_source": "slide_plan.json",
+  "record": "render-record.json",
+  "real_office_render": false
+ },
+ "input_echo": {
+  "task": "组会进展汇报（示例输入）",
+  "audience": "同课题组老师与同学（熟悉本方向，关心进度与卡点）",
+  "goal": "让合作者理解进展、当前卡点与下一步判据",
+  "field_paths": [
+   "input_echo",
+   "audience_model.audience",
+   "audience_model.goal",
+   "slide_plan.constraints.audience"
+  ],
+  "note": "verbatim echoes of the case descriptor; never used as a slide claim, bullet or evidence anchor (verify.py checks that no page copies them)"
+ },
+ "audience_model": {
+  "audience": "同课题组老师与同学（熟悉本方向，关心进度与卡点）",
+  "goal": "让合作者理解进展、当前卡点与下一步判据",
+  "archetype": "lab-meeting",
+  "archetype_reason": "matched 3 keyword(s)",
+  "strength_cap": "moderate",
+  "qa_minutes": 2.0
+ },
+ "source_policy": {
+  "kind": "scientific sources only",
+  "declared_materials": [
+   "paper.example.md"
+  ],
+  "used": [
+   "paper.example.md"
+  ],
+  "declared_but_missing": [],
+  "inputs_refused_as_non_evidence": [],
+  "rule": "only case-declared materials (or, when none are declared, files that pass the extension allowlist) may become evidence; the case file, the task statement, template/example declarations and the pipeline's own runtime artifacts are never evidence"
+ },
+ "sources": [
+  {
+   "material": "paper.example.md",
+   "bytes": 1931,
+   "readable": true,
+   "note": null
+  }
+ ],
+ "outputs": [
+  {
+   "path": "deck.pptx",
+   "exists": true,
+   "bytes": 23493,
+   "sha256": "1632a893b5adef8d3436504852712bfeced0e236e830fba103c40abf0f37fc69"
+  },
+  {
+   "path": "preview.pdf",
+   "exists": true,
+   "bytes": 9017,
+   "sha256": "ff663ca9938e593efd7aa40c07556d6f9ccf021609d631035bd31ae984cfb741"
+  },
+  {
+   "path": "render-record.json",
+   "exists": true,
+   "bytes": 865,
+   "sha256": "ddc532b67191d66b74a36fcf4f5046d72ca0a0e035dc13dc4763a84352ea791c"
+  },
+  {
+   "path": "slide_plan.json",
+   "exists": true,
+   "bytes": 14052,
+   "sha256": "aa05680754a788675db06dbfcc8bb17324b12bf9e1d281bf8d77d1a4fd34bc58"
+  },
+  {
+   "path": "outline.json",
+   "exists": true,
+   "bytes": 6076,
+   "sha256": "efd7a33d9e90320c1e37e45a2172bfb35f9f49d028d3f1ac42bf26a42950dae5"
+  },
+  {
+   "path": "speaker-notes.md",
+   "exists": true,
+   "bytes": 3329,
+   "sha256": "8c92c32bcbfa2f40aa14cab714a61ee2de885afdd04e5d8cd2962bfb19fd05bc"
+  }
+ ],
+ "slide_plan": {
+  "file": "slide_plan.json",
+  "schema": "schemas/slide_plan.schema.json",
+  "schema_sha256": "b7b9847fa6bffac29c81189aad3902c8108a5a328320dbad6d19436da19096f4",
+  "validator": "scripts/talkplan.py:jschk (JSON-Schema subset: type/required/enum/items/min-max/minimum/minLength; no $ref/pattern)",
+  "written_before_deck": true,
+  "slides": 8,
+  "schema_ok": true,
+  "schema_errors": [],
+  "qa_prep": 4,
+  "qa_backup_linked": 4
+ },
+ "time_budget_alloc": {
+  "talk_seconds": 240,
+  "floor_seconds": 5,
+  "title_rule": "max(3, round(talk*0.03))",
+  "sum": 240,
+  "residual": 0,
+  "title_seconds": 7,
+  "deviation_pct": 0.0
+ },
+ "evidence_floor": {
+  "rule": "references/02-narrative-patterns.md anchor floor per page type",
+  "below_floor": [],
+  "per_page_sample": {
+   "1": {
+    "role": "title",
+    "anchors": 1,
+    "floor": 0
+   },
+   "2": {
+    "role": "problem",
+    "anchors": 2,
+    "floor": 1
+   }
+  }
+ },
+ "audit": {
+  "summary": {
+   "checks": 14,
+   "pass": 14,
+   "fail": 0,
+   "locators_verified": 14,
+   "numbers_total": 22,
+   "numbers_locatable": 22,
+   "captions_total": 2,
+   "captions_matched": 2,
+   "locator_verification_rate": 100.0,
+   "number_traceability_rate": 100.0,
+   "caption_consistency_rate": 100.0
+  },
+  "rule": "materials are re-read here; quotes must be verbatim on the cited line, numbers must exist in the material, figure ids must match material captions",
+  "items_sample": [
+   {
+    "slide": 1,
+    "locator": "paper.example.md:L12",
+    "quote_head": "数据集:Sentinel-2 子集,共 1200 个图像块,分辨率 128×12",
+    "quote_verbatim": true,
+    "ok": true
+   },
+   {
+    "slide": 2,
+    "locator": "paper.example.md:L7",
+    "quote_head": "近年来,遥感地物分类在样本充足时已接近饱和,但标注成本使小样本情形仍是主要瓶颈。",
+    "quote_verbatim": true,
+    "ok": true
+   }
+  ]
+ },
+ "empty_artifact_guard": {
+  "passed": true,
+  "reasons": [],
+  "rule": "0 pages / 0 slides / failed verbatim anchor / slide_plan schema violation -> status partial"
+ },
+ "uncertainty": [
+  {
+   "item": "no material-side gap detected",
+   "why": "all declared materials readable",
+   "handling": "scientific content still needs human review"
+  },
+  {
+   "kind": "render_fonts_not_embedded",
+   "item": "preview.pdf uses base-14 / viewer-supplied CID fonts (no font binary is shipped)",
+   "why": "the package must not carry binary resources, and the container may have neither LibreOffice nor a CJK font; the preview is a geometric render of this plan",
+   "handling": "page count / page size / text layer / font facts are re-measured from the PDF bytes by verify.py; a true Office render is used automatically when LibreOffice is present (render-record.json.attempts records both)"
+  }
+ ],
+ "change_log": [
+  {
+   "what": "materials",
+   "why": "1 of 1 readable; 2 sentences dropped for no signal"
+  },
+  {
+   "what": "plan",
+   "why": "audience -> arc lab-meeting (matched 3 keyword(s)); 5 content + 3 backup slides"
+  },
+  {
+   "what": "deck",
+   "why": "engine=stdlib-ooxml (8 slides + notes)"
+  }
+ ],
+ "contract_passthrough": {
+  "source": "output_contract",
+  "declared": 5,
+  "resolved": 5,
+  "collisions": 2,
+  "unresolved": 0
+ },
+ "contract_echo": {
+  "uncertainty": [
+   {
+    "item": "no material-side gap detected",
+    "why": "all declared materials readable",
+    "handling": "scientific content still needs human review"
+   },
+   {
+    "kind": "render_fonts_not_embedded",
+    "item": "preview.pdf uses base-14 / viewer-supplied CID fonts (no font binary is shipped)",
+    "why": "the package must not carry binary resources, and the container may have neither LibreOffice nor a CJK font; the preview is a geometric render of this plan",
+    "handling": "page count / page size / text layer / font facts are re-measured from the PDF bytes by verify.py; a true Office render is used automatically when LibreOffice is present (render-record.json.attempts records both)"
+   }
+  ],
+  "status": "success"
+ },
+ "contract_key_collisions": [
+  {
+   "key": "uncertainty",
+   "declared": "材料缺口与待人工确认项",
+   "kept_field": "uncertainty",
+   "mapped_value": "<same as the reserved field; see contract_echo>",
+   "why": "the declared key has the same name as a reserved result field, so writing it would overwrite the pipeline's own field; the reserved field keeps its value (that is what the field means) and the contract mapping is kept here verbatim",
+   "where": "result.json.contract_echo.uncertainty"
+  },
+  {
+   "key": "status",
+   "declared": "success / partial / unsupported",
+   "kept_field": "status",
+   "mapped_value": "<same as the reserved field; see contract_echo>",
+   "why": "the declared key has the same name as a reserved result field, so writing it would overwrite the pipeline's own field; the reserved field keeps its value (that is what the field means) and the contract mapping is kept here verbatim",
+   "where": "result.json.contract_echo.status"
+  }
+ ],
+ "contract_unresolved_fields": [],
+ "skill": {
+  "name": "academic-talk-structurer",
+  "version": "1.4-adv1"
+ }
+}

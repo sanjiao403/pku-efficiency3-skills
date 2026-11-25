@@ -1,0 +1,606 @@
+{
+  "skill": {
+    "name": "paper2deck",
+    "version": "1.0.0"
+  },
+  "generated_by": "scripts/selftest.py",
+  "note": "Real self-test results from this machine. Checks the mechanism, not a platform score. Rendering evidence is recorded under end_to_end_run.detail, including the measured preview record (render_verification).",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_pptx": "1.0.2",
+    "pillow": "12.3.0",
+    "soffice": null,
+    "powerpoint_com_available": true,
+    "skill_version": "1.0.0"
+  },
+  "summary": {
+    "passed": 17,
+    "total": 17,
+    "failed": [],
+    "seconds": 14.26,
+    "quick": false
+  },
+  "checks": [
+    {
+      "check": "pdf_text_layer_roundtrip",
+      "asserts": "PDF writer -> reader keeps numbers, figure and table labels",
+      "status": "pass",
+      "detail": {
+        "segments": 16,
+        "text_layer": true
+      },
+      "seconds": 0.029
+    },
+    {
+      "check": "inventory_units",
+      "asserts": "numbers carry units, incl. metric names such as R2",
+      "status": "pass",
+      "detail": {
+        "units": [
+          "",
+          "r²",
+          "station",
+          "°c"
+        ]
+      },
+      "seconds": 0.0
+    },
+    {
+      "check": "verify_value_rejects_wrong_unit",
+      "asserts": "3.7 degC accepted, 3.7 kg rejected",
+      "status": "pass",
+      "detail": {
+        "accepted": "3.7 °C",
+        "rejected": "3.7 kg"
+      },
+      "seconds": 0.0
+    },
+    {
+      "check": "verify_locator",
+      "asserts": "Figure 1 exists; Figure 9 does not",
+      "status": "pass",
+      "detail": {
+        "present": "Figure 1",
+        "absent": "Figure 9"
+      },
+      "seconds": 0.0
+    },
+    {
+      "check": "evidence_lock_catches_fabrication",
+      "asserts": "an invented number and an invented figure number both fail the lock",
+      "status": "pass",
+      "detail": {
+        "clean_errors": 0,
+        "tampered_errors": 4,
+        "codes": [
+          "NUMBER_NOT_IN_SOURCE",
+          "REF_NOT_IN_SOURCE"
+        ]
+      },
+      "seconds": 0.01
+    },
+    {
+      "check": "layout_floor_and_overflow_action",
+      "asserts": "fit picks the largest size and reports split/trim instead of shrinking below 16pt",
+      "status": "pass",
+      "detail": {
+        "short_pt": 22,
+        "overflow_action": "split",
+        "floor_pt": 16
+      },
+      "seconds": 0.009
+    },
+    {
+      "check": "notes_separated_from_slide",
+      "asserts": "notes carry transitions/Q&A and stay under the echo threshold",
+      "status": "pass",
+      "detail": {
+        "max_redundancy": 0.068,
+        "total_speaking_seconds": 755
+      },
+      "seconds": 0.004
+    },
+    {
+      "check": "contract_four_shapes",
+      "asserts": "map / JSON Schema / array / absent contracts all resolve",
+      "status": "pass",
+      "detail": {
+        "shapes_handled": 4
+      },
+      "seconds": 0.002
+    },
+    {
+      "check": "pdf_tokeniser_always_advances",
+      "asserts": "a stray ')' ']' '>' in a real PDF stream cannot freeze the reader",
+      "status": "pass",
+      "detail": {
+        "stray_bytes_survived": [
+          ")",
+          "/",
+          "<",
+          ">",
+          "]",
+          "q"
+        ],
+        "text_preserved": true
+      },
+      "seconds": 0.0
+    },
+    {
+      "check": "non_material_inputs_rejected",
+      "asserts": "task.md / case.json / *.example.json stay out of the evidence set, a real tables.tex stays in",
+      "status": "pass",
+      "detail": {
+        "kept": [
+          "paper.md",
+          "tables.tex"
+        ],
+        "excluded": [
+          "slide-plan.example.json",
+          "spec.template.json",
+          "task.md"
+        ]
+      },
+      "seconds": 0.008
+    },
+    {
+      "check": "section_labels_are_headings",
+      "asserts": "figure axis rows, reference entries and sentences never become a section label (they are printed inside every locator)",
+      "status": "pass",
+      "detail": {
+        "accepted": [
+          "1 Introduction",
+          "3.2 Decoding and Rescoring",
+          "4 Related work",
+          "Abstract"
+        ],
+        "rejected": 4
+      },
+      "seconds": 0.0
+    },
+    {
+      "check": "control_chars_never_reach_the_deck",
+      "asserts": "PDF control bytes are dropped instead of being serialised as _x0002_ on a slide",
+      "status": "pass",
+      "detail": {
+        "scrubbed": "The gure shows a  t"
+      },
+      "seconds": 0.285
+    },
+    {
+      "check": "preview_measurement",
+      "asserts": "PNG integrity is walked chunk by chunk and a blank page is detected",
+      "status": "pass",
+      "detail": {
+        "intact_png": "accepted",
+        "trailing_junk": "32 trailing byte(s) after IEND",
+        "blank_page_detected": [
+          "slide-03.png"
+        ],
+        "corrupt_page_detected": "slide-02.png"
+      },
+      "seconds": 0.163
+    },
+    {
+      "check": "stray_raster_is_flagged",
+      "asserts": "a raster added to the output root turns A9 red and is named",
+      "status": "pass",
+      "detail": {
+        "flagged": [
+          "baseline_reference.png"
+        ],
+        "clean_case_raster_free": true
+      },
+      "seconds": 0.114
+    },
+    {
+      "check": "declared_missing_material",
+      "asserts": "a case whose declared paper is absent is not silently answered from another file",
+      "status": "pass",
+      "detail": {
+        "declared_missing": [
+          "paper.pdf"
+        ],
+        "substitute_used": false
+      },
+      "seconds": 0.029
+    },
+    {
+      "check": "reaudit_reads_the_artefacts",
+      "asserts": "qa.py --out opens the delivered deck instead of trusting the run's own ledgers",
+      "status": "pass",
+      "detail": {
+        "empty_dir_g0": "fail",
+        "reason": "deck.pptx could not be re-opened: file missing"
+      },
+      "seconds": 0.001
+    },
+    {
+      "check": "end_to_end_run",
+      "asserts": "one full run on the PDF example: deck.pptx + gates + honest result.json",
+      "status": "pass",
+      "detail": {
+        "seconds": 9.1,
+        "status": "success",
+        "slides": 9,
+        "gates_passed": "7/7",
+        "evidence_coverage": 1.0,
+        "pptx_bytes": 56469,
+        "render_engine": "powerpoint-com",
+        "preview_mode": "real",
+        "pdf": "deck.pdf",
+        "png_pages": 9,
+        "result_json_fields": [
+          "audit",
+          "audit_deck",
+          "case_id",
+          "changes",
+          "contract",
+          "deck",
+          "deliverable",
+          "evidence_map",
+          "inventory",
+          "materials_resolved",
+          "notes",
+          "outputs",
+          "performance",
+          "render",
+          "runtime",
+          "skill",
+          "slides",
+          "sources",
+          "status",
+          "template",
+          "uncertainty",
+          "validation"
+        ],
+        "pdf_bytes": 243740,
+        "real_render": true,
+        "render_verification": {
+          "checked": true,
+          "pdf_pages": 9,
+          "pdf_page_size_in": {
+            "w": 13.333,
+            "h": 7.5
+          },
+          "fonts_embedded": [
+            "BCDEEE+Calibri-Bold",
+            "BCDFEE+Calibri-Bold",
+            "BCDGEE+Calibri",
+            "BCDHEE+Calibri"
+          ],
+          "fonts_are_subset_embedded": true,
+          "png_count": 9,
+          "first_png_px": {
+            "w": 1600,
+            "h": 900
+          },
+          "first_png_dpi": 120.0,
+          "blank_pages": [],
+          "shapes": {
+            "pictures": 0,
+            "tables": 1,
+            "schematic_placeholders": 1,
+            "declared_without_object": [],
+            "pages": [
+              {
+                "page": 1,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 2,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 3,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 4,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 5,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": true,
+                "table_placeholder": false,
+                "declared": [
+                  "figure"
+                ]
+              },
+              {
+                "page": 6,
+                "pictures": 0,
+                "tables": 1,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": [
+                  "table"
+                ]
+              },
+              {
+                "page": 7,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 8,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              },
+              {
+                "page": 9,
+                "pictures": 0,
+                "tables": 0,
+                "figure_placeholder": false,
+                "table_placeholder": false,
+                "declared": []
+              }
+            ]
+          },
+          "issues": [],
+          "summary": "rendered preview measured: 9 PDF page(s) at {'w': 13.333, 'h': 7.5} in, 9 page PNG(s), 4 embedded font face(s); package text carries these numbers because the binaries themselves are not part of the submission"
+        },
+        "independent_audit": {
+          "auditor": "scripts/audit_deck.py",
+          "passed": 10,
+          "total": 10,
+          "checks": [
+            {
+              "id": "A1",
+              "verdict": "pass"
+            },
+            {
+              "id": "A2",
+              "verdict": "pass"
+            },
+            {
+              "id": "A3",
+              "verdict": "pass"
+            },
+            {
+              "id": "A4",
+              "verdict": "pass"
+            },
+            {
+              "id": "A5",
+              "verdict": "pass"
+            },
+            {
+              "id": "A6",
+              "verdict": "pass"
+            },
+            {
+              "id": "A7",
+              "verdict": "pass"
+            },
+            {
+              "id": "A9",
+              "verdict": "pass"
+            },
+            {
+              "id": "A10",
+              "verdict": "pass"
+            },
+            {
+              "id": "A8",
+              "verdict": "pass"
+            }
+          ],
+          "declared_outputs": 23,
+          "result_json_in_outputs": false
+        },
+        "reaudit": {
+          "gates": "8/8",
+          "failed": [],
+          "scope": "G1-G4 judge the page plan (plan layer); G0 and G5-G7 judge the delivered pptx/pdf/png. For a fully independent audit of the artefacts, run scripts/audit_deck.py.",
+          "baseline_ok": true,
+          "drift_detected_by": [
+            "G0_ledgers_match_artefacts"
+          ]
+        }
+      },
+      "seconds": 13.364
+    }
+  ],
+  "independent_audits": [
+    {
+      "out_dir": "selftest-e2e",
+      "deck": {
+        "pptx": "deck.pptx",
+        "slides": 9,
+        "size_in": {
+          "w": 13.333,
+          "h": 7.5
+        },
+        "min_font_pt": 11.0
+      },
+      "passed": 10,
+      "failed": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "check": "result.json: every contract field present and non-null",
+          "verdict": "pass",
+          "expected": {
+            "fields": 5
+          },
+          "actual": {
+            "present": 5,
+            "nulls": []
+          },
+          "detail": []
+        },
+        {
+          "id": "A2",
+          "check": "outputs[]: every declared artefact exists with matching bytes and sha256",
+          "verdict": "pass",
+          "expected": {
+            "entries": 23
+          },
+          "actual": {
+            "verified": 23
+          },
+          "detail": []
+        },
+        {
+          "id": "A3",
+          "check": "page count: pptx == result.slides and within slide_limit",
+          "verdict": "pass",
+          "expected": {
+            "limit": 12
+          },
+          "actual": {
+            "pptx": 9,
+            "result.json": 9
+          },
+          "detail": []
+        },
+        {
+          "id": "A4",
+          "check": "every Figure/Table number and number in the pptx exists in the material",
+          "verdict": "pass",
+          "expected": {
+            "material_numbers": 53,
+            "material_captions": 2
+          },
+          "actual": {
+            "bad_refs": 0,
+            "bad_numbers": 0
+          },
+          "detail": []
+        },
+        {
+          "id": "A5",
+          "check": "each content page has a verified material locator or a declared reason, re-derived from the material",
+          "verdict": "pass",
+          "expected": {
+            "content_pages": 8
+          },
+          "actual": {
+            "unresolved": 0,
+            "declared_sources": [
+              "paper.pdf"
+            ]
+          },
+          "detail": []
+        },
+        {
+          "id": "A6",
+          "check": "notes exist and stay under 0.34 4-gram overlap",
+          "verdict": "pass",
+          "expected": {
+            "pages": 9
+          },
+          "actual": {
+            "bad": 0
+          },
+          "detail": []
+        },
+        {
+          "id": "A7",
+          "check": "no shape outside the page, type >= 11pt, slide numbers present",
+          "verdict": "pass",
+          "expected": {
+            "floor_pt": 11.0
+          },
+          "actual": {
+            "min_font_pt": 11.0,
+            "overflow": 0,
+            "pages_without_number": 0
+          },
+          "detail": []
+        },
+        {
+          "id": "A9",
+          "check": "the delivered preview is a real render of this deck (pdf pages, page images, aspect, not blank, no undeclared raster)",
+          "verdict": "pass",
+          "expected": {
+            "deck_slides": 9,
+            "deck_size_in": {
+              "w": 13.333,
+              "h": 7.5
+            }
+          },
+          "actual": {
+            "pdf": "deck.pdf",
+            "pdf_pages": 9,
+            "pdf_page_in": {
+              "w": 13.333,
+              "h": 7.5
+            },
+            "png_pages": 9,
+            "first_png_px": {
+              "w": 1600,
+              "h": 900
+            },
+            "blank_pages": [],
+            "unexpected_raster": [],
+            "binaries": 11,
+            "measured_by": "audit_deck.preview_facts (reads the artefacts, not render.json)"
+          },
+          "detail": []
+        },
+        {
+          "id": "A10",
+          "check": "sources[] holds scientific material only, and every cited locator belongs to a declared source",
+          "verdict": "pass",
+          "expected": {
+            "declared_sources": 1
+          },
+          "actual": {
+            "non_material_promoted": [],
+            "locators_from_undeclared": [],
+            "not_reopenable_here": []
+          },
+          "detail": []
+        },
+        {
+          "id": "A8",
+          "check": "status is consistent with the audit findings",
+          "verdict": "pass",
+          "expected": {
+            "expected": "success only if every check passes"
+          },
+          "actual": {
+            "status": "success",
+            "failed_checks": []
+          },
+          "detail": []
+        }
+      ]
+    }
+  ],
+  "independent_audit_summary": {
+    "auditor": "scripts/audit_deck.py",
+    "note": "Recomputed from deck.pptx + result.json + the case material only; plan.json / inventory.json / validation.json / layout.json are not read, so the expected-vs-actual verdicts below are independent of the plan layer that produced the deck.",
+    "cases": 1,
+    "checks_per_case": 10,
+    "passed": 10,
+    "failed": 0
+  }
+}

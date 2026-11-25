@@ -1,0 +1,64 @@
+{
+  "note": "Internal mechanism comparison on the same source, template geometry and slide limit. NOT an official platform score and not a benchmark result for any evaluation case.",
+  "case": "case.json",
+  "material": [
+    "D:/Desktop/06_AI研究/bohr-strange-pku-game/效率赛3期/questions/q06/runs/adv1-audit/adv1run/case_en/paper.pdf"
+  ],
+  "elapsed_s": 0.03,
+  "baseline": {
+    "slides": 6,
+    "pages_with_locator": 0,
+    "evidence_coverage": 0.0,
+    "numbers_on_slides": 0,
+    "figure_or_table_pages": 0,
+    "grounded_numbers": 37,
+    "overflow_pages": 0,
+    "min_font_pt": 22,
+    "notes_max_redundancy": 1.0,
+    "notes_with_transition": 0,
+    "validation_errors": 1,
+    "validation_warnings": 28,
+    "spine_roles": [
+      "content"
+    ]
+  },
+  "skill": {
+    "slides": 9,
+    "pages_with_locator": 9,
+    "evidence_coverage": 1.0,
+    "numbers_on_slides": 12,
+    "figure_or_table_pages": 2,
+    "grounded_numbers": 35,
+    "overflow_pages": 0,
+    "min_font_pt": 13,
+    "notes_max_redundancy": 0.061,
+    "notes_with_transition": 9,
+    "validation_errors": 0,
+    "validation_warnings": 0,
+    "spine_roles": [
+      "approach",
+      "evidence",
+      "gap",
+      "limits",
+      "question",
+      "result",
+      "takeaway",
+      "title"
+    ]
+  },
+  "delta": {
+    "slides": 3,
+    "pages_with_locator": 9,
+    "evidence_coverage": 1.0,
+    "numbers_on_slides": 12,
+    "figure_or_table_pages": 2,
+    "grounded_numbers": -2,
+    "overflow_pages": 0,
+    "min_font_pt": -9,
+    "notes_max_redundancy": -0.9390000000000001,
+    "notes_with_transition": 9,
+    "validation_errors": -1,
+    "validation_warnings": -28,
+    "spine_roles": null
+  }
+}

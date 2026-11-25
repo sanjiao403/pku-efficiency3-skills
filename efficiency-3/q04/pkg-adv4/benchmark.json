@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-11-24T13:26:41+08:00",
+  "generator": "pathway.py 1.3.0-adv4 (tests/bench.py)",
+  "entry": "python3 scripts/pathway.py --case <case.json> --out <out>",
+  "baseline_arm": "naive keyword extractor (definition in BENCHMARK.md, code in tests/bench.py): capitalised tokens as untyped entities, first-two-mention edges on activation words, no passive/negation/coordination handling, no evidence, no legend, no exclusion",
+  "cases": [
+    {
+      "case": "case-01",
+      "input": "<written at run time under a temporary directory>",
+      "skill": {
+        "entities": 8,
+        "relations": 6,
+        "excluded": 1,
+        "unresolved": 1,
+        "traceability_rate": 1.0,
+        "verification_failures": 0,
+        "seconds": 1.89,
+        "status": "success"
+      },
+      "baseline": {
+        "entities": 12,
+        "relations": 4,
+        "excluded": 0,
+        "unresolved": 0,
+        "traceability_rate": 0.0,
+        "verification_failures": 5,
+        "seconds": 0.0,
+        "status": "success"
+      }
+    },
+    {
+      "case": "case-02",
+      "input": "<written at run time under a temporary directory>",
+      "skill": {
+        "entities": 9,
+        "relations": 5,
+        "excluded": 0,
+        "unresolved": 2,
+        "traceability_rate": 1.0,
+        "verification_failures": 0,
+        "seconds": 1.95,
+        "status": "success"
+      },
+      "baseline": {
+        "entities": 12,
+        "relations": 1,
+        "excluded": 0,
+        "unresolved": 0,
+        "traceability_rate": 0.0,
+        "verification_failures": 5,
+        "seconds": 0.0,
+        "status": "success"
+      }
+    },
+    {
+      "case": "case-03",
+      "input": "<written at run time under a temporary directory>",
+      "skill": {
+        "entities": 9,
+        "relations": 4,
+        "excluded": 2,
+        "unresolved": 5,
+        "traceability_rate": 1.0,
+        "verification_failures": 0,
+        "seconds": 1.94,
+        "status": "success"
+      },
+      "baseline": {
+        "entities": 7,
+        "relations": 1,
+        "excluded": 0,
+        "unresolved": 0,
+        "traceability_rate": 0.0,
+        "verification_failures": 5,
+        "seconds": 0.0,
+        "status": "success"
+      }
+    }
+  ],
+  "copy_probe": {
+    "cases": [
+      {
+        "case": "case-01",
+        "returncode": 0,
+        "expected": {
+          "status": "success",
+          "entities": "> 0",
+          "errors": 0
+        },
+        "actual": {
+          "status": "success",
+          "entities": 8,
+          "relations": 6,
+          "errors": 0,
+          "resolved_from": [
+            "case_dir"
+          ]
+        }
+      },
+      {
+        "case": "case-02",
+        "returncode": 0,
+        "expected": {
+          "status": "success",
+          "entities": "> 0",
+          "errors": 0
+        },
+        "actual": {
+          "status": "success",
+          "entities": 9,
+          "relations": 5,
+          "errors": 0,
+          "resolved_from": [
+            "case_dir"
+          ]
+        }
+      },
+      {
+        "case": "case-03",
+        "returncode": 0,
+        "expected": {
+          "status": "success",
+          "entities": "> 0",
+          "errors": 0
+        },
+        "actual": {
+          "status": "success",
+          "entities": 9,
+          "relations": 4,
+          "errors": 0,
+          "resolved_from": [
+            "case_dir"
+          ]
+        }
+      }
+    ],
+    "all_pass": true,
+    "destination_template": "<tmp>/probe/runs/q04-fire/stage/outputs"
+  },
+  "totals": {
+    "skill": {
+      "entities": 26,
+      "relations": 15,
+      "verification_failures": 0,
+      "seconds": 5.78,
+      "traceability_rate": 1.0
+    },
+    "baseline": {
+      "entities": 31,
+      "relations": 6,
+      "verification_failures": 15,
+      "seconds": 0.0,
+      "traceability_rate": 0.0
+    }
+  }
+}

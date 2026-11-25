@@ -1,0 +1,402 @@
+{
+ "what": "sentinel contamination + per-check coverage matrix (16 checks)",
+ "sentinel": "SENTINELJUNKTEXT4417",
+ "command": "python -X utf8 <q09>/runs/adv4/contam_matrix.py --out <work> --arms pkg-adv4 --matrix-out <a passing deck out dir> --matrix-case <case.json> --matrix-arms pkg-adv4 pkg-adv3",
+ "part1_contamination": [
+  {
+   "arm": "pkg-adv4",
+   "corpus_used": "paper-fulltext.md",
+   "refused_as_evidence": [
+    "task.md",
+    "spec.template.json"
+   ],
+   "status": "success",
+   "run_survived_to_the_end": true,
+   "sources[]": [
+    "paper-fulltext.md"
+   ],
+   "non_material_in_citation_index": "none",
+   "sentinel_hits_in_artifacts": {
+    "deck.pptx (slide+notes text)": 0,
+    "evidence_map.jsonl": 0,
+    "slide_plan.json": 0,
+    "source.json (citation corpus)": 0
+   },
+   "error": null
+  }
+ ],
+ "part2_coverage_matrix": {
+  "pkg-adv4": [
+   {
+    "check": "C01",
+    "tamper": "case asks for one more slide than delivered",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C01"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C02",
+    "tamper": "case caps the deck at 4 slides",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C02"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C03",
+    "tamper": "a body box moved off the slide",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C04",
+    "tamper": "a body box shrunk to 0.2in",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C04"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C05",
+    "tamper": "a second body box placed on top of the first",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C05"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C08",
+    "tamper": "page 3 loses its title and its speaker notes",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C08",
+     "C11"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C09",
+    "tamper": "page 3 body set to 7 pt",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C09"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C10",
+    "tamper": "an unrelated 4:3 template used as the invariance baseline",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C10"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C11",
+    "tamper": "page 3 keeps its text but loses every anchor",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C11"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C12",
+    "tamper": "a bullet replaced by an invented sentence with a real citation",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C12"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C13",
+    "tamper": "one digit of a number changed on page 4",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C12",
+     "C13"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C07",
+    "tamper": "a figure stretched to 1.6x its intrinsic height",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C07"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C01-aux",
+    "tamper": "sanity: the untouched table/picture deck still verifies",
+    "verifier_rc": 0,
+    "failed_ids": [],
+    "turned_red": false
+   },
+   {
+    "check": "C06",
+    "tamper": "table columns widened 4x beyond the slide",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C06"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C15",
+    "tamper": "a real figure replaced by a 1x1 white stub image",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C07",
+     "C15"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C14",
+    "tamper": "the preview PDF truncated to a single page",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C14"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C08",
+    "tamper": "a content page emptied, no [备份] declaration",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C08"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C15",
+    "tamper": "every preview PNG replaced by pure white",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C15"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C16",
+    "tamper": "contract case_id tampered to 'C07'",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C16"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C16",
+    "tamper": "contract sources[] tampered to 'task.md'",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C16"
+    ],
+    "turned_red": true
+   }
+  ],
+  "pkg-adv3": [
+   {
+    "check": "C01",
+    "tamper": "case asks for one more slide than delivered",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C01"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C02",
+    "tamper": "case caps the deck at 4 slides",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C02"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C03",
+    "tamper": "a body box moved off the slide",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C04",
+    "tamper": "a body box shrunk to 0.2in",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C04"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C05",
+    "tamper": "a second body box placed on top of the first",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C05"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C08",
+    "tamper": "page 3 loses its title and its speaker notes",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C08",
+     "C11"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C09",
+    "tamper": "page 3 body set to 7 pt",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C09"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C10",
+    "tamper": "an unrelated 4:3 template used as the invariance baseline",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C10"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C11",
+    "tamper": "page 3 keeps its text but loses every anchor",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C11"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C12",
+    "tamper": "a bullet replaced by an invented sentence with a real citation",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C12"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C13",
+    "tamper": "one digit of a number changed on page 4",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C12",
+     "C13"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C07",
+    "tamper": "a figure stretched to 1.6x its intrinsic height",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C07"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C01-aux",
+    "tamper": "sanity: the untouched table/picture deck still verifies",
+    "verifier_rc": 0,
+    "failed_ids": [],
+    "turned_red": false
+   },
+   {
+    "check": "C06",
+    "tamper": "table columns widened 4x beyond the slide",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C06"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C15",
+    "tamper": "a real figure replaced by a 1x1 white stub image",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C03",
+     "C07",
+     "C15"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C14",
+    "tamper": "the preview PDF truncated to a single page",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C14"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C08",
+    "tamper": "a content page emptied, no [备份] declaration",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C08"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C15",
+    "tamper": "every preview PNG replaced by pure white",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C15"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C16",
+    "tamper": "contract case_id tampered to 'C07'",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C16"
+    ],
+    "turned_red": true
+   },
+   {
+    "check": "C16",
+    "tamper": "contract sources[] tampered to 'task.md'",
+    "verifier_rc": 2,
+    "failed_ids": [
+     "C16"
+    ],
+    "turned_red": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "_comment": "示例（非正式答案）。演示 case.json 的契约字段；平台会用真实案例覆盖。",
+  "case_id": "example-apparatus",
+  "title": "示例图：缓冲液输送装置（示例，非正式答案）",
+  "figure_kind": "schematic",
+  "task": "依据材料画出装置与流向，并交付可编辑源文件与结构化结果。",
+  "output_contract": {
+    "case_id": "string,原样回填",
+    "status": "string,success|partial",
+    "elements": "array,实体含 id/label/kind/source",
+    "relations": "array,连线含 from/to/kind/source",
+    "editable_source": "object,SVG 源文件与可编辑性说明",
+    "exports": "array,PDF/PNG 导出件",
+    "provenance": "object,材料与溯源",
+    "checks": "object,复核结果",
+    "uncertainty": "array"
+  }
+}

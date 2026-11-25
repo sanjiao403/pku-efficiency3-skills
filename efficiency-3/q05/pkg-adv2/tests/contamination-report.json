@@ -1,0 +1,68 @@
+{
+  "package": "pkg-adv2",
+  "sentinel": "SENTINELJUNKTEXT4417",
+  "checks": [
+    {
+      "test": "1a.evidence_index_is_materials_only",
+      "ok": true,
+      "detail": "materials=['methods.md'] non_material=none orphan_locators=none excluded=['case.example.json', 'case.json', 'result.example.json', 'spec.template.json', 'task.md']"
+    },
+    {
+      "test": "1b.workorder_files_are_declared",
+      "ok": true,
+      "detail": "excluded=['case.example.json(workorder)', 'case.json(case)', 'result.example.json(workorder)', 'spec.template.json(workorder)', 'task.md(workorder)']"
+    },
+    {
+      "test": "2.sentinel_absent_from_artifacts",
+      "ok": true,
+      "detail": "svg=0 result_graph=0 result_full=0 fake_entity_in_svg=none"
+    },
+    {
+      "test": "3.0.baseline_verify_green",
+      "ok": true,
+      "detail": "rc=0 fails=[]"
+    },
+    {
+      "test": "3.1.data_node_renamed_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.every_element_drawn']"
+    },
+    {
+      "test": "3.2.node_deleted_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.every_element_drawn']"
+    },
+    {
+      "test": "3.3.embedded_raster_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['svg.no_raster_or_foreign', 'result.status_honest']"
+    },
+    {
+      "test": "3.4.unread_material_citation_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.locators_resolve', 'provenance.locators_exist_in_input']"
+    },
+    {
+      "test": "3.5.workorder_promoted_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.no_workorder_sources']"
+    },
+    {
+      "test": "4a.ghost_material_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.locators_exist_in_input']"
+    },
+    {
+      "test": "4b.line_out_of_range_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.locator_lines_in_range']"
+    },
+    {
+      "test": "4c.fabricated_quote_goes_red",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.quotes_found_in_material']"
+    }
+  ],
+  "passed": 12,
+  "failed": 0
+}

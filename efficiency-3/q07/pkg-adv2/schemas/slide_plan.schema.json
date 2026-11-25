@@ -1,0 +1,361 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://academic-talk-structurer/schemas/slide_plan.schema.json",
+ "title": "Academic talk slide plan (first-class intermediate artifact)",
+ "type": "object",
+ "required": [
+  "version",
+  "case_id",
+  "planner",
+  "language",
+  "constraints",
+  "spine",
+  "slides",
+  "qa_prep",
+  "uncertainty"
+ ],
+ "additionalProperties": true,
+ "properties": {
+  "version": {
+   "type": "string"
+  },
+  "case_id": {
+   "type": "string"
+  },
+  "planner": {
+   "type": "string",
+   "enum": [
+    "semantic",
+    "deterministic_fallback"
+   ]
+  },
+  "language": {
+   "type": "string",
+   "enum": [
+    "en",
+    "zh"
+   ]
+  },
+  "constraints": {
+   "type": "object",
+   "required": [
+    "audience",
+    "audience_profile",
+    "time_minutes",
+    "max_slides",
+    "talk_slides",
+    "backup_slides",
+    "seconds_per_slide"
+   ],
+   "additionalProperties": true,
+   "properties": {
+    "audience": {
+     "type": "string"
+    },
+    "audience_profile": {
+     "type": "string",
+     "enum": [
+      "domain_expert",
+      "mixed_seminar",
+      "committee",
+      "collaborator",
+      "general"
+     ]
+    },
+    "time_minutes": {
+     "type": "number",
+     "minimum": 1
+    },
+    "qa_minutes": {
+     "type": "number",
+     "minimum": 0
+    },
+    "max_slides": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "talk_slides": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "backup_slides": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "seconds_per_slide": {
+     "type": "number",
+     "minimum": 0
+    },
+    "slides_match_target": {
+     "type": "boolean"
+    }
+   }
+  },
+  "spine": {
+   "type": "object",
+   "required": [
+    "problem",
+    "gap",
+    "approach",
+    "key_evidence",
+    "contributions",
+    "limitations"
+   ],
+   "properties": {
+    "problem": {
+     "type": "string"
+    },
+    "gap": {
+     "type": "string"
+    },
+    "approach": {
+     "type": "string"
+    },
+    "key_evidence": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "contributions": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "limitations": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "slides": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "slide_no",
+     "role",
+     "backup",
+     "title",
+     "bullets",
+     "figures",
+     "tables",
+     "evidence",
+     "evidence_strength",
+     "notes",
+     "timing_seconds"
+    ],
+    "additionalProperties": true,
+    "properties": {
+     "slide_no": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "role": {
+      "type": "string",
+      "enum": [
+       "title",
+       "background",
+       "problem",
+       "gap",
+       "contribution",
+       "method-overview",
+       "method-detail",
+       "setup",
+       "result-1",
+       "result-2",
+       "ablation",
+       "limitation",
+       "conclusion",
+       "backup",
+       "method",
+       "mechanism",
+       "result",
+       "comparison",
+       "divider"
+      ],
+      "description": "Planning vocabulary of references/02-narrative-patterns.md, plus generic aliases kept for third-party producers. talkplan.validate_slide_plan() re-checks on every run that this enum still covers every role the planner can emit, so schema and code cannot drift apart silently."
+     },
+     "backup": {
+      "type": "boolean"
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 110
+     },
+     "bullets": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+       "type": "object",
+       "required": [
+        "text",
+        "level"
+       ],
+       "properties": {
+        "text": {
+         "type": "string",
+         "maxLength": 220
+        },
+        "level": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 2
+        }
+       }
+      }
+     },
+     "figures": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "tables": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "kind",
+        "page"
+       ],
+       "properties": {
+        "kind": {
+         "type": "string",
+         "enum": [
+          "figure",
+          "table",
+          "page",
+          "section",
+          "abstract"
+         ]
+        },
+        "id": {
+         "type": "string"
+        },
+        "page": {
+         "type": "integer",
+         "minimum": 1
+        },
+        "section": {
+         "type": "string"
+        },
+        "quote": {
+         "type": "string",
+         "maxLength": 400
+        }
+       }
+      }
+     },
+     "evidence_strength": {
+      "type": "string",
+      "enum": [
+       "direct",
+       "comparative",
+       "mechanistic",
+       "background"
+      ]
+     },
+     "notes": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1200
+     },
+     "timing_seconds": {
+      "type": "number",
+      "minimum": 0
+     },
+     "claim": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "qa_prep": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "category",
+     "question",
+     "answer_points",
+     "evidence"
+    ],
+    "properties": {
+     "category": {
+      "type": "string",
+      "enum": [
+       "mechanism",
+       "data",
+       "controls",
+       "limitation",
+       "general"
+      ]
+     },
+     "question": {
+      "type": "string",
+      "minLength": 5
+     },
+     "answer_points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string"
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "kind",
+        "page"
+       ]
+      }
+     },
+     "backup_slide_no": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "description": "slide_no of the page that answers this question; null when no slide carries the locator (then backup_linked is false)."
+     },
+     "backup_linked": {
+      "type": "boolean"
+     },
+     "answer_strength": {
+      "type": "string",
+      "enum": [
+       "direct",
+       "comparative",
+       "mechanistic",
+       "background"
+      ],
+      "description": "must not exceed the strength of the cited slide (references/05-qa-and-timing.md)"
+     },
+     "answer_rule": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "uncertainty": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "description": "talkplan 先写 /app/output/slide_plan.json 再合成 deck；本文件在每次运行时由 talkplan.validate_slide_plan() 实际校验（JSON-Schema 子集：type/required/enum/items/min-max/minimum/minLength），不合规项写进 result.json.slide_plan.schema_errors，verify.py 会用同一份 schema 独立重算一遍。"
+}

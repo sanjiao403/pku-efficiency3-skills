@@ -1,0 +1,482 @@
+{
+  "_comment": "示例（非正式答案）：examples/case.example.json + examples/example-material.md 真跑的 result.json **节选**（字段名与结构为真，长列表已截断）。正式案例由 scripts/apparatus.py 现场生成完整文件。",
+  "case_id": "example-apparatus",
+  "skill_version": "apparatus-adv1",
+  "status": "success",
+  "status_reason": "结构/连线/来源/导出自检通过（见 scripts/verify.py）",
+  "summary": "schematic：2 面板 / 11 图元 / 10 连线；溯源 11/11",
+  "figure_kind": "schematic",
+  "canvas_mm": [
+    180.0,
+    126.84
+  ],
+  "outputs": [
+    {
+      "path": "figures/figure.svg",
+      "bytes": 29357,
+      "sha256": "0ab0a19f5c72ddf3"
+    },
+    {
+      "path": "figures/figure.pdf",
+      "bytes": 1796876,
+      "sha256": "ed131c08581951c7"
+    },
+    {
+      "path": "figures/figure.png",
+      "bytes": 185936,
+      "sha256": "823d95673247c1ed"
+    }
+  ],
+  "deliverable": {
+    "editable_source": {
+      "path": "figures/figure.svg",
+      "why": "分层 SVG，真实 <text> 未转曲，每块带 data-node/data-quote"
+    },
+    "exports": [
+      {
+        "path": "figures/figure.pdf",
+        "format": "pdf"
+      },
+      {
+        "path": "figures/figure.png",
+        "format": "png",
+        "dpi": 300
+      }
+    ],
+    "render_backend": "pymupdf"
+  },
+  "elements": [
+    {
+      "id": "U1",
+      "label": "培养基储液瓶 Medium reservoir",
+      "kind": "unit.vessel",
+      "source": {
+        "locator": "example-material.md#L8",
+        "quote": "| 培养基储液瓶 Medium reservoir | 1000 mL | 1 |"
+      }
+    },
+    {
+      "id": "U2",
+      "label": "蠕动泵 P-1",
+      "kind": "unit.instrument",
+      "source": {
+        "locator": "example-material.md#L9",
+        "quote": "| 蠕动泵 P-1 | 30 rpm | 1 |"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "E1",
+      "from": "U1",
+      "to": "U2",
+      "kind": "material",
+      "source": {
+        "locator": "example-material.md#L15-19",
+        "quote": "The culture medium is fed from the medium reservoir to the peristaltic pump P-1."
+      }
+    },
+    {
+      "id": "E2",
+      "from": "U2",
+      "to": "U3",
+      "kind": "material",
+      "source": {
+        "locator": "example-material.md#L15-19",
+        "quote": "The peristaltic pump P-1 delivers to the oxygenator O-1."
+      }
+    },
+    {
+      "id": "E3",
+      "from": "U3",
+      "to": "U4",
+      "kind": "material",
+      "source": {
+        "locator": "example-material.md#L15-19",
+        "quote": "The oxygenator O-1 is connected to the perfusion chamber."
+      }
+    }
+  ],
+  "data_mapping": [
+    {
+      "label": "1000 mL",
+      "value": "1000",
+      "unit": "mL",
+      "source": {
+        "locator": "example-material.md#L8",
+        "quote": "| 培养基储液瓶 Medium reservoir | 1000 mL | 1 |"
+      }
+    },
+    {
+      "label": "30 rpm",
+      "value": "30",
+      "unit": "rpm",
+      "source": {
+        "locator": "example-material.md#L9",
+        "quote": "| 蠕动泵 P-1 | 30 rpm | 1 |"
+      }
+    }
+  ],
+  "provenance": {
+    "materials": [
+      "example-material.md"
+    ],
+    "extractors": {
+      "example-material.md": "text"
+    },
+    "unreadable": [],
+    "trace_ok": 11,
+    "trace_total": 11,
+    "material_order": "lexicographic",
+    "output_dir_excluded": true
+  },
+  "checks": {
+    "connections": {
+      "edges": 10,
+      "device_edges": 5,
+      "step_edges": 5,
+      "phase_edges": 0,
+      "direction_from_sentence": true,
+      "ambiguous_skipped": 0
+    },
+    "layout": {
+      "content_bbox_px": [
+        35.89,
+        38.0,
+        599.04,
+        429.3
+      ],
+      "within_canvas": true,
+      "reflow_rounds": 0,
+      "overflow": []
+    },
+    "exports": {
+      "ok": true,
+      "measured_from_bytes": true,
+      "target_dpi": 300,
+      "svg": {
+        "bytes": 29357,
+        "well_formed": true,
+        "width_mm": 180.0,
+        "height_mm": 126.84,
+        "viewbox_px": [
+          680.31,
+          479.4
+        ],
+        "texts": 37,
+        "images": 0,
+        "node_shapes": 11,
+        "connectors": 10,
+        "arrowheads": 10,
+        "layers": [
+          "layer-annotations",
+          "layer-connectors",
+          "layer-labels",
+          "layer-legend",
+          "layer-rulers",
+          "layer-units"
+        ],
+        "text_chars": 414,
+        "cjk_chars": 159,
+        "node_centers_px": [
+          [
+            132.57999999999998,
+            98.35
+          ],
+          [
+            334.15500000000003,
+            92.5
+          ],
+          [
+            535.73,
+            86.64999999999999
+          ],
+          [
+            132.57999999999998,
+            154.5
+          ],
+          [
+            334.155,
+            148.65
+          ],
+          [
+            535.735,
+            148.65
+          ]
+        ]
+      },
+      "pdf": {
+        "bytes": 1796876,
+        "media_box_pt": [
+          510.24,
+          359.55
+        ],
+        "page_mm": [
+          180.0,
+          126.84
+        ],
+        "content_streams": 11,
+        "tj_arrays": 103,
+        "tj_literals": 16,
+        "text_ops": 119,
+        "text_ops_raw_compressed_scan": 34,
+        "images": 0,
+        "font_files": 3,
+        "fonts": [
+          "Droid",
+          "NimbusRoman-Bold",
+          "NimbusRoman-Regular",
+          "Times-Bold",
+          "Times-Roman"
+        ],
+        "has_to_unicode": true,
+        "text_source": "pypdf",
+        "unicode_chars": 370,
+        "unicode_cjk": 159,
+        "unicode_replacement": 0,
+        "unicode_sample": "培养基储液瓶 Medium reservoir 1000 mL 蠕动泵 P-1 30 rpm 氧合器 oxygenator O-1 培养腔 ",
+        "page_matches_canvas": true
+      },
+      "png": {
+        "bytes": 185936,
+        "signature_ok": true,
+        "width_px": 2126,
+        "height_px": 1499,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlaced": 0,
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "has_phys": true,
+        "px_matches_dpi": true,
+        "node_centers_inked": "6/6"
+      },
+      "render": {
+        "available": true,
+        "expected_chars": 414,
+        "decoded_chars": 370,
+        "text_source": "pypdf",
+        "cjk_chars": 159,
+        "junk_chars": 0,
+        "coverage": 0.8937,
+        "glyph_ink_hit": 414,
+        "glyph_ink_miss": 0,
+        "glyph_ink_rate": 1.0
+      },
+      "png_node_center_samples": [
+        [
+          414,
+          307,
+          [
+            232,
+            244,
+            236
+          ]
+        ],
+        [
+          1044,
+          289,
+          [
+            227,
+            240,
+            247
+          ]
+        ],
+        [
+          1674,
+          270,
+          [
+            227,
+            240,
+            247
+          ]
+        ],
+        [
+          414,
+          483,
+          [
+            232,
+            244,
+            236
+          ]
+        ],
+        [
+          1044,
+          464,
+          [
+            132,
+            155,
+            140
+          ]
+        ],
+        [
+          1674,
+          464,
+          [
+            43,
+            32,
+            67
+          ]
+        ]
+      ]
+    },
+    "render": {
+      "backend": "pymupdf",
+      "notes": []
+    },
+    "evidence_scope": {
+      "material_files": 1,
+      "inline_materials": 0,
+      "workorder_excluded": [
+        "apparatus.example.json",
+        "case.example.json"
+      ],
+      "policy": "证据索引只收 material；工单/示例/模板文件排除"
+    },
+    "independent": "python3 scripts/verify.py --svg figures/figure.svg --result result.json --materials <case_dir> --case <case.json>",
+    "contract": {
+      "declared": 9,
+      "filled": 9,
+      "placeholder": [],
+      "sections": [
+        "editable_sources",
+        "exports",
+        "data_mapping",
+        "element_traceability"
+      ],
+      "ok": true
+    }
+  },
+  "change_log": [
+    {
+      "action": "read-materials",
+      "target": "example-material.md",
+      "by": "scripts/extract.py",
+      "reason": "只读材料；不依据领域标签补造内容"
+    },
+    {
+      "action": "extract-structure",
+      "target": "6 entities / 5 device edges / 5 steps / 5 step edges / 0 phases",
+      "by": "scripts/extract.py",
+      "reason": "清单表 + 显式流向句式 + 编号步骤 + Phase 标记"
+    }
+  ],
+  "review": {
+    "human_confirmation": "pending",
+    "why": "自动流水线不做科学判断；请按 checks.independent 的命令复核后确认",
+    "confirmed_by_human": false
+  },
+  "uncertainty": [],
+  "gaps": [],
+  "output_contract": {
+    "editable_sources": [
+      {
+        "kind": "svg",
+        "path": "figures/figure.svg",
+        "format": "image/svg+xml",
+        "layers": [
+          "layer-rulers",
+          "layer-units",
+          "layer-connectors",
+          "layer-labels",
+          "layer-legend",
+          "layer-annotations"
+        ],
+        "editability": "真实 <text> 未转曲；每个图元带 data-node/data-kind/data-quote/data-src；字体族带 CJK 回退链",
+        "checksum_sha256": "0ab0a19f5c72ddf3"
+      }
+    ],
+    "exports": [
+      {
+        "kind": "pdf",
+        "path": "figures/figure.pdf",
+        "format": "application/pdf",
+        "vector": true,
+        "page_mm": [
+          180.0,
+          126.84
+        ],
+        "text_ops_inflated": 119,
+        "tj_arrays": 103,
+        "tj_literals": 16,
+        "fonts_embedded": 3,
+        "fonts": [
+          "Droid",
+          "NimbusRoman-Bold",
+          "NimbusRoman-Regular",
+          "Times-Bold",
+          "Times-Roman"
+        ],
+        "text_source": "pypdf",
+        "unicode_chars": 370,
+        "unicode_cjk": 159,
+        "text_coverage": 0.8937,
+        "glyph_ink_rate": 1.0
+      },
+      {
+        "kind": "png",
+        "path": "figures/figure.png",
+        "format": "image/png",
+        "dpi": 300,
+        "dpi_tag": [
+          300.0,
+          300.0
+        ],
+        "width_px": 2126,
+        "height_px": 1499,
+        "bit_depth": 8,
+        "px_matches_dpi": true,
+        "node_centers_inked": "6/6"
+      }
+    ],
+    "data_mapping": [
+      {
+        "label": "1000 mL",
+        "value": "1000",
+        "unit": "mL",
+        "source": {
+          "locator": "example-material.md#L8",
+          "quote": "| 培养基储液瓶 Medium reservoir | 1000 mL | 1 |"
+        }
+      }
+    ],
+    "element_traceability": [
+      {
+        "element": "entity-U1",
+        "kind": "unit.vessel",
+        "source": "example-material.md#L8",
+        "quote": "| 培养基储液瓶 Medium reservoir | 1000 mL | 1 |",
+        "drawn": true
+      },
+      {
+        "element": "entity-U2",
+        "kind": "unit.instrument",
+        "source": "example-material.md#L9",
+        "quote": "| 蠕动泵 P-1 | 30 rpm | 1 |",
+        "drawn": true
+      },
+      {
+        "element": "entity-U3",
+        "kind": "unit.instrument",
+        "source": "example-material.md#L10",
+        "quote": "| 氧合器 oxygenator O-1 | 1 |",
+        "drawn": true
+      }
+    ]
+  },
+  "contract_echo": {
+    "case_id": "filled from computed result",
+    "status": "filled from computed result",
+    "elements": "filled from computed result",
+    "relations": "filled from computed result",
+    "editable_source": "aliased from computed result field 'deliverable'",
+    "exports": "aliased from computed result field 'output_contract'",
+    "provenance": "filled from computed result",
+    "checks": "filled from computed result",
+    "uncertainty": "filled from computed result",
+    "output_contract": "4 sections: editable_sources/exports/data_mapping/element_traceability"
+  },
+  "_note": "示例（非正式答案）；elements/relations/data_mapping/element_traceability 为节选。"
+}

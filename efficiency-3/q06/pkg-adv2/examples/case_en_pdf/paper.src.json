@@ -1,0 +1,73 @@
+{
+  "_note": "EXAMPLE ONLY - synthetic fixture used to exercise the PDF path. Not a prepared answer to any evaluation case.",
+  "title": "Downscaling Satellite Land-Surface Temperature with a Residual Attention Network",
+  "authors": "L. Chen, M. Ortiz, K. Nakamura",
+  "affiliation": "Institute for Urban Climate Studies",
+  "abstract": "Land-surface temperature (LST) products from MODIS are too coarse for street-level heat exposure mapping. We propose a residual attention network (RAN) that fuses 1 km MODIS LST with 30 m Landsat reflectance and urban morphology layers. Across 12 validation stations the proposed model reduces mean absolute error from 4.9 degC to 3.7 degC and raises R2 from 0.71 to 0.86 relative to the operational baseline. The largest gains occur in dense low-rise neighbourhoods, while performance degrades over water bodies, where the training sample is sparse.",
+  "sections": [
+    {
+      "heading": "1. Introduction",
+      "paras": [
+        "Urban heat exposure is a first-order public-health problem: heat-related mortality in the study region rose 24.5% between 2010 and 2020, and the burden is concentrated in dense low-rise neighbourhoods.",
+        "Satellite LST is the standard proxy for exposure mapping, but the operational 1 km product is coarser than the street canyon that people actually live in, so exposure estimates can be off by several degrees at the block scale.",
+        "Existing downscaling studies report mean absolute errors between 2.4 degC and 5.1 degC, and almost all of them validate at the sensor footprint rather than at the block scale that public-health users need."
+      ]
+    },
+    {
+      "heading": "2. Related Work",
+      "paras": [
+        "Thermal sharpening methods (Richardson et al., 2019; Alves and Sheng, 2020) assume a stable relationship between LST and vegetation indices; they are fast but degrade when the surface is heterogeneous.",
+        "Statistical downscaling with random forests (Smith et al., 2021) reaches a mean absolute error of 4.9 degC at 100 m over the same region and does not model building geometry.",
+        "Deep super-resolution models (Du et al., 2022) improve the texture of the output but their validation is limited to visual comparison, and none of these studies reports block-scale error."
+      ]
+    },
+    {
+      "heading": "3. Method",
+      "paras": [
+        "We propose a residual attention network (RAN) that takes four aligned inputs at 30 m: Landsat surface reflectance, 1 km MODIS LST resampled by bilinear interpolation, a building-height raster, and an impervious-fraction layer.",
+        "Each residual block is followed by a channel attention module, so the network can down-weight reflectance bands that are contaminated by cloud shadow instead of discarding the whole patch.",
+        "The network is trained on 12,480 paired patches from 2018-2022 with an L1 loss weighted by the inverse of the local LST variance; training converges in 60 epochs, and the learning rate is 0.001 with cosine decay."
+      ],
+      "figure": {
+        "label": "Figure 1",
+        "caption": "Overview of the residual attention network (RAN) pipeline: four 30 m inputs are fused and refined by four residual attention blocks before the final LST regression head.",
+        "kind": "flow",
+        "nodes": ["Inputs", "Encoder", "Attention", "Head"]
+      }
+    },
+    {
+      "heading": "4. Results",
+      "paras": [
+        "Table 1 reports the ablation. Removing the attention module raises the mean absolute error from 3.7 degC to 4.4 degC, and removing the building-height input raises it to 4.6 degC, so both components contribute independently.",
+        "Our method reduces the mean absolute error to 3.7 degC on 12 validation stations at the 30 m block scale, a 24.5% reduction relative to the 4.9 degC random-forest baseline of Smith et al. (2021).",
+        "The coefficient of determination reaches R2 = 0.86, and the improvement is largest in dense low-rise neighbourhoods, where the baseline overestimates night-time LST by 1.8 degC on average."
+      ],
+      "table": {
+        "label": "Table 1",
+        "caption": "Ablation of the proposed residual attention network at the 30 m block scale over 12 validation stations.",
+        "header": ["Variant", "MAE (degC)", "R2"],
+        "rows": [
+          ["Random-forest baseline (Smith et al., 2021)", "4.9", "0.71"],
+          ["RAN without attention", "4.4", "0.78"],
+          ["RAN without building height", "4.6", "0.75"],
+          ["RAN (full model)", "3.7", "0.86"]
+        ]
+      }
+    },
+    {
+      "heading": "5. Discussion and Limitations",
+      "paras": [
+        "Performance degrades over water bodies and large parks, where only 3% of the training patches fall; the model should not be applied to lake-side blocks without retraining.",
+        "The validation network has 12 stations in one metropolitan region, so the reported error is a local estimate and cannot be extrapolated to other climate zones.",
+        "The method requires building-height data, which is unavailable in many cities; future work should test a morphology proxy derived from optical imagery."
+      ]
+    }
+  ],
+  "references": [
+    "[1] Richardson, M., et al. (2019). Thermal sharpening of MODIS LST. Remote Sensing of Environment.",
+    "[2] Alves, D., Sheng, Y. (2020). A sharpening index for urban surfaces. ISPRS Journal.",
+    "[3] Smith, J., et al. (2021). Random-forest downscaling of land-surface temperature. Urban Climate.",
+    "[4] Du, P., et al. (2022). Super-resolution of thermal imagery with deep networks. IEEE TGRS."
+  ],
+  "footer": "EXAMPLE FIXTURE (synthetic) - not a prepared answer"
+}

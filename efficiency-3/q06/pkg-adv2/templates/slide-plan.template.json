@@ -1,0 +1,61 @@
+{
+  "_note": "Page-plan contract for paper2deck. Fill one object per slide; run.py adopts plan.json automatically when it sits next to case.json. See references/slide-blueprint.md for the rules.",
+  "plan_version": 1,
+  "deck": {
+    "title": "<paper title, or the deck's own title>",
+    "subtitle": "",
+    "language": "zh | en",
+    "audience": "<who is in the room>",
+    "duration_min": 12,
+    "slide_limit": 16,
+    "template": null,
+    "footer": "<optional footer text; defaults to the deck title>"
+  },
+  "storyline": {
+    "problem": "<one sentence: why this matters>",
+    "gap": "<one sentence: what prior work left open; may be empty only if declared>",
+    "approach": "<one sentence: the decisive design decisions>",
+    "evidence": "<one sentence: which artefact carries the load>",
+    "result": "<one sentence: the headline quantified outcome>",
+    "limits": "<one sentence: scope and failure modes>",
+    "takeaway": "<one sentence: what to remember>"
+  },
+  "accepted": [],
+  "_accepted_note": "warning codes an author explicitly accepts on the record, e.g. [\"BULLET_IS_PROSE\"]",
+  "slides": [
+    {
+      "id": "s01",
+      "role": "title|outline|question|gap|approach|evidence|result|limits|takeaway|backup",
+      "title": "<<=48 CJK / <=88 latin characters>",
+      "claim": "<the single assertion of this page, <=140 chars>",
+      "bullets": ["<speakable phrase, <=96 chars>"],
+      "numbers": ["<value with unit/metric as shown to the audience>"],
+      "kpis": [{ "value": "3.7", "label": "MAE (\u00b0C)" }],
+      "figure": {
+        "label": "Figure 1",
+        "caption": "<verbatim caption from the source>",
+        "kind": "figure|schematic|data",
+        "asset": null,
+        "source_locator": "<file \u00b7 \u00a7section \u00b7 pN>"
+      },
+      "table": {
+        "label": "Table 1",
+        "caption": "<verbatim caption>",
+        "columns": ["<header>"],
+        "rows": [["<cell>"]],
+        "source_locator": "<file \u00b7 \u00a7section \u00b7 pN>"
+      },
+      "evidence": [
+        {
+          "kind": "figure|table|section|paragraph|equation",
+          "label": "Figure 1",
+          "locator": "<file \u00b7 \u00a7section \u00b7 pN>",
+          "quote": "<verbatim span from the source>",
+          "paraphrase": false
+        }
+      ],
+      "evidence_absent_reason": "",
+      "density": "low|medium|high"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+ "note": "expected vs actual, produced by real runs of the main command; T7 are negative controls that must fail",
+ "python": "3.14.3",
+ "tests": [
+  {
+   "test": "T1 generate: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "assed\": true, \"stages\": [[\"contract\", \"ok\"], [\"discover\", \"ok\"], [\"template\", \"ok\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"plan\", \"ok\"], [\"build\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+  },
+  {
+   "test": "T1 generate: result.status",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T1 generate: case_id echoes the input case (QA-round-20261124 P0-1)",
+   "expected": "T1-EXAMPLE",
+   "actual": "T1-EXAMPLE",
+   "ok": true
+  },
+  {
+   "test": "T1 generate: notes contract is read back from the deck",
+   "expected": "read back from deck.pptx",
+   "actual": "read back from deck.pptx",
+   "ok": true
+  },
+  {
+   "test": "T1 generate: every page's notes contract is non-empty",
+   "expected": 0,
+   "actual": 0,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: no page is an undeclared blank",
+   "expected": [],
+   "actual": [],
+   "ok": true
+  },
+  {
+   "test": "T1 generate: slides == case slide_count",
+   "expected": 8,
+   "actual": 8,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: contract keys echoed",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: outputs[] carries sha256",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: no check failed",
+   "expected": 0,
+   "actual": 0,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: n/a checks are listed, not silent",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: body text is not empty (placeholder kept)",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "\"checks_passed\": true, \"stages\": [[\"contract\", \"ok\"], [\"discover\", \"ok\"], [\"template\", \"not-needed\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"edit\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+  },
+  {
+   "test": "T2 edit: result.status",
+   "expected": "success",
+   "actual": "success",
+   "ok": true,
+   "uncertainty": [],
+   "checks": {
+    "slides": 6,
+    "checks": 17,
+    "failed": 0,
+    "not_applicable": [
+     "C02",
+     "C06",
+     "C07"
+    ],
+    "failed_ids": [],
+    "conditional_ids": [
+     "C02",
+     "C06",
+     "C07",
+     "C14",
+     "C15",
+     "C16"
+    ],
+    "coverage": {
+     "passed": 13,
+     "failed": 0,
+     "not_applicable": 3
+    }
+   }
+  },
+  {
+   "test": "T2 edit: slide count trimmed to the case instruction",
+   "expected": 6,
+   "actual": 6,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: template_preserved (edit report)",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: C10 compares against the starting deck it edited",
+   "expected": "pass",
+   "actual": "pass",
+   "ok": true,
+   "baseline": "starting-deck.pptx",
+   "role": "starting deck (edit invariance)",
+   "why": {
+    "id": "C10",
+    "name": "design fingerprint unchanged (master/layouts/theme)",
+    "ok": true,
+    "status": "pass",
+    "detail": {
+     "baseline": "starting-deck.pptx",
+     "baseline_role": "starting deck (edit invariance)",
+     "method": "design fingerprint (slide size + theme typefaces + layout placeholder geometry), not byte hashes: the writer re-serialises parts",
+     "differences": []
+    }
+   }
+  },
+  {
+   "test": "T2 edit: version snapshots written",
+   "expected": 2,
+   "actual": 2,
+   "ok": true
+  },
+  {
+   "test": "T3 recompute (generated deck) exits 0",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "\",\r\n    \"expected\": 3796,\r\n    \"actual\": 3796,\r\n    \"ok\": true\r\n   },\r\n   {\r\n    \"item\": \"outputs[] slide_plan.json bytes\",\r\n    \"expected\": 6060,\r\n    \"actual\": 6060,\r\n    \"ok\": true\r\n   }\r\n  ],\r\n  \"passed\": true\r\n },\r\n \"passed\": true\r\n}\r\n"
+  },
+  {
+   "test": "T3 recompute (edited deck) exits 0",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "   \"expected\": 37944,\r\n    \"actual\": 37944,\r\n    \"ok\": true\r\n   },\r\n   {\r\n    \"item\": \"outputs[] evidence_map.jsonl bytes\",\r\n    \"expected\": 3070,\r\n    \"actual\": 3070,\r\n    \"ok\": true\r\n   }\r\n  ],\r\n  \"passed\": true\r\n },\r\n \"passed\": true\r\n}\r\n"
+  },
+  {
+   "test": "T4 cwd independence: status success",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T4 cwd independence: material resolved from case_dir",
+   "expected": "case_dir",
+   "actual": "case_dir",
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: status success",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: slides == 8",
+   "expected": 8,
+   "actual": 8,
+   "ok": true
+  },
+  {
+   "test": "T6 empty input: status is not success",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T6 empty input: a reason is recorded",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T7 negative control (fabricated-bullet): C12 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C12"
+   ],
+   "why": "a tampered deck must not be reported as verified"
+  },
+  {
+   "test": "T7 negative control (number-moved-to-another-page): C13 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C12",
+    "C13"
+   ],
+   "why": "a tampered deck must not be reported as verified"
+  },
+  {
+   "test": "T7 negative control (anchor-points-at-a-wrong-page): C11 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C11"
+   ],
+   "why": "a tampered deck must not be reported as verified"
+  },
+  {
+   "test": "T8 negative control (preview truncated to one page): C14 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C14"
+   ]
+  },
+  {
+   "test": "T9 negative control (1x1 stub pasted as a figure): C15 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C03",
+    "C07",
+    "C15"
+   ]
+  },
+  {
+   "test": "T10 negative control (content page emptied, no [备份]): C08 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C08"
+   ]
+  },
+  {
+   "test": "T11 negative control (contract case_id polluted): C16 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C16"
+   ]
+  },
+  {
+   "test": "T12 negative control (contract notes emptied): C16 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C16"
+   ]
+  },
+  {
+   "test": "T13 negative control (work order promoted into sources[]): C16 fails",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "exit_code": 2,
+   "failed_ids": [
+    "C16"
+   ]
+  },
+  {
+   "test": "T14 a real paper named case-study-routing.md is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "case-study-routing.md",
+   "refused": []
+  },
+  {
+   "test": "T15 a task sheet renamed to a paper-like name is still refused",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "failed",
+   "slides": 0,
+   "material": null,
+   "refused": [
+    "case-study-notes.md"
+   ]
+  },
+  {
+   "test": "T16 a real paper using grader/rubric is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "llm-eval-paper.md",
+   "refused": []
+  },
+  {
+   "test": "T17 a Chinese assessment paper mentioning 评分维度 is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "assessment-paper.md",
+   "refused": []
+  },
+  {
+   "test": "T18 a real paper named task-notes.md is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "task-notes.md",
+   "refused": []
+  },
+  {
+   "test": "T19 a real paper named case_report.md is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "case_report.md",
+   "refused": []
+  },
+  {
+   "test": "T20 a work order named brief.md is still refused",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "failed",
+   "slides": 0,
+   "material": null,
+   "refused": [
+    "brief.md"
+   ]
+  },
+  {
+   "test": "T21 a Chinese annotation paper (评分维度/评分点/评分细则) is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "zh-annotation-paper.md",
+   "refused": []
+  },
+  {
+   "test": "T22 a paper about prepared answers is read as material",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "status": "success",
+   "slides": 6,
+   "material": "prepared-answers-paper.md",
+   "refused": []
+  }
+ ],
+ "passed": true,
+ "cwd_independence": {
+  "command": "cd <external-cwd> && python3 <pkg>/scripts/deck.py --case <in>/case.json --out <external-cwd>/out",
+  "cwd": "<external temp dir, not the package dir and not /input>",
+  "exit_code": 0,
+  "status": "success",
+  "slides": 8,
+  "resolved_from": {
+   "material": "case_dir"
+  },
+  "tail": "k\"], [\"discover\", \"ok\"], [\"template\", \"ok\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"plan\", \"ok\"], [\"build\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+ },
+ "copy_probe": {
+  "why": "input discovery keys on file names only, never on absolute path segments: a package placed under a path containing 'outputs' still sees its inputs",
+  "copy_path_shape": "<tmp>/runs/q09-fire/stage/outputs/pkg-copy",
+  "command": "cd <external-cwd> && python3 <copy>/scripts/deck.py --case <copy>/examples/case.example.json --out <external-cwd>/out",
+  "exit_code": 0,
+  "status": "success",
+  "slides": 8,
+  "discover": "ok",
+  "uncertainty": []
+ },
+ "empty_artifact_guard": {
+  "exit_code": 1,
+  "status": "failed",
+  "slides": 0,
+  "uncertainty": [
+   "no material and no starting deck in the input directory"
+  ]
+ },
+ "negative_controls": [
+  {
+   "control": "fabricated-bullet",
+   "must_fail": "C12",
+   "failed_ids": [
+    "C12"
+   ],
+   "exit_code": 2
+  },
+  {
+   "control": "number-moved-to-another-page",
+   "must_fail": "C13",
+   "failed_ids": [
+    "C12",
+    "C13"
+   ],
+   "exit_code": 2
+  },
+  {
+   "control": "anchor-points-at-a-wrong-page",
+   "must_fail": "C11",
+   "failed_ids": [
+    "C11"
+   ],
+   "exit_code": 2
+  }
+ ],
+ "runtime_workdir": "temporary (not shipped)"
+}

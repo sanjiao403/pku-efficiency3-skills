@@ -1,0 +1,123 @@
+{
+  "package": "pkg-adv2",
+  "python": "3.14.3",
+  "checks": [
+    {
+      "test": "A1.deterministic_svg",
+      "ok": true,
+      "detail": "sha1=de5d83d001d7 sha2=de5d83d001d7 status=success"
+    },
+    {
+      "test": "A2.no_self_feed",
+      "ok": true,
+      "detail": "materials=['material.md'] self_fed=[] sha_same=True"
+    },
+    {
+      "test": "B1.workorder_not_evidence",
+      "ok": true,
+      "detail": "status=partial elements=0 leaked_in_svg=[] excluded=['case.json']"
+    },
+    {
+      "test": "C0.verify_green_baseline",
+      "ok": true,
+      "detail": "rc=0 fails=[]"
+    },
+    {
+      "test": "C1.bites_on_stripped_data_role",
+      "ok": true,
+      "detail": "rc=2 fails=['arrow.one_head_per_connector', 'scale.bar_present', 'provenance.blocks_have_quote', 'provenance.locators_present', 'provenance.connectors_have_quote', 'result.status_honest', 'provenance.every_element_drawn']"
+    },
+    {
+      "test": "C2.bites_on_invented_number",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.no_invented_numbers']"
+    },
+    {
+      "test": "C3.bites_on_missing_element",
+      "ok": true,
+      "detail": "rc=2 fails=['provenance.every_element_drawn']"
+    },
+    {
+      "test": "D1.empty_is_partial_not_crash",
+      "ok": true,
+      "detail": "status=partial elements=0 verify_rc=0 fails=[]"
+    },
+    {
+      "test": "D2.no_backend_still_svg",
+      "ok": true,
+      "detail": "status=partial notes=['pymupdf: blocked-in-selftest']"
+    },
+    {
+      "test": "E1.contract_fields_present",
+      "ok": true,
+      "detail": "declared=11 missing=[] sections=['data_mapping', 'editable_sources', 'element_traceability', 'exports']"
+    },
+    {
+      "test": "E2.contract_echo_explains",
+      "ok": true,
+      "detail": "echo=12"
+    },
+    {
+      "test": "F1.bail_writes_honest_result",
+      "ok": true,
+      "detail": "status=partial error=['RuntimeError: smoke-test-error']"
+    },
+    {
+      "test": "G1.pdf_stdlib_fallback",
+      "ok": true,
+      "detail": "elements=3 extractor={'material.pdf': 'pdftext-stdlib'} unreadable=[]"
+    },
+    {
+      "test": "I1.three_formats_measured",
+      "ok": true,
+      "detail": "pdf_page=[180.0, 113.08] image_xo=0 text_ops=107 png_dpi=[300.0, 300.0] ink=1.0"
+    },
+    {
+      "test": "I1b.text_ops_measured_on_inflated_streams",
+      "ok": true,
+      "detail": "inflated text_ops=107 vs compressed-scan=34 (D40 口径：必须 inflate 后数)"
+    },
+    {
+      "test": "I1c.unicode_text_extraction",
+      "ok": true,
+      "detail": "source=pypdf unicode_chars=312 cjk=119 coverage=0.9017"
+    },
+    {
+      "test": "I2.bites_on_png_dpi_tag",
+      "ok": true,
+      "detail": "rc=2 fails=['export.png_dpi_tag']"
+    },
+    {
+      "test": "I3.bites_on_raster_in_pdf",
+      "ok": true,
+      "detail": "rc=2 fails=['export.pdf_vector_no_raster']"
+    },
+    {
+      "test": "I4.source_preserving_edit",
+      "ok": true,
+      "detail": "lines_changed=1 outside_identical=True structure=True total_lines=83"
+    },
+    {
+      "test": "I5.edited_figure_still_verifies",
+      "ok": true,
+      "detail": "rc=0 fails=[]"
+    },
+    {
+      "test": "I6.presentation_attr_edit_line_surgical",
+      "ok": true,
+      "detail": "ok=True lines_changed=1 outside_identical=True"
+    },
+    {
+      "test": "I7.provenance_attr_edit_refused",
+      "ok": true,
+      "detail": "rc=2 why=data-quote 是溯源字段：改它等于改证据来源，应先改材料/结构后重跑；确需修改请加 --allow-proven"
+    },
+    {
+      "test": "H1.no_absolute_paths",
+      "ok": true,
+      "detail": "[]"
+    }
+  ],
+  "passed": 23,
+  "failed": 0
+}

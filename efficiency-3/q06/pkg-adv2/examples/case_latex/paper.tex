@@ -1,0 +1,68 @@
+% EXAMPLE ONLY - synthetic LaTeX fixture for the LaTeX reader path.
+\documentclass[11pt]{article}
+\title{Carbon-Aware Scheduling of Batch Jobs in Shared GPU Clusters}
+\author{Y. Zhao, P. Lindqvist}
+\begin{document}
+\maketitle
+\begin{abstract}
+Batch workloads on shared GPU clusters are scheduled for throughput, but the
+electricity they consume varies by a factor of 2.1 with the hour of the day. We
+present a carbon-aware scheduler that delays deferrable jobs into low-carbon
+windows while holding the service-level objective. On a 96-GPU production trace
+the scheduler cuts carbon emissions by 18.4\% at a throughput cost of 2.6\%.
+\end{abstract}
+
+\section{Introduction}
+Shared GPU clusters now account for a large share of institutional electricity
+use, yet the schedulers that decide what runs when optimise queue time only
+\cite{chen2023}. Grid carbon intensity fluctuates diurnally, so the same job
+started six hours later can emit 40\% less CO$_2$ without any change to the
+computation itself.
+
+\section{Related Work}
+Carbon-aware scheduling has been studied for geographically distributed data
+centers \cite{lin2022}, where the scheduler can migrate work between regions.
+Single-cluster approaches \cite{okafor2021} reduce carbon by pausing
+non-urgent work, but they report no bound on the service-level objective and
+assume jobs can be restarted from a checkpoint.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/carbon-window}
+\caption{Scheduling window of the proposed carbon-aware scheduler: deferrable jobs are held in a queue until the forecast carbon intensity drops below the threshold.}
+\label{fig:window}
+\end{figure}
+
+\section{Method}
+We formulate the problem as a two-stage decision: a forecast stage predicts
+carbon intensity over the next six hours, and a placement stage admits jobs in
+order of carbon efficiency subject to a queue-time bound of 30 minutes. The
+scheduler is implemented as a plug-in for an existing batch system and needs no
+changes to the jobs themselves. Figure~\ref{fig:window} shows the scheduling
+window and the admission threshold.
+
+\section{Results}
+Table~\ref{tab:main} reports the main comparison on a 96-GPU production trace
+over 14 days. The proposed scheduler reduces emissions by 18.4\% relative to the
+throughput-first baseline, at a throughput cost of 2.6\%, and it keeps the
+95th-percentile queue time within the 30 minute bound.
+
+\begin{table}
+\caption{Main comparison on a 96-GPU production trace over 14 days.}
+\label{tab:main}
+\begin{tabular}{lccc}
+Scheduler & Emissions (kg CO2) & Throughput (jobs/h) & p95 queue time (min) \\
+Throughput-first baseline & 1420 & 88.5 & 22 \\
+Carbon-aware (ours) & 1159 & 86.2 & 29 \\
+Oracle hindsight & 1044 & 87.9 & 25 \\
+\end{tabular}
+\end{table}
+
+\section{Limitations}
+Our evaluation covers a single cluster and a 14 day trace, so the 18.4\%
+reduction is not evidence of a general rate; the scheduler also depends on a
+carbon-intensity forecast whose error is not yet characterised. Jobs that hold a
+GPU for less than 5 minutes cannot be deferred, and they are scheduled
+immediately.
+
+\end{document}

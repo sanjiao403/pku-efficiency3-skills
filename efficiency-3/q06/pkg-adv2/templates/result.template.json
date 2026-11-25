@@ -1,0 +1,17 @@
+{
+  "_note": "Skeleton written to /app/output/result.json within the first second of a run, so a killed process still leaves an honest, contract-complete file. Replace case_id with the value from the input case.json; then rewrite the whole file after every stage.",
+  "case_id": "REPLACE_WITH_INPUT_CASE_ID",
+  "status": "partial",
+  "deliverable": "",
+  "deck": { "pptx": null, "pdf": null, "slides": [], "slide_count": 0 },
+  "slides": [],
+  "evidence_map": [],
+  "render": { "engine": null, "preview_mode": null, "pdf": null, "pngs": [], "png_dir": null, "fonts": {}, "verification": { "checked": false, "issues": [] } },"materials_resolved": [],
+  "notes": "",
+  "template": { "available": false, "path": null, "layouts": [] },
+  "sources": [],
+  "uncertainty": ["run started; nothing produced yet"],
+  "changes": [{ "stage": "init", "note": "result skeleton written" }],
+  "audit": { "passed": 0, "total": 7, "dimensions": {}, "real_render": false },
+  "skill": { "name": "paper2deck", "version": "1.0.0" }
+}
