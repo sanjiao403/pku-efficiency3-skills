@@ -1,0 +1,40 @@
+{
+  "_note": "角色 → 版式偏好覆盖表。plan_deck 读取本文件后按 order 里的角色顺序挑选版式（先命中 roles 里存在的角色）；不写则用 pptx_util.DEFAULT_ROLE_RULES 的内置顺序。改这里可以适配中文/期刊模板的版式命名。",
+  "schema": "q08-layout-roles/1",
+  "order": {
+    "title": ["title", "section", "blank"],
+    "agenda": ["agenda", "content", "two-column"],
+    "section": ["section", "title-only", "content"],
+    "bullets": ["content", "two-column", "title-only"],
+    "figure": ["two-column", "figure", "content", "title-only"],
+    "two-column": ["two-column", "content"],
+    "conclusion": ["content", "two-column", "title-only"],
+    "closing": ["title", "section", "blank"]
+  },
+  "name_hints": {
+    "title": ["title slide", "标题幻灯片", "封面"],
+    "agenda": ["agenda", "outline", "目录", "提纲"],
+    "section": ["section header", "节标题", "章节标题", "过渡页"],
+    "content": ["title and content", "标题和内容", "内容", "正文"],
+    "two-column": ["two content", "comparison", "两栏", "比较", "左右"],
+    "figure": ["picture with caption", "content with caption", "图片", "图表"],
+    "title-only": ["title only", "仅标题"],
+    "blank": ["blank", "空白"]
+  },
+  "min_sizes_pt": { "title": 20, "body": 14, "caption": 10, "footer": 9 },
+  "academic_font_pairs": {
+    "zh": { "title": { "latin": "Arial", "ea": "黑体" }, "body": { "latin": "Times New Roman", "ea": "宋体" } },
+    "en": { "title": { "latin": "Arial", "ea": "Arial" }, "body": { "latin": "Times New Roman", "ea": "Times New Roman" } }
+  },
+  "font_fallbacks": {
+    "黑体": ["SimHei", "Microsoft YaHei", "Noto Sans CJK SC"],
+    "宋体": ["SimSun", "Noto Serif CJK SC", "Source Han Serif SC"],
+    "微软雅黑": ["Microsoft YaHei", "Noto Sans CJK SC"],
+    "Times New Roman": ["Liberation Serif", "Nimbus Roman", "DejaVu Serif"],
+    "Arial": ["Liberation Sans", "Helvetica", "DejaVu Sans"],
+    "Source Han Sans SC": ["Noto Sans CJK SC", "Microsoft YaHei", "SimHei"],
+    "Source Han Serif SC": ["Noto Serif CJK SC", "SimSun"],
+    "Source Serif Pro": ["Times New Roman", "Liberation Serif"],
+    "Source Sans Pro": ["Arial", "Liberation Sans"]
+  }
+}

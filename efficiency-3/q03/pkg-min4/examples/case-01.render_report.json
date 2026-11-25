@@ -1,0 +1,55 @@
+{
+  "_comment": "示例（非正式答案）",
+  "chart_id": "gain-01-grounded",
+  "chart_type": "grouped_bar",
+  "figure_mm": [
+    89.0,
+    70.0
+  ],
+  "font_family_used": [
+    "Arial",
+    "Helvetica",
+    "sans-serif"
+  ],
+  "style_source": "built into chart.py; see references/journal-profiles.md",
+  "categories": [
+    "Il6",
+    "Tnf",
+    "Hif1a"
+  ],
+  "series": [
+    {
+      "name": "Vehicle",
+      "colour": "#0072B2",
+      "points": 3
+    },
+    {
+      "name": "LPS",
+      "colour": "#D55E00",
+      "points": 3
+    }
+  ],
+  "element_count": 6,
+  "mapping_coverage": 1.0,
+  "null_value_notes": [],
+  "exports": {
+    "figure.svg": {
+      "path": "figure.svg",
+      "status": "ok",
+      "bytes": 3813,
+      "sha256": "9ce7b88c1fa28e97f3cc7a55dff849fdf28496d97a7a1de485730779fa3213e3"
+    },
+    "figure.map.json": {
+      "path": "figure.map.json",
+      "status": "ok",
+      "bytes": 3155,
+      "sha256": "98e9913c1531f5f7c66004137b45c9648beebbf2e2114937616686f90a7abef3"
+    }
+  },
+  "status": "success",
+  "seconds": 0.01,
+  "caveats": [
+    "text-only; SVG only (no PDF/PNG in this minimal build)"
+  ],
+  "case_ref": "the --case file given (see result.json.sources)"
+}

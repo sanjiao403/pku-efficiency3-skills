@@ -1,0 +1,120 @@
+{
+  "package": "pkg-adv2",
+  "generated_at_local": "2026-11-24T11:24:15",
+  "python": "3.14.3",
+  "work_dir": "<TMP>",
+  "package_dir": "<PKG>",
+  "determinism": {
+    "policy": "SOURCE_DATE_EPOCH pins every timestamp; two runs of the same case are byte-identical (figure.pdf included)",
+    "files_compared": 7,
+    "diff": [],
+    "figure_pdf_sha256": "18c65dee05aa576fe97e1dd12e318c81c64e6478c2d5fe72f99f454cc02fa8c9"
+  },
+  "cases_total": 17,
+  "cases_passed": 17,
+  "failed": [],
+  "cases": [
+    {
+      "case": "end_to_end_success",
+      "kind": "positive",
+      "ok": true,
+      "detail": "exit=0 status=success files=7/7 engine=matplotlib 3.11.2 (Agg; pdf.fonttype=42)"
+    },
+    {
+      "case": "export_gates_green",
+      "kind": "positive",
+      "ok": true,
+      "detail": "checks={'pdf_is_vector': True, 'pdf_text_preserved': True, 'pdf_size_matches_style': True, 'png_geometry_matches_dpi': True, 'png_colour_space': True}"
+    },
+    {
+      "case": "independent_verify",
+      "kind": "positive",
+      "ok": true,
+      "detail": "exit=0 :: 19/19 recomputed checks passed; VERIFY_OK"
+    },
+    {
+      "case": "contract_keeps_case_id",
+      "kind": "positive",
+      "ok": true,
+      "detail": "case_id='contract-probe' keys=['_contract_source', 'case_id', 'change_log', 'changes', 'checks', 'cwd_independent']… status=success"
+    },
+    {
+      "case": "physical_line_numbers",
+      "kind": "positive",
+      "ok": true,
+      "detail": "physical rows of the 3 records = [3, 5, 6] (header on line 2, blank line 4 must not shift them)"
+    },
+    {
+      "case": "missing_case_writes_result",
+      "kind": "negative",
+      "ok": true,
+      "detail": "exit=1 status=failed uncertainty=1 item(s)"
+    },
+    {
+      "case": "no_numeric_column_is_failed",
+      "kind": "negative",
+      "ok": true,
+      "detail": "exit=1 status=failed figure_written=False"
+    },
+    {
+      "case": "missing_unit_is_partial",
+      "kind": "negative",
+      "ok": true,
+      "detail": "status=partial axis_units_ok=False figure_delivered=True"
+    },
+    {
+      "case": "stdlib_engine_delivers",
+      "kind": "positive",
+      "ok": true,
+      "detail": "engine=stdlib (vector PDF via Type1 Helvetica; PNG via zlib) png_text_layer=1051x827 px raster of the primitives only (this engine has n verify_exit=0"
+    },
+    {
+      "case": "copy_probe",
+      "kind": "positive",
+      "ok": true,
+      "detail": "copied under .../outputs -> status=success elements=8"
+    },
+    {
+      "case": "cwd_decoy_not_used",
+      "kind": "positive",
+      "ok": true,
+      "detail": "plotted values=[1.0, 2.0] (decoy in cwd holds 999.0)"
+    },
+    {
+      "case": "cjk_labels_preserved",
+      "kind": "positive",
+      "ok": true,
+      "detail": "svg_has_cjk=True font_basis=CJK via Microsoft YaHei (msyh.ttc) status=success"
+    },
+    {
+      "case": "verify_reads_physical_rows",
+      "kind": "positive",
+      "ok": true,
+      "detail": "verify.py re-read every bar value from its physical line"
+    },
+    {
+      "case": "material_doc_is_not_data",
+      "kind": "negative",
+      "ok": true,
+      "detail": "exit=1 status=failed figure_written=False materials_seen=['alpha_notes.md']"
+    },
+    {
+      "case": "sources_name_the_table_only",
+      "kind": "positive",
+      "ok": true,
+      "detail": "sources=['case.inline']"
+    },
+    {
+      "case": "sibling_example_json_not_data",
+      "kind": "positive",
+      "ok": true,
+      "detail": "plotted=[1.0, 2.0] rejected_as_non_data=['figure_spec.example.json']"
+    },
+    {
+      "case": "reproducible_byte_identical",
+      "kind": "positive",
+      "ok": true,
+      "detail": "7 artefact(s) compared with SOURCE_DATE_EPOCH=0: diff=none (pdf=18c65dee05aa576f)"
+    }
+  ]
+}

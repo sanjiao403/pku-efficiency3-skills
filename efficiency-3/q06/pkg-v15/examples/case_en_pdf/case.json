@@ -1,0 +1,21 @@
+{
+  "_note": "EXAMPLE ONLY - example case input (output_contract as {field: description}).",
+  "case_id": "example-en-pdf",
+  "task": "Turn the paper into a 12-minute group-meeting deck that keeps a locator on every page.",
+  "language": "en",
+  "audience": "Urban climate group meeting, mixed remote-sensing and public-health readers",
+  "duration_min": 12,
+  "slide_limit": 14,
+  "materials": ["paper.pdf"],
+  "_materials_note": "build paper.pdf first: python3 scripts/make_case_pdf.py --src examples/case_en_pdf/paper.src.json --out work/example-en-pdf/paper.pdf",
+  "output_contract": {
+    "deliverable": "deck outline text with the page-by-page claim ladder",
+    "deck": "editable .pptx plus the rendered PDF/PNG preview",
+    "slides": "page-level plan: role, title, claim, bullets, numbers",
+    "evidence_map": "for each page: claim, artefact label, source locator, verbatim quote",
+    "notes": "speaker notes per page",
+    "render": "render engine, preview mode, exported files, fonts actually used",
+    "uncertainty": "material gaps and anything not derivable from the source",
+    "status": "success / partial / unsupported"
+  }
+}

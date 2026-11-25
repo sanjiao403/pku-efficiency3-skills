@@ -1,0 +1,65 @@
+{
+  "_readme": "result.json 骨架模板。契约键来自 /input/case.json 的 output_contract（脚本会自动回填其全部键）；缺值用 \"\" 或 []，绝不写 null。`outputs`/`sources`/`uncertainty`/`changes` 为追加字段，只增不改。",
+  "case_id": "<照抄输入>",
+  "status": "ok | partial | insufficient_evidence | input_error",
+  "status_reason": "一句话说明 status 的依据（含 origin/引擎/修复数）",
+  "summary": "一句话交付摘要",
+
+  "editable_source": {
+    "path": "figure.svg",
+    "format": "svg",
+    "editable": true,
+    "layers": ["frame", "panels", "entities", "relations", "data", "labels", "legend", "annotations"],
+    "text_count": 0,
+    "sha256": "",
+    "text_preserved": true,
+    "model_copy": "figure-ir.json"
+  },
+  "export_artifact": {
+    "png": {"path": "figure.png", "width": 2400, "height": 1350, "dpi": 300,
+            "engine": "", "verified": false, "ink_ratio": 0.0, "attempts": []},
+    "pdf": {"path": "figure.pdf", "pages": 1, "vector": true, "engine": "", "verified": false,
+            "page_pt": [576.0, 324.0]}
+  },
+  "content_map": [
+    {"kind": "panel|entity|relation|value|data_point|legend", "id": "<SVG 元素 id>",
+     "label": "逐字标签", "on_canvas": true,
+     "source": {"id": "S1", "path": "material.md", "locator": "material.md#para2", "quote": "逐字片段"}}
+  ],
+  "compliance_checks": [
+    {"check": "canvas_size", "required": "2400 x 1350 px", "measured": "2400 x 1350 px",
+     "verdict": "pass|warn|fail", "evidence": "export_artifact.png"}
+  ],
+  "exceptions": [
+    {"element": "", "issue": "", "detail": "", "handling": ""}
+  ],
+
+  "outputs": {
+    "editable_source": "figure.svg",
+    "preview_png": "figure.png",
+    "vector_pdf": "figure.pdf",
+    "result": "result.json",
+    "figure_model": "figure-ir.json",
+    "run_log": "run.log"
+  },
+  "sources": [{"source_id": "S1", "path": "material.md", "kind": "text", "pages_or_paras": 6}],
+  "uncertainty": [{"item": "", "why": "", "handling": ""}],
+  "changes": [{"action": "create|edit|repair", "what": "", "reason": ""}],
+  "coverage": {"elements": 0, "on_canvas": 0, "with_verbatim_source": 0, "source_ratio": 0.0,
+               "by_kind": {}},
+  "invariants": {
+    "legend": {"ok": true, "legend_entries": 0, "categories": 0},
+    "numbers": {"checked": 0, "traced": 0, "untraced": [], "ratio": 0.0},
+    "grayscale": {"series": 0, "patterned": 0, "ok": true},
+    "fit": {},
+    "panels": []
+  },
+  "degradations": [{"what": "", "why": "", "impact": ""}],
+  "gaps": [{"item": "", "why": "", "alternative_evidence": ""}],
+  "errors": [],
+  "not_reported": [{"field": "", "why": ""}],
+  "runtime": {"steps": [], "budget": {"model_requests": 64, "wall_seconds": 900,
+              "response_tokens": 16384, "script_soft_seconds": 20, "script_hard_seconds": 120},
+              "fast": false, "timed_out": false},
+  "contract_echo": {"declared": true, "shape": "dict|list", "keys": []}
+}

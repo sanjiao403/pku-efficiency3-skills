@@ -1,0 +1,18 @@
+{
+  "_note": "示例（非正式答案）· 最小调用示例：source 相对本文件（examples/）解析，template 指向同目录的**文本模板规格**（包内零二进制，运行期合成）。.",
+  "case_id": "EXAMPLE-001",
+  "task": "把示例材料组织成 10 分钟学术汇报（模板由文本规格运行期合成）",
+  "language": "zh",
+  "audience": "课题组组会（示例）",
+  "minutes": 10,
+  "slide_count": { "min": 8, "max": 10, "target": 9 },
+  "template": "template-spec.example.json",
+  "source": { "path": "../tests/fixtures/f1/paper.md", "kind": "md" },
+  "footer": "示例（非正式答案）",
+  "output_contract": {
+    "presentation": "可编辑 pptx",
+    "slide_plan": "页级主张与结构",
+    "evidence_map": "每页 → 材料定位",
+    "status": "success|partial"
+  }
+}

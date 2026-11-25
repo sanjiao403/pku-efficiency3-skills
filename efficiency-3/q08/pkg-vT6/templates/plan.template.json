@@ -1,0 +1,71 @@
+{
+  "_note": "页级计划契约（slide_plan.json）。agent 可以自由改写本文件（改主张/文案/图注），再用 run.py --plan 成册；plan_deck --validate 会按同一份契约校验并拦截越界。",
+  "schema": "q08-deck-plan/1",
+  "case_id": "CASE-0001",
+  "meta": {
+    "task": "任务名",
+    "template": "模板路径",
+    "audience": "听众",
+    "minutes": 12,
+    "language": "zh",
+    "slide_count_constraint": { "min": 9, "max": 12, "target": 10 },
+    "slide_count_planned": 10,
+    "footer": "页脚文案（会按占位符宽度裁到一行）",
+    "fonts": {
+      "title": { "latin": "Arial", "ea": "黑体", "min_pt": 20 },
+      "body": { "latin": "Times New Roman", "ea": "宋体", "min_pt": 14 },
+      "caption": { "latin": "Times New Roman", "ea": "宋体" },
+      "policy": "中英文分别落 a:latin / a:ea；缺失按 fallback 链替换并记录"
+    },
+    "ladders": {
+      "body": [20, 18, 16, 14],
+      "title": [40, 36, 32, 28, 24],
+      "caption": [14, 12, 11, 10],
+      "min_body_pt": 14
+    },
+    "source_map_sha256": "源材料哈希（防止计划与材料错配）",
+    "template_sha256": "模板哈希",
+    "generated_by": "plan_deck.py"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "role": "title|agenda|section|bullets|figure|two-column|conclusion|closing",
+      "layout_index": 0,
+      "layout_hint": "Title Slide",
+      "title": "页标题（内容页 ≤46 字，超长按小句边界截断并记 title_truncated）",
+      "subtitle": "封面副标题",
+      "claim": "页级主张：源材料逐字最强断言（含数值优先），截断处补省略号",
+      "claim_locator": "§3.2 ¶1",
+      "bullets": [
+        {
+          "text": "页内要点（逐字摘录，可截断）",
+          "level": 0,
+          "bullet": true,
+          "locator": "§3.2 ¶2 或 p.4 §2.1 ¶3",
+          "block_id": "b012",
+          "quote": "未截断的原文句子（回源校验用）",
+          "truncated": false,
+          "kind": "nav（仅目录页：表示导航项，不做引文回源）"
+        }
+      ],
+      "figure": {
+        "label": "Figure 1",
+        "caption": "图注（与源材料一致）",
+        "path": "work/figures/fig1.png",
+        "source_locator": "Figure 1 (p.4)",
+        "origin": "embedded|extracted-raster|cropped-region|generated",
+        "mode": "fit|cover"
+      },
+      "notes": "讲稿/备注：讲解顺序 + 逐条证据定位 + 被移入的备选证据",
+      "budget": { "size_pt": 20.0, "capacity_chars": 420, "fits": true },
+      "overflow_to_notes": [{ "text": "超容器被移入备注的内容", "locator": "§5 ¶2" }]
+    }
+  ],
+  "dropped_content": [
+    { "section": "被裁章节", "locator": "§2.1", "score": 3.2, "why": "超出案例页数上限" }
+  ],
+  "change_log": [{ "what": "渲染回测溢出修正", "slide": 6, "why": "第 1 轮判定溢出，移入 1 条到备注" }],
+  "agent_todo": ["用源材料原文核对每条 bullet 的表述", "把 claim 改成面向听众的一句话主张"],
+  "stats": { "slides": 10, "bullets": 28, "figures_used": 2, "body_chars": 2100 }
+}

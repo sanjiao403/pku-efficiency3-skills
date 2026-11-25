@@ -1,0 +1,99 @@
+{
+  "_disclaimer": "示例 IR（示例，非正式案例结果）：数据表 → 可编辑图表 + 图形摘要。",
+  "case_id": "example-b-results",
+  "origin": "curated",
+  "mode": "create",
+  "title": "Palmitoylation sets the interferon ceiling",
+  "subtitle": "DHHC3 knockdown doubles peak IFN-beta release from stimulated macrophages",
+  "panels": [
+    {
+      "order": 1, "role": "problem", "title": "Question", "kind": "bullets",
+      "claim": "Does palmitoylation set how much interferon a cell can release?",
+      "items": [
+        {"id": "p1i1", "text": "Interferon output varies widely between genotypes",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "We measured interferon-beta release from three macrophage genotypes after cytosolic DNA stimulation"}},
+        {"id": "p1i2", "text": "Whether DHHC3 catalytic activity sets the ceiling is unknown",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "DHHC3 catalytic-dead knock-in (DHHC3 CD) behaved like wild type, confirming that the effect requires catalytic activity rather than protein abundance"}}
+      ]
+    },
+    {
+      "order": 2, "role": "method", "title": "Design", "kind": "chain",
+      "items": [
+        {"id": "p2i1", "text": "Stimulate cytosolic DNA at t = 0",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "Cells were stimulated at t = 0 and supernatant was collected at 2, 6, 12 and 24 h"}},
+        {"id": "p2i2", "text": "Sample supernatant at 4 time points",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "supernatant was collected at 2, 6, 12 and 24 h"}},
+        {"id": "p2i3", "text": "Quantify IFN-beta by ELISA, n = 4",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "Each condition had four biological replicates"}}
+      ]
+    },
+    {
+      "order": 3, "role": "results", "title": "Release over time", "kind": "chart", "chart": "CH1",
+      "claim": "Knockdown raises the 6 h peak 1.9-fold; catalytic-dead behaves like wild type."
+    },
+    {
+      "order": 4, "role": "conclusion", "title": "Meaning", "kind": "bullets",
+      "claim": "The modification, not protein abundance, sets the interferon ceiling.",
+      "items": [
+        {"id": "p4i1", "text": "All genotypes converge to baseline by 24 h",
+         "source": {"id": "S2", "locator": "measurements.csv#row4", "quote": "24,31,6,38,8,34,7"}},
+        {"id": "p4i2", "text": "DHHC3 is a candidate adjuvant target",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "confirming that the effect requires catalytic activity rather than protein abundance"}}
+      ]
+    }
+  ],
+  "entities": [],
+  "relations": [],
+  "charts": [
+    {
+      "id": "CH1", "kind": "bar", "title": "IFN-beta release after DNA stimulation",
+      "x_label": "time after stimulation (h)", "y_label": "IFN-beta", "unit": "pg/mL",
+      "series": [
+        {"name": "WT", "color_key": "c1", "points": [
+          {"x": "2 h", "y": 96, "raw": "96", "err": 14, "source": {"id": "S2", "locator": "measurements.csv#row1", "quote": "2,96,14,151,22,101,17"}},
+          {"x": "6 h", "y": 320, "raw": "320", "err": 41, "source": {"id": "S2", "locator": "measurements.csv#row2", "quote": "6,320,41,612,73,338,46"}},
+          {"x": "12 h", "y": 184, "raw": "184", "err": 26, "source": {"id": "S2", "locator": "measurements.csv#row3", "quote": "12,184,26,402,55,197,29"}},
+          {"x": "24 h", "y": 31, "raw": "31", "err": 6, "source": {"id": "S2", "locator": "measurements.csv#row4", "quote": "24,31,6,38,8,34,7"}}
+        ]},
+        {"name": "DHHC3 KD", "color_key": "c2", "points": [
+          {"x": "2 h", "y": 151, "raw": "151", "err": 22, "source": {"id": "S2", "locator": "measurements.csv#row1", "quote": "2,96,14,151,22,101,17"}},
+          {"x": "6 h", "y": 612, "raw": "612", "err": 73, "source": {"id": "S2", "locator": "measurements.csv#row2", "quote": "6,320,41,612,73,338,46"}},
+          {"x": "12 h", "y": 402, "raw": "402", "err": 55, "source": {"id": "S2", "locator": "measurements.csv#row3", "quote": "12,184,26,402,55,197,29"}},
+          {"x": "24 h", "y": 38, "raw": "38", "err": 8, "source": {"id": "S2", "locator": "measurements.csv#row4", "quote": "24,31,6,38,8,34,7"}}
+        ]},
+        {"name": "DHHC3 CD", "color_key": "c3", "points": [
+          {"x": "2 h", "y": 101, "raw": "101", "err": 17, "source": {"id": "S2", "locator": "measurements.csv#row1", "quote": "2,96,14,151,22,101,17"}},
+          {"x": "6 h", "y": 338, "raw": "338", "err": 46, "source": {"id": "S2", "locator": "measurements.csv#row2", "quote": "6,320,41,612,73,338,46"}},
+          {"x": "12 h", "y": 197, "raw": "197", "err": 29, "source": {"id": "S2", "locator": "measurements.csv#row3", "quote": "12,184,26,402,55,197,29"}},
+          {"x": "24 h", "y": 34, "raw": "34", "err": 7, "source": {"id": "S2", "locator": "measurements.csv#row4", "quote": "24,31,6,38,8,34,7"}}
+        ]}
+      ]
+    }
+  ],
+  "claims": [
+    {"id": "K1", "label": "Peak IFN-beta, DHHC3 KD at 6 h", "value": 612, "unit": "pg/mL",
+     "compare": {"label": "WT", "value": 320},
+     "source": {"id": "S2", "locator": "measurements.csv#row2", "quote": "6,320,41,612,73,338,46"}},
+    {"id": "K2", "label": "Peak IFN-beta, catalytic-dead at 6 h", "value": 338, "unit": "pg/mL",
+     "compare": {"label": "WT", "value": 320},
+     "source": {"id": "S2", "locator": "measurements.csv#row2", "quote": "6,320,41,612,73,338,46"}},
+    {"id": "K3", "label": "Residual release at 24 h, WT", "value": 31, "unit": "pg/mL",
+     "compare": {"label": "basal", "value": 40},
+     "source": {"id": "S2", "locator": "measurements.csv#row4", "quote": "24,31,6,38,8,34,7"}}
+  ],
+  "legend": [],
+  "notes": {
+    "units": "pg/mL, mean ± SD",
+    "conditions": "primary macrophages, n = 4, cytosolic DNA stimulation",
+    "scale_bar": "",
+    "caption": "DHHC3 knockdown raises the 6 h interferon peak from 320 to 612 pg/mL while catalytic-dead knock-in tracks wild type, so catalytic activity rather than protein level sets the ceiling.",
+    "figure_no": "Figure 2"
+  },
+  "sources": [
+    {"id": "S1", "path": "material.md", "locator": "material.md#para2",
+     "quote": "We measured interferon-beta release from three macrophage genotypes after cytosolic DNA stimulation"},
+    {"id": "S2", "path": "measurements.csv", "locator": "measurements.csv#row2",
+     "quote": "6,320,41,612,73,338,46"}
+  ],
+  "must_include": ["WT", "DHHC3 KD", "DHHC3 CD", "pg/mL"]
+}

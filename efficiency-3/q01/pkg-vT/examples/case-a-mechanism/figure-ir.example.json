@@ -1,0 +1,98 @@
+{
+  "_disclaimer": "示例 IR（示例，非正式案例结果）：用于演示 figure IR 的写法，并作为 tests/selftest.py 的输入。",
+  "case_id": "example-a-mechanism",
+  "origin": "curated",
+  "mode": "create",
+  "title": "Palmitoylation gates STING exit from the ER",
+  "subtitle": "DHHC3-dependent S-palmitoylation sets the threshold of the interferon response",
+  "panels": [
+    {
+      "order": 1, "role": "problem", "title": "Unresolved step",
+      "claim": "STING must reach the Golgi, but what holds it in the ER is unknown.",
+      "kind": "bullets",
+      "items": [
+        {"id": "p1i1", "text": "Cytosolic DNA sensing converges on the adaptor STING",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "Cytosolic DNA sensing converges on the adaptor STING"}},
+        {"id": "p1i2", "text": "STING must move from the ER to the Golgi to recruit TBK1",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "which must move from the endoplasmic reticulum to the Golgi to recruit TBK1"}},
+        {"id": "p1i3", "text": "Whether palmitoylation gates that exit was unresolved",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "How this trafficking step is gated is unresolved"}}
+      ]
+    },
+    {
+      "order": 2, "role": "method", "title": "Route", "kind": "chain",
+      "items": [
+        {"id": "p2i1", "text": "Map palmitoylation sites on STING",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "the palmitoyl transferase DHHC3 palmitoylates STING at cysteine 88"}},
+        {"id": "p2i2", "text": "Deplete DHHC3 and image ER-to-Golgi traffic",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "When DHHC3 was depleted, STING trafficking to the Golgi increased 2.4 fold"}},
+        {"id": "p2i3", "text": "Read out TBK1 phosphorylation and IFNB1 induction",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "TBK1 phosphorylation rose 3.1 fold"}}
+      ]
+    },
+    {
+      "order": 3, "role": "results", "title": "Palmitoylation-gated route",
+      "claim": "DHHC3 holds STING in the ER; removing the mark releases the route.",
+      "kind": "relations", "relations": ["R1", "R2", "R3", "R4"]
+    },
+    {
+      "order": 4, "role": "conclusion", "title": "Translational claim",
+      "claim": "Blocking the modification releases the brake on antiviral signalling.",
+      "kind": "bullets",
+      "items": [
+        {"id": "p4i1", "text": "2-bromopalmitate blocks DHHC3 and phenocopies depletion",
+         "source": {"id": "S1", "locator": "material.md#para4", "quote": "The small molecule 2-bromopalmitate blocks DHHC3 and phenocopies DHHC3 depletion"}},
+        {"id": "p4i2", "text": "IFNB1 induction rises from 18.5 to 41.2 fold",
+         "source": {"id": "S1", "locator": "material.md#para6", "quote": "IFNB1 mRNA induction at 6 h was 18.5 fold in wild type cells and 41.2 fold in DHHC3 knockdown cells"}}
+      ]
+    }
+  ],
+  "entities": [
+    {"id": "E1", "label": "DHHC3", "type": "protein", "compartment": "membrane", "italic": false,
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "the palmitoyl transferase DHHC3 palmitoylates STING at cysteine 88"}},
+    {"id": "E2", "label": "STING", "type": "protein", "compartment": "ER membrane", "italic": false,
+     "source": {"id": "S1", "locator": "material.md#para2", "quote": "STING, which must move from the endoplasmic reticulum to the Golgi"}},
+    {"id": "E3", "label": "Golgi", "type": "organelle", "compartment": "cytoplasm", "italic": false,
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "STING trafficking to the Golgi increased 2.4 fold"}},
+    {"id": "E4", "label": "TBK1", "type": "protein", "compartment": "cytoplasm", "italic": false,
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "TBK1 phosphorylation rose 3.1 fold"}},
+    {"id": "E5", "label": "IRF3", "type": "protein", "compartment": "cytoplasm", "italic": false,
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "Activated TBK1 phosphorylates IRF3"}}
+  ],
+  "relations": [
+    {"id": "R1", "from": "E1", "to": "E2", "type": "modification", "label": "S-palmitoylation",
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "DHHC3 palmitoylates STING at cysteine 88"}},
+    {"id": "R2", "from": "E2", "to": "E3", "type": "transport", "label": "ER exit",
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "Palmitoylated STING is retained in the ER and fails to reach the Golgi"}},
+    {"id": "R3", "from": "E3", "to": "E4", "type": "activation", "label": "TBK1 binding",
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "TBK1 phosphorylation rose 3.1 fold"}},
+    {"id": "R4", "from": "E4", "to": "E5", "type": "activation", "label": "phosphorylation",
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "Activated TBK1 phosphorylates IRF3"}}
+  ],
+  "charts": [],
+  "claims": [
+    {"id": "K1", "label": "IFNB1 induction at 6 h", "value": 41.2, "unit": "fold",
+     "compare": {"label": "wild type", "value": 18.5},
+     "source": {"id": "S1", "locator": "material.md#para6", "quote": "IFNB1 mRNA induction at 6 h was 18.5 fold in wild type cells and 41.2 fold in DHHC3 knockdown cells"}},
+    {"id": "K2", "label": "STING Golgi colocalisation", "value": 61, "unit": "%",
+     "compare": {"label": "wild type", "value": 22},
+     "source": {"id": "S1", "locator": "material.md#para6", "quote": "STING Golgi colocalisation was 22 percent in wild type and 61 percent after DHHC3 knockdown"}},
+    {"id": "K3", "label": "ER residence time of STING", "value": 17, "unit": "min",
+     "compare": {"label": "wild type", "value": 46},
+     "source": {"id": "S1", "locator": "material.md#para6", "quote": "Mean ER residence time of STING dropped from 46 min to 17 min"}}
+  ],
+  "legend": [],
+  "notes": {
+    "units": "fold induction / % colocalisation / min",
+    "conditions": "primary macrophages, 6 h after cytosolic DNA stimulation, n = 4",
+    "scale_bar": "",
+    "caption": "DHHC3-dependent palmitoylation retains STING in the ER and sets the ceiling of the interferon response; removing the mark raises IFNB1 induction 2.2-fold.",
+    "figure_no": "Figure 1"
+  },
+  "sources": [
+    {"id": "S1", "path": "material.md", "locator": "material.md#para2",
+     "quote": "Cytosolic DNA sensing converges on the adaptor STING, which must move from the endoplasmic reticulum to the Golgi to recruit TBK1"}
+  ],
+  "must_include": ["STING", "DHHC3", "Golgi", "TBK1", "IRF3"]
+}
+

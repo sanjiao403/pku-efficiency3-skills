@@ -1,0 +1,19 @@
+{
+  "_note": "示例（非正式答案）· 文本模板规格：Skill 包内零二进制，运行期由 pptx_util.build_template_from_spec 按本规格合成真模板（画幅 + 主题字体/配色 + 版式/占位符名）。case.json 里的 template 指向本文件时，按 case.json 所在目录解析。",
+  "default": "example-4x3-zh",
+  "templates": [
+    {
+      "name": "example-4x3-zh",
+      "build": { "size": "4:3", "theme_name": "academic-cjk",
+                 "rename_layouts_zh": true, "name_placeholders_zh": true },
+      "theme": {
+        "major": { "latin": "Arial", "ea": "黑体", "cs": "Arial" },
+        "minor": { "latin": "Times New Roman", "ea": "宋体", "cs": "Times New Roman" },
+        "colors": { "dk2": "1F3864", "accent1": "2E74B5", "accent2": "C00000",
+                    "accent3": "548235", "accent4": "BF8F00", "accent5": "7030A0",
+                    "accent6": "00B0F0", "hlink": "0563C1", "folHlink": "954F72" }
+      },
+      "expected": { "slide_size_in": [10.0, 7.5], "ratio_label": "4:3", "layout_count": 11 }
+    }
+  ]
+}

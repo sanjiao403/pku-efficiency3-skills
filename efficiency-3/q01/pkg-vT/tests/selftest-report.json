@@ -1,0 +1,438 @@
+{
+  "generated_by": "tests/selftest.py",
+  "skill_version": "---",
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "optional_engines": [
+      "pymupdf",
+      "pillow",
+      "matplotlib",
+      "playwright"
+    ],
+    "font_sans_file": "simhei.ttf",
+    "font_cjk_capable": true,
+    "font_source": "scan",
+    "sandbox": "临时目录（路径不入包）"
+  },
+  "cases": [
+    "case-a-mechanism",
+    "case-b-results",
+    "case-c-edit"
+  ],
+  "checks": [
+    {
+      "id": "case-a-mechanism.init",
+      "case": "case-a-mechanism",
+      "category": "smoke",
+      "ok": true,
+      "detail": "init exit=0",
+      "command": "ga_build.py init",
+      "seconds": 0.36
+    },
+    {
+      "id": "case-a-mechanism.check",
+      "case": "case-a-mechanism",
+      "category": "gate",
+      "ok": true,
+      "detail": "check 末行 CHECK_OK",
+      "command": "ga_build.py check",
+      "seconds": 0.29
+    },
+    {
+      "id": "case-a-mechanism.build",
+      "case": "case-a-mechanism",
+      "category": "smoke",
+      "ok": true,
+      "detail": "build exit=0",
+      "command": "ga_build.py build --fast",
+      "seconds": 1.1
+    },
+    {
+      "id": "case-a-mechanism.selfcheck",
+      "case": "case-a-mechanism",
+      "category": "gate",
+      "ok": true,
+      "detail": "SELFCHECK_OK  problems=0",
+      "command": "ga_build.py selfcheck",
+      "seconds": 0.29
+    },
+    {
+      "id": "case-a-mechanism.artifacts",
+      "case": "case-a-mechanism",
+      "category": "artifact",
+      "ok": true,
+      "detail": "svg=57579 png=260803 pdf=1900497 bytes",
+      "command": "ls /app/output",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.editable_svg",
+      "case": "case-a-mechanism",
+      "category": "artifact",
+      "ok": true,
+      "detail": "text=74 groups=8",
+      "command": "figure.svg",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.contract",
+      "case": "case-a-mechanism",
+      "category": "contract",
+      "ok": true,
+      "detail": "缺失键=无",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.case_id",
+      "case": "case-a-mechanism",
+      "category": "contract",
+      "ok": true,
+      "detail": "case_id=example-a-mechanism",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.png_real",
+      "case": "case-a-mechanism",
+      "category": "artifact",
+      "ok": true,
+      "detail": "IHDR={'width': 2400, 'height': 1350, 'bit_depth': 8, 'color_type': 2} 声明=2400",
+      "command": "figure.png",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.pdf_real",
+      "case": "case-a-mechanism",
+      "category": "artifact",
+      "ok": true,
+      "detail": "header=%PDF-1.7 pages=1",
+      "command": "figure.pdf",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.compliance",
+      "case": "case-a-mechanism",
+      "category": "gate",
+      "ok": true,
+      "detail": "fail项=无",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-a-mechanism.deterministic",
+      "case": "case-a-mechanism",
+      "category": "gate",
+      "ok": true,
+      "detail": "两跑 svg sha256 一致",
+      "command": "ga_build.py build x2",
+      "seconds": 1.08
+    },
+    {
+      "id": "case-b-results.init",
+      "case": "case-b-results",
+      "category": "smoke",
+      "ok": true,
+      "detail": "init exit=0",
+      "command": "ga_build.py init",
+      "seconds": 0.32
+    },
+    {
+      "id": "case-b-results.check",
+      "case": "case-b-results",
+      "category": "gate",
+      "ok": true,
+      "detail": "check 末行 CHECK_OK",
+      "command": "ga_build.py check",
+      "seconds": 0.31
+    },
+    {
+      "id": "case-b-results.build",
+      "case": "case-b-results",
+      "category": "smoke",
+      "ok": true,
+      "detail": "build exit=0",
+      "command": "ga_build.py build --fast",
+      "seconds": 1.1
+    },
+    {
+      "id": "case-b-results.selfcheck",
+      "case": "case-b-results",
+      "category": "gate",
+      "ok": true,
+      "detail": "SELFCHECK_OK  problems=0",
+      "command": "ga_build.py selfcheck",
+      "seconds": 0.3
+    },
+    {
+      "id": "case-b-results.artifacts",
+      "case": "case-b-results",
+      "category": "artifact",
+      "ok": true,
+      "detail": "svg=47551 png=238317 pdf=1896393 bytes",
+      "command": "ls /app/output",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.editable_svg",
+      "case": "case-b-results",
+      "category": "artifact",
+      "ok": true,
+      "detail": "text=84 groups=8",
+      "command": "figure.svg",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.contract",
+      "case": "case-b-results",
+      "category": "contract",
+      "ok": true,
+      "detail": "缺失键=无",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.case_id",
+      "case": "case-b-results",
+      "category": "contract",
+      "ok": true,
+      "detail": "case_id=example-b-results",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.png_real",
+      "case": "case-b-results",
+      "category": "artifact",
+      "ok": true,
+      "detail": "IHDR={'width': 2400, 'height': 1350, 'bit_depth': 8, 'color_type': 2} 声明=2400",
+      "command": "figure.png",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.pdf_real",
+      "case": "case-b-results",
+      "category": "artifact",
+      "ok": true,
+      "detail": "header=%PDF-1.7 pages=1",
+      "command": "figure.pdf",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.compliance",
+      "case": "case-b-results",
+      "category": "gate",
+      "ok": true,
+      "detail": "fail项=无",
+      "command": "result.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-b-results.deterministic",
+      "case": "case-b-results",
+      "category": "gate",
+      "ok": true,
+      "detail": "两跑 svg sha256 一致",
+      "command": "ga_build.py build x2",
+      "seconds": 1.05
+    },
+    {
+      "id": "case-c-edit.init",
+      "case": "case-c-edit",
+      "category": "smoke",
+      "ok": true,
+      "detail": "init exit=0",
+      "command": "ga_build.py init",
+      "seconds": 0.31
+    },
+    {
+      "id": "case-c-edit.edit",
+      "case": "case-c-edit",
+      "category": "smoke",
+      "ok": true,
+      "detail": "edit exit=0",
+      "command": "ga_build.py edit",
+      "seconds": 0.53
+    },
+    {
+      "id": "case-c-edit.selfcheck",
+      "case": "case-c-edit",
+      "category": "gate",
+      "ok": true,
+      "detail": "SELFCHECK_OK  problems=0",
+      "command": "ga_build.py selfcheck",
+      "seconds": 0.29
+    },
+    {
+      "id": "case-c-edit.edit_record",
+      "case": "case-c-edit",
+      "category": "gate",
+      "ok": true,
+      "detail": "applied=3 source_sha=5ca233b3d7ea",
+      "command": "edit-record.json",
+      "seconds": 0.0
+    },
+    {
+      "id": "case-c-edit.untouched_preserved",
+      "case": "case-c-edit",
+      "category": "gate",
+      "ok": true,
+      "detail": "编辑后 <text> 数量不少于原图",
+      "command": "figure.svg",
+      "seconds": 0.0
+    },
+    {
+      "id": "degrade.empty_input",
+      "case": "-",
+      "category": "degrade",
+      "ok": true,
+      "detail": "exit=0 status=input_error",
+      "command": "ga_build.py build",
+      "seconds": 0.99
+    },
+    {
+      "id": "degrade.broken_json",
+      "case": "-",
+      "category": "degrade",
+      "ok": true,
+      "detail": "init=0 build=0",
+      "command": "ga_build.py init/build",
+      "seconds": 1.34
+    },
+    {
+      "id": "stress.overflow_repair",
+      "case": "-",
+      "category": "stress",
+      "ok": true,
+      "detail": "exit=0 修复/异常记录=2 丢弃条目=0 越界闸=pass",
+      "command": "ga_build.py build (900x520, 长文本)",
+      "seconds": 1.62
+    },
+    {
+      "id": "fallback.stdlib_pdf",
+      "case": "-",
+      "category": "fallback",
+      "ok": true,
+      "detail": "engine=stdlib-pdf pages=1 bytes=10438 vector=True",
+      "command": "render_pdf._write_stdlib_pdf",
+      "seconds": 0.02
+    },
+    {
+      "id": "fallback.stdlib_png",
+      "case": "-",
+      "category": "fallback",
+      "ok": true,
+      "detail": "engine=stdlib 2400x1350 ink=0.1118",
+      "command": "render_png._via_stdlib",
+      "seconds": 1.5
+    }
+  ],
+  "totals": {
+    "checks": 34,
+    "passed": 34,
+    "failed": 0,
+    "seconds": 13.63
+  },
+  "verdict": "pass",
+  "notes": [
+    "全部命令以子进程方式调用真实入口 ga_build.py，并回读产出文件核验；",
+    "示例案例为包内自带示例（标「示例」），非组织方固定案例；",
+    "deterministic 检查对同一 IR 重跑两次并比较 figure.svg 的 sha256。"
+  ],
+  "render_evidence": {
+    "note": "文字化渲染证据（本包不含任何二进制资源；位图/矢量件在 questions/q01/runs/）。数值来自 pkg-vT 在 /tmp 隔离目录上的一次真实 build（示例案例 case-a-mechanism），不是估计值。",
+    "run": {
+      "case": "examples/case-a-mechanism (示例)",
+      "status": "ok",
+      "hard_fail": 0,
+      "warnings": 0,
+      "exceptions": 2,
+      "exceptions_note": "2 条均为版式自动修复记录（关系列标签按栏宽自适应），非失败",
+      "build_seconds": 0.78,
+      "fast_mode": true
+    },
+    "editable_source": {
+      "file": "figure.svg",
+      "format": "svg",
+      "bytes": 57579,
+      "layers": 8,
+      "layer_names": [
+        "frame",
+        "panels",
+        "entities",
+        "relations",
+        "data",
+        "labels",
+        "legend",
+        "annotations"
+      ],
+      "text_elements": 74,
+      "text_is_real_text": true,
+      "text_to_paths": false,
+      "element_ids_map_to_content_map": true
+    },
+    "png": {
+      "path": "figure.png (运行产物，未入包)",
+      "width_px": 2400,
+      "height_px": 1350,
+      "dpi": 300,
+      "physical_mm": [
+        203.2,
+        114.3
+      ],
+      "engine": "pymupdf",
+      "ihdr_verified": true,
+      "ink_ratio": 0.2161,
+      "blank_canvas": false,
+      "font_embedding": "不适用（像素图，字形已栅格化；字形来源 simhei.ttf，见 font_report）"
+    },
+    "pdf": {
+      "path": "figure.pdf (运行产物，未入包)",
+      "pages": 1,
+      "bytes": 1900497,
+      "header": "%PDF-",
+      "vector": true,
+      "engine": "pymupdf",
+      "font_embedded": true,
+      "font_embedding_evidence": "PDF 流内含 /FontFile2（嵌入子集）",
+      "page_pt": [
+        576.0,
+        324.0
+      ]
+    },
+    "fonts": {
+      "sans_file": "simhei.ttf",
+      "cjk_capable": true,
+      "discovery_source": "scan",
+      "substitutions": [],
+      "note": "字体探测顺序：有界目录扫描 → fontconfig(可选) → PyMuPDF 内置"
+    },
+    "determinism": {
+      "method": "同一 figure IR 连续两次 build，比较 figure.svg 的 sha256",
+      "identical": true,
+      "svg_sha256": "32c783f946ae705fd76f65ab573dfbfc74194aaa86bd1894d9cecbf9ba4e6f5a"
+    },
+    "binary_policy": {
+      "package_contains_binary": false,
+      "checked_extensions": [
+        "png",
+        "jpg",
+        "pdf",
+        "zip",
+        "ttf",
+        "pptx",
+        "docx",
+        "xlsx"
+      ],
+      "binary_files_found": 0,
+      "preview_policy": "包内以 SVG(文本) 作为替代预览；位图预览放在 questions/q01/runs/"
+    },
+    "reproduce": [
+      "python3 scripts/ga_build.py init  --input examples/case-a-mechanism --work /tmp/w --output /tmp/o",
+      "cp examples/case-a-mechanism/figure-ir.example.json /tmp/w/figure-ir.json",
+      "python3 scripts/ga_build.py build --input examples/case-a-mechanism --work /tmp/w --output /tmp/o --fast",
+      "python3 scripts/ga_build.py selfcheck --input examples/case-a-mechanism --work /tmp/w --output /tmp/o"
+    ]
+  }
+}

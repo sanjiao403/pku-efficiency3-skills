@@ -1,0 +1,237 @@
+{
+  "_comment": "示例（非正式答案）——带标签的增益案例集。每条 = label（grounded / fabricated_number / off_topic / unit_missing）+ 可跑的 case（内联数据）+ expect（期望判定）+ 判定字段路径。由 scripts/benchmark.py 逐条真实运行、scripts/verify.py 只读产物判定，verdict 写进 benchmark.json.gain_cases[].verdict。",
+  "cases": [
+    {
+      "id": "gain-01",
+      "label": "grounded",
+      "why": "分组柱状图：每个柱都能指回源表行与列（grounded 基线）",
+      "expect": {
+        "status": "success",
+        "value_fidelity": "ok",
+        "traceability_rate": 1.0,
+        "unit_on_axis": true
+      },
+      "case": {
+        "case_id": "gain-01-grounded",
+        "workorder": "source_value_chart",
+        "chart_type": "grouped_bar",
+        "journal": "nature",
+        "title": "LPS-induced inflammatory gene expression (example data)",
+        "x_label": "Gene",
+        "y_label": "Relative mRNA expression",
+        "y_unit": "fold change",
+        "caption": "Bars are means of n = 3 independent cultures; error bars show s.d. Example data.",
+        "error_bar_meaning": "s.d.",
+        "data": {
+          "columns": [
+            "gene",
+            "condition",
+            "mean",
+            "sd",
+            "n"
+          ],
+          "rows": [
+            [
+              "Il6",
+              "Vehicle",
+              1.0,
+              0.11,
+              3
+            ],
+            [
+              "Il6",
+              "LPS",
+              8.42,
+              0.94,
+              3
+            ],
+            [
+              "Tnf",
+              "Vehicle",
+              1.0,
+              0.08,
+              3
+            ],
+            [
+              "Tnf",
+              "LPS",
+              5.31,
+              0.61,
+              3
+            ],
+            [
+              "Hif1a",
+              "Vehicle",
+              1.0,
+              0.14,
+              3
+            ],
+            [
+              "Hif1a",
+              "LPS",
+              4.07,
+              0.52,
+              3
+            ]
+          ]
+        },
+        "output_contract": {
+          "case_id": "案例标识",
+          "status": "success | partial | failed",
+          "summary": "一句话结论",
+          "editable_source": "可编辑源文件路径",
+          "exports": "导出件路径",
+          "element_map": "映射文件路径",
+          "checks": "检查结果",
+          "sources": "材料 + hash",
+          "change_log": "修改记录",
+          "uncertainty": "缺口"
+        }
+      }
+    },
+    {
+      "id": "gain-02",
+      "label": "fabricated_number",
+      "why": "把映射里的数值改成源表不存在的 7.77，要求只读产物即判出 value.mismatch",
+      "expect": {
+        "value_fidelity": "fail",
+        "detected_by": "values_match_source / value.mismatch",
+        "tampered_element": "el-s1-cat1",
+        "tampered_to": 7.77
+      },
+      "case": {
+        "case_id": "gain-02-fabricated",
+        "workorder": "source_value_chart",
+        "chart_type": "grouped_bar",
+        "journal": "nature",
+        "x_label": "Gene",
+        "y_label": "Relative mRNA expression",
+        "y_unit": "fold change",
+        "caption": "Bars are means of n = 3 independent cultures; error bars show s.d. Example data.",
+        "error_bar_meaning": "s.d.",
+        "data": {
+          "columns": [
+            "gene",
+            "condition",
+            "mean",
+            "sd",
+            "n"
+          ],
+          "rows": [
+            [
+              "Il6",
+              "Vehicle",
+              1.0,
+              0.11,
+              3
+            ],
+            [
+              "Il6",
+              "LPS",
+              8.42,
+              0.94,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "gain-03",
+      "label": "off_topic",
+      "why": "跑题工单 + 无数值列：必须拒绝出图、不编数字",
+      "expect": {
+        "status": "failed",
+        "values_drawn": 0,
+        "no_invention": true
+      },
+      "case": {
+        "case_id": "gain-03-off-topic",
+        "workorder": "protein_structure_alignment",
+        "chart_type": "bar",
+        "title": "Structural alignment summary (example data)",
+        "y_label": "RMSD",
+        "y_unit": "angstrom",
+        "data": {
+          "columns": [
+            "sample",
+            "note"
+          ],
+          "rows": [
+            [
+              "S1",
+              "helix-rich, no measurement recorded"
+            ],
+            [
+              "S2",
+              "beta-sheet, not assayed"
+            ],
+            [
+              "S3",
+              "failed QC"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "gain-04",
+      "label": "unit_missing",
+      "why": "数量轴是物理量却无单位：必须出图但报 partial 与 axis_units 失败",
+      "expect": {
+        "status": "partial",
+        "axis_units": "fail",
+        "unit_on_axis": false
+      },
+      "case": {
+        "case_id": "gain-04-unit-missing",
+        "workorder": "source_value_chart",
+        "chart_type": "grouped_bar",
+        "journal": "cell",
+        "x_label": "Condition",
+        "y_label": "Intracellular ATP concentration",
+        "caption": "Bars are means of n = 4 samples; error bars show s.e.m. The work order omits the unit.",
+        "error_bar_meaning": "s.e.m.",
+        "data": {
+          "columns": [
+            "condition",
+            "group",
+            "mean",
+            "sem",
+            "n"
+          ],
+          "rows": [
+            [
+              "Control",
+              "WT",
+              12.4,
+              0.8,
+              4
+            ],
+            [
+              "Control",
+              "KO",
+              9.1,
+              0.7,
+              4
+            ],
+            [
+              "Stimulated",
+              "WT",
+              18.7,
+              1.3,
+              4
+            ],
+            [
+              "Stimulated",
+              "KO",
+              11.2,
+              0.9,
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

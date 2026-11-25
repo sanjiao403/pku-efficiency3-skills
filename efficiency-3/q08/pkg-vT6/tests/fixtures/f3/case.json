@@ -1,0 +1,34 @@
+{
+  "case_id": "FIXTURE-F3",
+  "task": "Edit-and-adapt: a starting deck already exists (old template content, two leftover slides). Adapt it to the new paper without breaking the deck's master/layout inheritance, and keep a fully cited evidence trail.",
+  "language": "en",
+  "audience": "ML reading group (30 min slot, 12 min talk)",
+  "minutes": 12,
+  "slide_count": {"min": 9, "max": 12, "target": 11},
+  "template": "template.pptx",
+  "starting_deck": "starting_deck.pptx",
+  "source": {"path": "paper.md", "kind": "md"},
+  "figure_specs": [
+    {
+      "label": "Figure 1",
+      "csv": "mae_by_hour.csv",
+      "kind": "line",
+      "x": "hour",
+      "y": "ARIMA_MAE",
+      "series": "ARIMA_MAE",
+      "title": "Test MAE by hour of day",
+      "xlabel": "Hour of day",
+      "ylabel": "MAE (MW)",
+      "width_in": 6.4,
+      "height_in": 3.2
+    }
+  ],
+  "footer": "FIXTURE-F3 (adapted deck)",
+  "output_contract": {
+    "presentation": "editable pptx",
+    "slide_plan": "page-level claims",
+    "evidence_map": "page → source locator",
+    "render": "pdf/png + font substitution log",
+    "status": "success|partial + uncertainty"
+  }
+}

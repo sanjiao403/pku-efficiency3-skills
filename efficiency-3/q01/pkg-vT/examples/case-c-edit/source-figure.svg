@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 示例输入（示例，非正式案例结果）：一份可编辑的机制图草稿，供 edit 模式演示保源修改。 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <title>Draft mechanism panel (example input)</title>
+  <g id="layer-panels">
+    <rect id="box-1" x="40" y="120" width="300" height="120" rx="10" fill="#F7F8FA" stroke="#D5D9DE"/>
+    <text id="box-1-label" x="190" y="188" font-family="'Noto Sans CJK SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="middle">STING in ER</text>
+    <rect id="box-2" x="450" y="120" width="300" height="120" rx="10" fill="#F7F8FA" stroke="#D5D9DE"/>
+    <text id="box-2-label" x="600" y="188" font-family="'Noto Sans CJK SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="middle">ER retention</text>
+    <rect id="box-3" x="860" y="120" width="300" height="120" rx="10" fill="#D55E00" stroke="#1A1A1E"/>
+    <text id="box-3-label" x="1010" y="188" font-family="'Noto Sans CJK SC',Helvetica,Arial,sans-serif" font-size="26" fill="#FFFFFF" text-anchor="middle">Golgi STING</text>
+  </g>
+  <g id="layer-relations">
+    <line id="edge-1" x1="340" y1="180" x2="440" y2="180" stroke="#3C4043" stroke-width="3"/>
+    <polygon id="edge-1-head" points="450,180 436,173 436,187" fill="#3C4043"/>
+    <line id="edge-2" x1="750" y1="180" x2="850" y2="180" stroke="#3C4043" stroke-width="3"/>
+    <polygon id="edge-2-head" points="860,180 846,173 846,187" fill="#3C4043"/>
+  </g>
+</svg>

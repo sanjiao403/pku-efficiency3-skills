@@ -1,0 +1,44 @@
+{
+  "_comment": "示例（非正式答案）。自带内联数据，可直接跑通主命令：python3 scripts/chart.py --case examples/case.example.json --out /app/output。字段名故意混用常见别名（chart_type / y_label / y_unit / caption / journal / output_contract），用于说明容错读取；不是平台正式案例，也不含被测答案。",
+  "case_id": "example-inline-grouped-bar",
+  "task": "scientific-data-chart-generation-and-editing",
+  "workorder": "source_value_chart",
+  "chart_type": "grouped_bar",
+  "journal": "nature",
+  "title": "LPS-induced inflammatory gene expression (example data)",
+  "x_label": "Gene",
+  "y_label": "Relative mRNA expression",
+  "y_unit": "fold change",
+  "caption": "Relative mRNA expression in BV2 cells treated with vehicle or LPS (100 ng/mL, 6 h). Bars are means of n = 3 independent cultures; error bars show s.d. * p < 0.05, two-tailed unpaired t-test. Example data, not a published result.",
+  "error_bar_meaning": "s.d.",
+  "notes": "Vehicle was normalised to 1.00 per gene, so comparisons are within a gene, not across genes.",
+  "data": {
+    "columns": ["gene", "condition", "mean", "sd", "n"],
+    "rows": [
+      ["Il6", "Vehicle", 1.0, 0.11, 3],
+      ["Il6", "LPS", 8.42, 0.94, 3],
+      ["Tnf", "Vehicle", 1.0, 0.08, 3],
+      ["Tnf", "LPS", 5.31, 0.61, 3],
+      ["Hif1a", "Vehicle", 1.0, 0.14, 3],
+      ["Hif1a", "LPS", 4.07, 0.52, 3],
+      ["Vegfa", "Vehicle", 1.0, 0.19, 3],
+      ["Vegfa", "LPS", 2.68, 0.37, 3]
+    ]
+  },
+  "significance": [
+    { "id": "sig-il6", "between": [["s1", "cat1"], ["s2", "cat1"]], "marker": "**", "p": 0.004, "test": "two-tailed unpaired t-test" },
+    { "id": "sig-tnf", "between": [["s1", "cat2"], ["s2", "cat2"]], "marker": "*", "p": 0.02, "test": "two-tailed unpaired t-test" }
+  ],
+  "output_contract": {
+    "case_id": "案例标识原样回填",
+    "status": "success | partial | failed",
+    "summary": "一句话结论",
+    "editable_source": "可编辑源文件相对路径列表",
+    "exports": "导出件相对路径列表",
+    "element_map": "图元↔源数据映射文件的相对路径",
+    "checks": "各项检查结果",
+    "sources": "材料文件 + 版本/hash",
+    "change_log": "生成与人工修改记录",
+    "uncertainty": "不确定性与缺口"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "_note": "案例输入契约（case.json）。任何字段都可省略；省略时按『缺省行为』列处理。路径可以是相对 case.json 的目录，也可以是绝对路径。",
+  "schema": "q08-case/1",
+  "case_id": "CASE-0001",
+  "task": "把论文组织成 N 分钟学术汇报并套用给定 pptx 模板",
+  "language": "zh",
+  "audience": "课题组组会（交叉学科听众）",
+  "venue": "组会 · 2026 秋",
+  "minutes": 12,
+  "slide_count": { "min": 9, "max": 12, "target": 10, "figure_slides": 3 },
+  "template": "template.pptx",
+  "starting_deck": null,
+  "source": { "path": "paper.pdf", "kind": "pdf" },
+  "deck_title": null,
+  "deck_subtitle": null,
+  "footer": "课题组组会 · 2026 秋",
+  "required_sections": ["Results", "Limitations"],
+  "fonts": {
+    "title": { "latin": "Arial", "ea": "黑体" },
+    "body": { "latin": "Times New Roman", "ea": "宋体" },
+    "caption": { "latin": "Times New Roman", "ea": "宋体" }
+  },
+  "figure_specs": [
+    {
+      "label": "Figure 1",
+      "csv": "data/curve.csv",
+      "kind": "line",
+      "x": "x_col",
+      "y": "y_col",
+      "series": "series_col",
+      "error": null,
+      "lo": null,
+      "hi": null,
+      "title": "figure title",
+      "xlabel": "x label",
+      "ylabel": "y label",
+      "width_in": 6.0,
+      "height_in": 3.4
+    }
+  ],
+  "output_contract": {
+    "presentation": "可编辑 pptx（母版/版式继承）",
+    "slide_plan": "页级主张与结构",
+    "evidence_map": "每页 → 论文图/表/章节定位",
+    "render": "PDF/PNG 预览与字体替换记录",
+    "status": "success|partial + uncertainty"
+  },
+  "_defaults": {
+    "case_id": "UNKNOWN",
+    "language": "zh",
+    "slide_count": "8–12（无约束时）",
+    "template": "无模板时按包内 templates/template-spec.json 在运行期合成母版（包内零二进制 pptx），并记 uncertainty",
+    "source": "case 目录里唯一的材料类文件（.md/.markdown/.txt/.pdf/.docx；task.md/case.json/*.example.json/template-spec*.json 等工单与契约不当材料）",
+    "allow_work_order_source": "false；仅当确实要用工单类文件当材料时才置 true（默认拒绝 SOURCE_IS_TASK_DOC）",
+    "figure_specs": "不出图，使用材料内已有图（PDF 抽图 / md 引用）",
+    "fonts": "沿用模板主题字体（major→标题，minor→正文）",
+    "footer": "截断后的论文标题",
+    "output_contract": "不回显额外字段"
+  }
+}

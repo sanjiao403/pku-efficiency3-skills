@@ -1,0 +1,589 @@
+{
+  "case_id": "EXAMPLE-001",
+  "task": "把示例材料组织成 10 分钟学术汇报，套用自带学术模板（16:9）",
+  "status": "partial",
+  "status_reason": "渲染链未产出 PDF/PNG（none）",
+  "summary": "把《单原子纳米酶比色检测平台用于水样中痕量汞离子》套进模板（11 个版式，主题字体 Times New Roman），产出 10 页可编辑 pptx，渲染 0 页 PDF（后端 none）；18 条页级证据、引文可回源率 100.0%、正文最小字号 20.0 pt、图片宽高比最大偏差 0.000%。",
+  "generated_at": "2026-11-22T00:46:57+08:00",
+  "results": {
+    "template": {
+      "source": {
+        "path": "academic-16x9.pptx",
+        "bytes": 27473,
+        "sha256": "b87d6acec104dd079f0a075b3ea2d33b8d93efb3c957a207e4183b5f612c984a"
+      },
+      "slide_size": {
+        "width_emu": 12191695,
+        "height_emu": 6858000,
+        "width_in": 13.33299978127734,
+        "height_in": 7.5,
+        "aspect": 1.7777,
+        "ratio_label": "16:9"
+      },
+      "layout_count": 11,
+      "roles": {
+        "title": [
+          0
+        ],
+        "content": [
+          1,
+          9,
+          10
+        ],
+        "section": [
+          2
+        ],
+        "two-column": [
+          3,
+          4,
+          7
+        ],
+        "title-only": [
+          5
+        ],
+        "blank": [
+          6
+        ],
+        "figure": [
+          8
+        ]
+      },
+      "theme_fonts": {
+        "majorFont": {
+          "latin": "Arial",
+          "ea": "黑体",
+          "cs": "Arial"
+        },
+        "minorFont": {
+          "latin": "Times New Roman",
+          "ea": "宋体",
+          "cs": "Times New Roman"
+        }
+      },
+      "theme_colors": {
+        "dk1": "000000",
+        "lt1": "FFFFFF",
+        "dk2": "1F3864",
+        "lt2": "F2F2F2",
+        "accent1": "2E74B5",
+        "accent2": "C00000",
+        "accent3": "548235",
+        "accent4": "BF8F00",
+        "accent5": "7030A0",
+        "accent6": "00B0F0",
+        "hlink": "0563C1",
+        "folHlink": "954F72"
+      },
+      "fonts": {
+        "Arial": {
+          "declared_by": [
+            "majorFont.cs",
+            "majorFont.latin"
+          ],
+          "installed": true,
+          "fallback_latin": "Liberation Sans",
+          "fallback_ea": "Microsoft YaHei"
+        },
+        "Times New Roman": {
+          "declared_by": [
+            "minorFont.cs",
+            "minorFont.latin"
+          ],
+          "installed": true,
+          "fallback_latin": "Liberation Serif",
+          "fallback_ea": "SimSun"
+        },
+        "宋体": {
+          "declared_by": [
+            "minorFont.ea"
+          ],
+          "installed": true,
+          "fallback_latin": "Times New Roman",
+          "fallback_ea": "SimSun"
+        },
+        "黑体": {
+          "declared_by": [
+            "majorFont.ea"
+          ],
+          "installed": true,
+          "fallback_latin": "Arial",
+          "fallback_ea": "SimHei"
+        }
+      },
+      "warnings": [],
+      "inheritance": {
+        "layouts_out": 11,
+        "layouts_template": 11,
+        "masters_out": 1,
+        "masters_template": 1,
+        "theme_out": {
+          "majorFont": {
+            "latin": "Arial",
+            "ea": "黑体",
+            "cs": "Arial"
+          },
+          "minorFont": {
+            "latin": "Times New Roman",
+            "ea": "宋体",
+            "cs": "Times New Roman"
+          }
+        },
+        "theme_template": {
+          "majorFont": {
+            "latin": "Arial",
+            "ea": "黑体",
+            "cs": "Arial"
+          },
+          "minorFont": {
+            "latin": "Times New Roman",
+            "ea": "宋体",
+            "cs": "Times New Roman"
+          }
+        },
+        "layouts_preserved": true,
+        "theme_preserved": true
+      }
+    },
+    "plan": {
+      "stats": {
+        "slides": 10,
+        "bullets": 24,
+        "figures_used": 1,
+        "body_chars": 1086,
+        "sections_in_source": 13,
+        "sections_used": 6
+      },
+      "slide_count_constraint": {
+        "min": 8,
+        "max": 10,
+        "target": 9,
+        "figure_slides": 2
+      },
+      "dropped_content": [
+        {
+          "section": "3.1 催化活性与抑制机制",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/3 结果/3.1 催化活性与抑制机制",
+          "score": 4.13,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "3.3 选择性与实际样品",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/3 结果/3.3 选择性与实际样品",
+          "score": 4.103,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "2.3 实际水样与统计",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/2 方法/2.3 实际水样与统计",
+          "score": 4.035,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "1 引言",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/1 引言",
+          "score": 1.55,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "2 方法",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/2 方法",
+          "score": 0.86,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "单原子纳米酶比色检测平台用于水样中痕量汞离子",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子",
+          "score": 0.81,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        },
+        {
+          "section": "3 结果",
+          "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/3 结果",
+          "score": 0.66,
+          "why": "超出案例页数上限（slide_count.max=10）"
+        }
+      ],
+      "fonts": {
+        "title": {
+          "latin": "Arial",
+          "ea": "黑体",
+          "theme_latin": "Arial",
+          "theme_ea": "黑体",
+          "min_pt": 20.0
+        },
+        "body": {
+          "latin": "Times New Roman",
+          "ea": "宋体",
+          "theme_latin": "Times New Roman",
+          "theme_ea": "宋体",
+          "min_pt": 14.0
+        },
+        "caption": {
+          "latin": "Times New Roman",
+          "ea": "宋体",
+          "theme_latin": "Times New Roman",
+          "theme_ea": "宋体",
+          "min_pt": 14.0
+        },
+        "policy": "中英文分别落到 a:latin / a:ea；字体不可用时按 template_map.fonts 的 fallback 链替换，并把替换写进 render_report（不静默回退）"
+      },
+      "ladders": {
+        "body": [
+          20,
+          18,
+          16,
+          14
+        ],
+        "title": [
+          40,
+          36,
+          32,
+          28,
+          24
+        ],
+        "caption": [
+          14,
+          12,
+          11,
+          10
+        ],
+        "min_body_pt": 14.0
+      }
+    },
+    "build": {
+      "slides": 10,
+      "stripped_slides": 0,
+      "mode": "build",
+      "warnings": [],
+      "font_scale": [],
+      "placeholders_synthesized": []
+    },
+    "fit": {
+      "metrics": {
+        "slides": 10,
+        "slides_with_text_overflow": 0,
+        "textboxes_over_container": 0,
+        "min_body_pt": 20.0,
+        "min_caption_pt": 12.0,
+        "figure_aspect_max_deviation": 0.0,
+        "figures": 1,
+        "geometry_inherited_slides": 9,
+        "locator_coverage": 1.0,
+        "quote_verified_rate": 1.0,
+        "footer_slides": 8,
+        "page_number_slides": 8
+      },
+      "issues": [],
+      "consistency": {
+        "title_geometry_groups": 3,
+        "title_geometry_inconsistent": []
+      }
+    },
+    "render": {
+      "ok": false,
+      "backend": "none",
+      "pdf": null,
+      "png_count": 0,
+      "page_count": null,
+      "pdf_fonts": null,
+      "missing_fonts": [],
+      "issues": null,
+      "pages": []
+    },
+    "evidence_summary": {
+      "total": 18,
+      "verified": 18,
+      "pages_with_evidence": 7
+    },
+    "metrics": {
+      "slides": 10,
+      "template_layouts_preserved": true,
+      "template_theme_preserved": true,
+      "layouts_in_output": 11,
+      "slides_with_overflow": 0,
+      "overflow_boxes": 0,
+      "min_body_pt": 20.0,
+      "figure_aspect_max_deviation": 0.0,
+      "figures": 1,
+      "locator_coverage": 1.0,
+      "quote_verified_rate": 1.0,
+      "pdf_pages": null,
+      "pdf_backend": "none",
+      "pdf_fonts": null,
+      "font_substitutions": [],
+      "min_pdf_text_coverage": null,
+      "page_number_slides": 8,
+      "footer_slides": 8
+    },
+    "figures": [
+      {
+        "out": "fig1.png",
+        "kind": "line",
+        "csv": "pkg/tests/fixtures/f1/dose_response.csv",
+        "csv_sha256": "1ece7087a6e2e186786f9e9b6132bc448b179327925429c2aa547610d635dd7e",
+        "rows": 9,
+        "cols": [
+          "conc_nM",
+          "rel_absorbance"
+        ],
+        "size_bytes": 51994,
+        "width_in": 6.0,
+        "height_in": 3.4,
+        "label": "Figure 1",
+        "spec_index": 1,
+        "rewritten_in_source": 1
+      }
+    ]
+  },
+  "slides": [
+    {
+      "page": 1,
+      "role": "title",
+      "layout": "Title Slide",
+      "title": "单原子纳米酶比色检测平台用于水样中痕量汞离子",
+      "claim": "",
+      "evidence_locs": [],
+      "evidence_count": 0,
+      "figure": null,
+      "font_sizes": [
+        40.0,
+        14.0
+      ],
+      "overflow": [],
+      "notes_chars": null,
+      "render": null
+    },
+    {
+      "page": 2,
+      "role": "agenda",
+      "layout": "Title and Content",
+      "title": "提纲 / Outline",
+      "claim": "",
+      "evidence_locs": [
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/2 方法/2.1 材料与表征",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/2 方法/2.2 比色检测流程",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/3 结果/3.2 分析性能",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/4 讨论",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/5 局限"
+      ],
+      "evidence_count": 6,
+      "figure": null,
+      "font_sizes": [
+        32.0,
+        20.0,
+        20.0
+      ],
+      "overflow": [],
+      "notes_chars": null,
+      "render": null
+    },
+    {
+      "page": 3,
+      "role": "bullets",
+      "layout": "Title and Content",
+      "title": "摘要",
+      "claim": "优化条件下，检测线性范围为 0.5–120 nM，检出限（LOD，3σ/S）为 0.18 nM，单次检测耗时 12 min。",
+      "evidence_locs": [
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1",
+        "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1"
+      ],
+      "evidence_count": 4,
+      "figure": null,
+      "font_sizes": [
+        32.0,
+        20.0,
+        20.0
+      ],
+      "overflow": [],
+      "notes_chars": null,
+      "render": null
+    }
+  ],
+  "evidence": [
+    {
+      "page": 3,
+      "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1",
+      "block_id": "b004",
+      "quote": "对 42 份实际水样的加标回收率为 96.4%–104.1%，相对标准偏差（RSD）≤ 4.7%。",
+      "verified": true,
+      "source_kind": "md"
+    },
+    {
+      "page": 3,
+      "locator": "§单原子纳米酶比色检测平台用于水样中痕量汞离子/摘要 ¶1",
+      "block_id": "b004",
+      "quote": "与电感耦合等离子体质谱（ICP-MS）平行比对，Bland–Altman 分析的平均偏差为 −0.7 nM（95% 一致",
+      "verified": true,
+      "source_kind": "md"
+    }
+  ],
+  "sources": [
+    {
+      "file": "source.md",
+      "kind": "md",
+      "sha256": "2810bdbfd2fcedd1...(示意截断)",
+      "bytes": 4922,
+      "chars": 2357,
+      "method": "markdown 结构解析（标题/段落/图/表）",
+      "original_file": "paper.md",
+      "sha256_original": "2810bdbfd2fcedd1...(示意截断)",
+      "source_sha256_used_for_extraction": "db7cdb2479222e240fc6b0d13ea8d760760f57ce851ef3f5aa1d0ad29cdf1c50"
+    }
+  ],
+  "uncertainty": [
+    {
+      "item": "渲染",
+      "why": "渲染链全失败：保留 pptx + HTML 预览，不伪造 PDF/PNG",
+      "handling": "保留 pptx + HTML 预览；不伪造 PDF/PNG"
+    },
+    {
+      "item": "内容裁剪",
+      "why": "3.1 催化活性与抑制机制（超出案例页数上限（slide_count.max=10））",
+      "handling": "按页数上限裁剪，原文定位保留在 dropped_content"
+    },
+    {
+      "item": "内容裁剪",
+      "why": "3.3 选择性与实际样品（超出案例页数上限（slide_count.max=10））",
+      "handling": "按页数上限裁剪，原文定位保留在 dropped_content"
+    }
+  ],
+  "change_log": [
+    {
+      "step": "1 模板解析",
+      "what": "读母版/版式/占位符/主题字体与配色",
+      "evidence": "results.template"
+    },
+    {
+      "step": "2 材料抽取",
+      "what": "按标题/段落/图注切成可定位单元",
+      "evidence": "sources + evidence[].locator"
+    },
+    {
+      "step": "3 页级计划",
+      "what": "定页结构与字号阶梯预算，超页数按分值裁剪",
+      "evidence": "results.plan"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "EXAMPLE-001.pptx",
+      "exists": true,
+      "kind": "editable-presentation",
+      "bytes": 108843,
+      "sha256": "bce424fd251b5107...(示意截断)"
+    },
+    {
+      "path": null,
+      "exists": false,
+      "kind": "rendered-pdf"
+    },
+    {
+      "path": "slide_plan.json",
+      "exists": true,
+      "kind": "slide-plan",
+      "bytes": 27761,
+      "sha256": "6b2577478dcf106d...(示意截断)"
+    },
+    {
+      "path": "template_map.json",
+      "exists": true,
+      "kind": "template-probe",
+      "bytes": 26771,
+      "sha256": "8ee55ce278317d75...(示意截断)"
+    }
+  ],
+  "capability_boundary": [
+    "技术检查只证明：模板继承真实、页内文本与渲染一致、证据定位可回源；",
+    "不证明：学术判断正确、讲稿叙事优秀、听众适配最佳——这些需人工评审；",
+    "材料缺失（无源文件/无模板/无图）时如实给 partial，不编造内容与数据。"
+  ],
+  "reproduce": "python scripts/run.py --input <case.json> --out out --backend auto  # 同一 case 复跑，比对 artifacts[].sha256",
+  "narrative": null,
+  "narrative_source": "missing (机器只产结构化事实；叙述应由 agent 补写)",
+  "output_contract_echo": {
+    "presentation": {
+      "path": "EXAMPLE-001.pptx",
+      "exists": true,
+      "kind": "editable-presentation",
+      "bytes": 108843,
+      "sha256": "bce424fd251b510729138e4faefa9d0dbe1a626ba3f058d4853d0014bb20d2b1"
+    },
+    "slide_plan": "slide_plan.json",
+    "evidence_map": "evidence_map.json",
+    "render": {
+      "ok": false,
+      "backend": "none",
+      "pdf": null,
+      "png_count": 0,
+      "page_count": null,
+      "pdf_fonts": null,
+      "missing_fonts": [],
+      "issues": null,
+      "pages": null
+    },
+    "status": "partial"
+  },
+  "contract_unresolved_fields": [],
+  "pipeline": {
+    "started": "2026-11-22T00:46:56+0800",
+    "steps": [
+      {
+        "step": "1_case",
+        "case_id": "EXAMPLE-001",
+        "case_dir": "examples",
+        "inferred": false
+      },
+      {
+        "step": "2_template",
+        "path": "academic-16x9.pptx",
+        "source": "case"
+      },
+      {
+        "step": "3_source",
+        "file": "source.md",
+        "kind": "md",
+        "figures": 1
+      },
+      {
+        "step": "4_extract",
+        "blocks": 25,
+        "sections": 13,
+        "figures": 1,
+        "chars": 2117
+      },
+      {
+        "step": "5_plan",
+        "source": "auto-seed",
+        "slides": 10,
+        "ok": true,
+        "findings": 0
+      },
+      {
+        "step": "6_build_fit_render",
+        "iter": 1,
+        "slides": 10,
+        "overflow": 0,
+        "render_ok": false,
+        "pages": null
+      }
+    ],
+    "errors": [],
+    "args": {
+      "input": "pkg\\examples\\case.example.json",
+      "out": "runs\\example",
+      "work": null,
+      "template": null,
+      "plan": null,
+      "backend": "none",
+      "iterations": 2,
+      "baseline": false,
+      "narrative": null,
+      "quiet": false
+    },
+    "elapsed_s": 1.7
+  },
+  "_note": "示例（非正式答案）· 【示意】演示 result.json 的键与取值形态；数值取自一次 --backend none 的示例运行（无渲染后端 → partial）。它不是平台固定案例的结果，也不是正式评测输出。"
+}

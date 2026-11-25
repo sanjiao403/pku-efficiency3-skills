@@ -1,0 +1,26 @@
+{
+  "_disclaimer": "示例 case（示例，非正式案例结果）。组织方 3 个固定案例不在此包内。",
+  "case_id": "example-c-edit",
+  "title": "Source-preserving edit of an existing mechanism panel",
+  "task_instruction": "在已有可编辑 SVG 上做最小修改，保留其余元素不变，并重新导出预览。",
+  "output_contract": {
+    "case_id": "案例标识",
+    "status": "ok | partial | insufficient_evidence | input_error",
+    "editable_source": "{path, format, editable, layers, text_count, sha256}",
+    "export_artifact": "{png:{path,width,height,dpi,engine}, pdf:{path,pages,vector,engine}}",
+    "content_map": "元素级溯源：被改元素 -> 原值/新值 + 依据",
+    "compliance_checks": "尺寸/分辨率/字体/导出真实性 逐项 measured vs required",
+    "exceptions": "未能满足项 + 原因 + 处置"
+  },
+  "canvas": {"width_px": 2400, "height_px": 1350, "dpi": 300, "min_font_px": 20},
+  "materials": ["material.md", "source-figure.svg"],
+  "input_svg": "source-figure.svg",
+  "expected_figure": {
+    "mode": "edit",
+    "edit_ops": [
+      {"id": "box-2-label", "op": "set_text", "value": "ER exit"},
+      {"id": "box-3", "op": "set_fill", "value": "#0B4F8A"}
+    ],
+    "must_preserve_untouched": true
+  }
+}

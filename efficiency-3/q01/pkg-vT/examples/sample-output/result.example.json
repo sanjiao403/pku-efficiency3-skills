@@ -1,0 +1,760 @@
+{
+  "case_id": "example-a-mechanism",
+  "status": "ok",
+  "status_reason": "IR=curated；四面板=4；元素=19；引文命中=95%；PNG=pymupdf；PDF=pymupdf；修复=0",
+  "summary": "Palmitoylation gates STING exit from the ER | 19 个可核验图元，0 处自动版式修复，导出 SVG+PNG(pymupdf)+PDF(pymupdf)",
+  "editable_source": {
+    "path": "figure.svg",
+    "format": "svg",
+    "editable": true,
+    "layers": [
+      "frame",
+      "panels",
+      "entities",
+      "relations",
+      "data",
+      "labels",
+      "legend",
+      "annotations"
+    ],
+    "text_count": 74,
+    "sha256": "32c783f946ae705fd76f65ab573dfbfc74194aaa86bd1894d9cecbf9ba4e6f5a",
+    "text_preserved": true,
+    "model_copy": "figure-ir.json",
+    "notes": "文字为真实 <text>，图元 id 与 content_map 一一对应，可在 Illustrator/Inkscape 直接编辑"
+  },
+  "export_artifact": {
+    "png": {
+      "path": "figure.png",
+      "width": 2400,
+      "height": 1350,
+      "dpi": 300,
+      "engine": "pymupdf",
+      "verified": true,
+      "ink_ratio": 0.1832,
+      "attempts": [
+        {
+          "engine": "cairosvg",
+          "result": "unavailable"
+        },
+        {
+          "engine": "pymupdf",
+          "result": "ok"
+        }
+      ]
+    },
+    "pdf": {
+      "path": "figure.pdf",
+      "pages": 1,
+      "vector": true,
+      "engine": "pymupdf",
+      "verified": true,
+      "page_pt": [
+        576.0,
+        324.0
+      ]
+    }
+  },
+  "content_map": [
+    {
+      "kind": "panel",
+      "id": "panel-1",
+      "order": 1,
+      "role": "problem",
+      "title": "Unresolved step",
+      "claim": "STING must reach the Golgi, but what holds it in the ER is unknown.",
+      "items": [
+        {
+          "id": "p1i1",
+          "text": "Cytosolic DNA sensing converges on the adaptor STING",
+          "element": "p1i1-l0",
+          "on_canvas": true
+        },
+        {
+          "id": "p1i2",
+          "text": "STING must move from the ER to the Golgi to recruit TBK1",
+          "element": "p1i2-l0",
+          "on_canvas": true
+        },
+        {
+          "id": "p1i3",
+          "text": "Whether palmitoylation gates that exit was unresolved",
+          "element": "p1i3-l0",
+          "on_canvas": true
+        }
+      ],
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para2",
+        "quote": "Cytosolic DNA sensing converges on the adaptor STING",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "panel",
+      "id": "panel-2",
+      "order": 2,
+      "role": "method",
+      "title": "Route",
+      "claim": "",
+      "items": [
+        {
+          "id": "p2i1",
+          "text": "Map palmitoylation sites on STING",
+          "element": "p2i1-l0",
+          "on_canvas": false
+        },
+        {
+          "id": "p2i2",
+          "text": "Deplete DHHC3 and image ER-to-Golgi traffic",
+          "element": "p2i2-l0",
+          "on_canvas": false
+        },
+        {
+          "id": "p2i3",
+          "text": "Read out TBK1 phosphorylation and IFNB1 induction",
+          "element": "p2i3-l0",
+          "on_canvas": false
+        }
+      ],
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "the palmitoyl transferase DHHC3 palmitoylates STING at cysteine 88",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "panel",
+      "id": "panel-3",
+      "order": 3,
+      "role": "results",
+      "title": "Palmitoylation-gated route",
+      "claim": "DHHC3 holds STING in the ER; removing the mark releases the route.",
+      "items": [],
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "",
+        "quote": ""
+      }
+    },
+    {
+      "kind": "panel",
+      "id": "panel-4",
+      "order": 4,
+      "role": "conclusion",
+      "title": "Translational claim",
+      "claim": "Blocking the modification releases the brake on antiviral signalling.",
+      "items": [
+        {
+          "id": "p4i1",
+          "text": "2-bromopalmitate blocks DHHC3 and phenocopies depletion",
+          "element": "p4i1-l0",
+          "on_canvas": true
+        },
+        {
+          "id": "p4i2",
+          "text": "IFNB1 induction rises from 18.5 to 41.2 fold",
+          "element": "p4i2-l0",
+          "on_canvas": true
+        }
+      ],
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "The small molecule 2-bromopalmitate blocks DHHC3 and phenocopies DHHC3 depletion",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "ent-E1",
+      "entity_id": "E1",
+      "label": "DHHC3",
+      "entity_type": "protein",
+      "compartment": "membrane",
+      "italic": false,
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "the palmitoyl transferase DHHC3 palmitoylates STING at cysteine 88",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "ent-E2",
+      "entity_id": "E2",
+      "label": "STING",
+      "entity_type": "protein",
+      "compartment": "ER membrane",
+      "italic": false,
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para2",
+        "quote": "STING, which must move from the endoplasmic reticulum to the Golgi",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "ent-E3",
+      "entity_id": "E3",
+      "label": "Golgi",
+      "entity_type": "organelle",
+      "compartment": "cytoplasm",
+      "italic": false,
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "STING trafficking to the Golgi increased 2.4 fold",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "ent-E4",
+      "entity_id": "E4",
+      "label": "TBK1",
+      "entity_type": "protein",
+      "compartment": "cytoplasm",
+      "italic": false,
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "TBK1 phosphorylation rose 3.1 fold",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "ent-E5",
+      "entity_id": "E5",
+      "label": "IRF3",
+      "entity_type": "protein",
+      "compartment": "cytoplasm",
+      "italic": false,
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "Activated TBK1 phosphorylates IRF3",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "relation",
+      "id": "edge-R1-head",
+      "relation_id": "R1",
+      "from": "E1",
+      "to": "E2",
+      "relation_type": "modification",
+      "direction": "forward",
+      "label": "S-palmitoylation",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "DHHC3 palmitoylates STING at cysteine 88",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "relation",
+      "id": "edge-R2-head",
+      "relation_id": "R2",
+      "from": "E2",
+      "to": "E3",
+      "relation_type": "transport",
+      "direction": "forward",
+      "label": "ER exit",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "Palmitoylated STING is retained in the ER and fails to reach the Golgi",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "relation",
+      "id": "edge-R3-head",
+      "relation_id": "R3",
+      "from": "E3",
+      "to": "E4",
+      "relation_type": "activation",
+      "direction": "forward",
+      "label": "TBK1 binding",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "TBK1 phosphorylation rose 3.1 fold",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "relation",
+      "id": "edge-R4-head",
+      "relation_id": "R4",
+      "from": "E4",
+      "to": "E5",
+      "relation_type": "activation",
+      "direction": "forward",
+      "label": "phosphorylation",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "Activated TBK1 phosphorylates IRF3",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "value",
+      "id": "ledger-K1-value",
+      "claim_id": "K1",
+      "label": "IFNB1 induction at 6 h",
+      "value": 41.2,
+      "unit": "fold",
+      "compare": {
+        "label": "wild type",
+        "value": 18.5
+      },
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para6",
+        "quote": "IFNB1 mRNA induction at 6 h was 18.5 fold in wild type cells and 41.2 fold in DHHC3 knockdown cells",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "value",
+      "id": "ledger-K2-value",
+      "claim_id": "K2",
+      "label": "STING Golgi colocalisation",
+      "value": 61,
+      "unit": "%",
+      "compare": {
+        "label": "wild type",
+        "value": 22
+      },
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para6",
+        "quote": "STING Golgi colocalisation was 22 percent in wild type and 61 percent after DHHC3 knockdown",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "value",
+      "id": "ledger-K3-value",
+      "claim_id": "K3",
+      "label": "ER residence time of STING",
+      "value": 17,
+      "unit": "min",
+      "compare": {
+        "label": "wild type",
+        "value": 46
+      },
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para6",
+        "quote": "Mean ER residence time of STING dropped from 46 min to 17 min",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "legend",
+      "id": "leg-rel-modification-lb",
+      "key": "rel-modification",
+      "label": "修饰 / modification",
+      "channel": "marker",
+      "color": "#3C4043",
+      "pattern": "none",
+      "category": "relation",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "DHHC3 palmitoylates STING at cysteine 88",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "legend",
+      "id": "leg-rel-transport-lb",
+      "key": "rel-transport",
+      "label": "转运 / transport",
+      "channel": "marker",
+      "color": "#3C4043",
+      "pattern": "none",
+      "category": "relation",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "Palmitoylated STING is retained in the ER and fails to reach the Golgi",
+        "kind": ""
+      }
+    },
+    {
+      "kind": "legend",
+      "id": "leg-rel-activation-lb",
+      "key": "rel-activation",
+      "label": "激活 / activation",
+      "channel": "marker",
+      "color": "#3C4043",
+      "pattern": "none",
+      "category": "relation",
+      "on_canvas": true,
+      "source": {
+        "id": "S1",
+        "path": "",
+        "locator": "material.md#para4",
+        "quote": "TBK1 phosphorylation rose 3.1 fold",
+        "kind": ""
+      }
+    }
+  ],
+  "compliance_checks": [
+    {
+      "check": "canvas_size",
+      "required": "2400 x 1350 px",
+      "measured": "2400 x 1350 px",
+      "verdict": "pass",
+      "evidence": "export_artifact.png"
+    },
+    {
+      "check": "resolution_dpi",
+      "required": ">= 300 dpi",
+      "measured": "300 dpi",
+      "verdict": "pass",
+      "evidence": "PNG IHDR + canvas.dpi"
+    },
+    {
+      "check": "png_real",
+      "required": "PNG 可解析 IHDR，非空白",
+      "measured": "engine=pymupdf ink=0.1832",
+      "verdict": "pass",
+      "evidence": "cairosvg,pymupdf"
+    },
+    {
+      "check": "pdf_real",
+      "required": "%PDF- 头 + >=1 页 + 矢量",
+      "measured": "engine=pymupdf pages=1",
+      "verdict": "pass",
+      "evidence": "%PDF-1.7"
+    },
+    {
+      "check": "editable_text",
+      "required": "SVG 内 <text> 数量 == 场景文本数",
+      "measured": "74 / 74",
+      "verdict": "pass",
+      "evidence": "figure.svg"
+    },
+    {
+      "check": "layers",
+      "required": ">= 4 个语义图层",
+      "measured": "8 层: frame,panels,entities,relations,data,labels,legend,annotations",
+      "verdict": "pass",
+      "evidence": "layer-* groups"
+    },
+    {
+      "check": "min_font_body_px",
+      "required": ">= 20 px（正文/标签层）",
+      "measured": "21.1 px",
+      "verdict": "pass",
+      "evidence": "layout.sizes + tier=body"
+    },
+    {
+      "check": "min_font_annotation_px",
+      "required": ">= 12.4 px（刻度/脚注层，下限为正文的 62%）",
+      "measured": "15.0 px",
+      "verdict": "pass",
+      "evidence": "layout.sizes + tier=annotation"
+    },
+    {
+      "check": "no_canvas_overflow",
+      "required": "0 个文本越界",
+      "measured": "0",
+      "verdict": "pass",
+      "evidence": ""
+    },
+    {
+      "check": "legend_consistency",
+      "required": "图例项数 == 图面分类数",
+      "measured": "3 vs 3",
+      "verdict": "pass",
+      "evidence": "rel=['modification', 'transport', 'activation'] series=[]"
+    },
+    {
+      "check": "source_verbatim",
+      "required": ">= 80% 元素有逐字来源",
+      "measured": "94.7%",
+      "verdict": "pass",
+      "evidence": "{\"data_point\": {\"total\": 0, \"traced\": 0}, \"entity\": {\"total\": 5, \"traced\": 5}, \"legend\": {\"total\": 3, \"traced\": 3}, \"panel\": {\"total\": 4, \"traced\": 3}, \"relation\": {\"total\": 4, \"traced\": 4}, \"value\": {\"total\": 3, \"traced\": 3}}"
+    },
+    {
+      "check": "number_trace",
+      "required": "画布上每个数值都能回查来源",
+      "measured": "10/10 traced",
+      "verdict": "pass",
+      "evidence": "untraced="
+    },
+    {
+      "check": "id_map",
+      "required": "content_map 元素 id 全部存在于 SVG",
+      "measured": "19/19",
+      "verdict": "pass",
+      "evidence": "content_map"
+    },
+    {
+      "check": "font_provenance",
+      "required": "记录实际字体与替换情况",
+      "measured": "simhei.ttf cjk",
+      "verdict": "pass",
+      "evidence": "source=scan"
+    }
+  ],
+  "exceptions": [
+    {
+      "element": "figure.png",
+      "issue": "PNG 引擎不可用",
+      "detail": "cairosvg -> unavailable",
+      "handling": "已尝试下一引擎"
+    },
+    {
+      "element": "figure.pdf",
+      "issue": "PDF 引擎不可用",
+      "detail": "cairosvg -> unavailable",
+      "handling": "已尝试下一引擎"
+    }
+  ],
+  "outputs": {
+    "editable_source": "figure.svg",
+    "preview_png": "figure.png",
+    "vector_pdf": "figure.pdf",
+    "result": "result.json",
+    "figure_model": "figure-ir.json",
+    "run_log": "run.log"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "path": "material.md",
+      "locator": "material.md#para2",
+      "quote": "Cytosolic DNA sensing converges on the adaptor STING, which must move from the endoplasmic reticulum to the Golgi to recruit TBK1",
+      "kind": "",
+      "source_id": "S1"
+    }
+  ],
+  "uncertainty": [
+    {
+      "item": "科学内容的正确性",
+      "why": "实体/关系/数值由 IR 声明，脚本不判断其科学真伪",
+      "handling": "逐条比对 content_map 中的 locator+quote；未命中者见 compliance_checks"
+    }
+  ],
+  "changes": [
+    {
+      "action": "create",
+      "what": "figure.svg/.png/.pdf",
+      "reason": "由 figure IR 确定性渲染"
+    }
+  ],
+  "errors": [],
+  "degradations": [
+    {
+      "what": "fast 模式：跳过浏览器与高开销引擎",
+      "why": "时间预算保护",
+      "impact": "PNG 引擎可能降级"
+    }
+  ],
+  "gaps": [],
+  "not_reported": [],
+  "runtime": {
+    "steps": [
+      {
+        "step": "build",
+        "seconds": 0.77,
+        "primitives": 362,
+        "primitives_text": 74
+      }
+    ],
+    "budget": {
+      "model_requests": 64,
+      "wall_seconds": 900,
+      "response_tokens": 16384,
+      "script_soft_seconds": 20,
+      "script_hard_seconds": 120
+    },
+    "fast": true,
+    "timed_out": false
+  },
+  "contract_echo": {
+    "declared": true,
+    "shape": "dict",
+    "keys": [
+      "case_id",
+      "status",
+      "editable_source",
+      "export_artifact",
+      "content_map",
+      "compliance_checks",
+      "exceptions"
+    ]
+  },
+  "coverage": {
+    "elements": 19,
+    "on_canvas": 19,
+    "with_verbatim_source": 18,
+    "source_ratio": 0.947,
+    "by_kind": {
+      "panel": {
+        "traced": 3,
+        "total": 4
+      },
+      "entity": {
+        "traced": 5,
+        "total": 5
+      },
+      "relation": {
+        "traced": 4,
+        "total": 4
+      },
+      "value": {
+        "traced": 3,
+        "total": 3
+      },
+      "data_point": {
+        "traced": 0,
+        "total": 0
+      },
+      "legend": {
+        "traced": 3,
+        "total": 3
+      }
+    }
+  },
+  "invariants": {
+    "legend": {
+      "ok": true,
+      "relation_categories_drawn": [
+        "modification",
+        "transport",
+        "activation"
+      ],
+      "relation_categories_in_legend": [
+        "modification",
+        "transport",
+        "activation"
+      ],
+      "series_drawn": [],
+      "series_in_legend": [],
+      "legend_entries": 3,
+      "categories": 3
+    },
+    "numbers": {
+      "checked": 10,
+      "traced": 10,
+      "untraced": [],
+      "ratio": 1.0
+    },
+    "grayscale": {
+      "series": 0,
+      "patterned": 0,
+      "ok": true
+    },
+    "fit": {
+      "panels_top": 225.2,
+      "panels_zone": 773.9,
+      "natural_max": 578.2,
+      "slack": 107.6,
+      "ledger_natural": 210.7,
+      "foot_top": 1226.3,
+      "used_height": 1135.5
+    },
+    "panels": [
+      {
+        "panel": "panel-1",
+        "role": "problem",
+        "kind": "bullets",
+        "items": 3,
+        "rendered": 3,
+        "dropped": [],
+        "font_px": 27.6,
+        "needed_px": 465.4,
+        "height_px": 685.8,
+        "overflow": false
+      },
+      {
+        "panel": "panel-2",
+        "role": "method",
+        "kind": "chain",
+        "items": 3,
+        "rendered": 3,
+        "dropped": [],
+        "font_px": 27.6,
+        "needed_px": 498.6,
+        "height_px": 685.8,
+        "overflow": false
+      },
+      {
+        "panel": "panel-3",
+        "role": "results",
+        "kind": "relations",
+        "items": 0,
+        "rendered": 0,
+        "dropped": [],
+        "font_px": 27.6,
+        "needed_px": 657.4,
+        "height_px": 685.8,
+        "overflow": false
+      },
+      {
+        "panel": "panel-4",
+        "role": "conclusion",
+        "kind": "bullets",
+        "items": 2,
+        "rendered": 2,
+        "dropped": [],
+        "font_px": 27.6,
+        "needed_px": 344.2,
+        "height_px": 685.8,
+        "overflow": false
+      }
+    ]
+  },
+  "font_report": {
+    "sans": "simhei.ttf",
+    "source": "scan",
+    "cjk_capable": true,
+    "substituted": []
+  }
+}

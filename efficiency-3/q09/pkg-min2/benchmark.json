@@ -1,0 +1,46 @@
+{
+ "what": "real baseline vs Skill on the shipped example (same material, same slide_count, same machine, one run each)",
+ "command": "cd <external-cwd> && python3 <pkg>/scripts/deck.py --case <in>/case.json --out <pkg-out>/skill",
+ "cmd": {
+  "skill": "<run-dir>"
+ },
+ "baseline_definition": "minimal direct implementation: split the material into N equal character chunks and paste each chunk into one text box per page; no ledger, anchors, footer, notes or verification (tests cross-check only)",
+ "baseline": {
+  "slides": 8,
+  "slides_match_slide_count": true,
+  "number_anchor_hit_rate": 1.0,
+  "evidence_page_coverage": 0.0,
+  "citation_footer_coverage": 0.0,
+  "sentence_integrity": 0.444,
+  "violations": 0,
+  "seconds": 0.03
+ },
+ "skill": {
+  "slides": 8,
+  "slides_match_slide_count": true,
+  "number_anchor_hit_rate": 1.0,
+  "evidence_page_coverage": 0.571,
+  "citation_footer_coverage": 0.571,
+  "sentence_integrity": 1.0,
+  "violations": 0,
+  "seconds": 7.68
+ },
+ "skill_status": "success",
+ "delta": {
+  "slides": 0,
+  "slides_match_slide_count": 0,
+  "number_anchor_hit_rate": 0.0,
+  "evidence_page_coverage": 0.571,
+  "citation_footer_coverage": 0.571,
+  "sentence_integrity": 0.556,
+  "violations": 0,
+  "seconds": 7.65
+ },
+ "limitations": [
+  "baseline is one honest minimal implementation, not a tuned competitor",
+  "one run per path; wall-clock is host-dependent",
+  "the shipped example material is synthetic text (no figures, no scanned pages)",
+  "violations reuse the estimator in scripts/verify.py, not pixel measurement"
+ ],
+ "workdir": "temporary (not shipped)"
+}

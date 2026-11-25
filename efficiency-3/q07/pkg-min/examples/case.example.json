@@ -1,0 +1,23 @@
+{
+  "_note": "示例（非正式答案）：一份 6 分钟组会汇报的最小输入。materials 里的 paper.example.md 随本例提供。",
+  "_example": true,
+  "case_id": "example-groupmeeting-6min",
+  "task": "组会进展汇报（示例输入）",
+  "presentation_type": "group_meeting",
+  "audience": "同课题组老师与同学（熟悉本方向，关心进度与卡点）",
+  "audience_prior": "expert_same_field",
+  "goal": "让合作者理解进展、当前卡点与下一步判据",
+  "language": "zh",
+  "duration_min": 6,
+  "qa_min": 2,
+  "slide_count": 8,
+  "template_spec": "template-spec.json",
+  "materials": ["paper.example.md"],
+  "output_contract": {
+    "outline": "结构化页级大纲 JSON（每页主张、证据引用、预计秒数）",
+    "editable_deck": "可编辑演示文件（页级结构、主张、讲稿备注）",
+    "evidence_map": "页级证据映射：每页内容到材料文件与行号",
+    "uncertainty": "材料缺口与待人工确认项",
+    "status": "success / partial / unsupported"
+  }
+}

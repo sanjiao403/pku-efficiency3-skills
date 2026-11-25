@@ -1,0 +1,621 @@
+{
+  "generated_by": "tests/selftest.py",
+  "generated_at": "2026-11-22T16:54:34+08:00",
+  "mode": "full",
+  "backend": "auto",
+  "cases": [
+    {
+      "case_dir": "f1",
+      "returncode": 0,
+      "elapsed_s": 11.2,
+      "checks": [
+        {
+          "name": "1 状态非失败",
+          "pass": true,
+          "detail": "success"
+        },
+        {
+          "name": "2 版式继承保持",
+          "pass": true,
+          "detail": "layouts=11"
+        },
+        {
+          "name": "3 主题字体保持",
+          "pass": true,
+          "detail": "['ArialMT', 'SimHei', 'SimSun', 'TimesNewRomanPSMT']"
+        },
+        {
+          "name": "4 页数在案例约束内",
+          "pass": true,
+          "detail": "slides=11 约束={'min': 9, 'max': 12, 'target': 10}"
+        },
+        {
+          "name": "5 无文本框溢出",
+          "pass": true,
+          "detail": "0"
+        },
+        {
+          "name": "6 正文最小字号 ≥14pt",
+          "pass": true,
+          "detail": "20.0"
+        },
+        {
+          "name": "7 图片等比（偏差<0.5%）",
+          "pass": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "8 引文可回源 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "9 证据定位覆盖 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "10 每页都有证据定位",
+          "pass": true,
+          "detail": "slides=11"
+        },
+        {
+          "name": "11 备注/讲稿齐备",
+          "pass": true,
+          "detail": "notes 见 pptx 备注页"
+        },
+        {
+          "name": "12 模板链可复核",
+          "pass": true,
+          "detail": "{'layouts_out': 11, 'layouts_template': 11, 'masters_out': 1, 'masters_template': 1, 'theme_out': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'theme_template': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'layouts_preserved': True, 'theme_preserved': True}"
+        },
+        {
+          "name": "13 渲染 PDF 页数=pptx 页数",
+          "pass": true,
+          "detail": "11 vs 11"
+        },
+        {
+          "name": "14 PDF 文本覆盖率 ≥97%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "15 字体替换已记录",
+          "pass": true,
+          "detail": "[]"
+        },
+        {
+          "name": "16 契约字段回显",
+          "pass": true,
+          "detail": "keys=['presentation', 'slide_plan', 'evidence_map', 'render', 'status'] unresolved=[]"
+        },
+        {
+          "name": "17 产物带 sha256",
+          "pass": true,
+          "detail": "artifacts=18"
+        },
+        {
+          "name": "18 变更记录可追",
+          "pass": true,
+          "detail": "6"
+        }
+      ],
+      "log_tail": "[run] DONE status=success → f1 (10.4s)\r\n",
+      "case_id": "FIXTURE-F1",
+      "status": "success",
+      "metrics": {
+        "slides": 11,
+        "overflow_boxes": 0,
+        "min_body_pt": 20.0,
+        "figures": 1,
+        "figure_aspect_max_deviation": 0.0,
+        "quote_verified_rate": 1.0,
+        "locator_coverage": 1.0,
+        "min_pdf_text_coverage": 1.0,
+        "pdf_backend": "powerpoint",
+        "font_substitutions": []
+      }
+    },
+    {
+      "case_dir": "f2",
+      "returncode": 0,
+      "elapsed_s": 9.1,
+      "checks": [
+        {
+          "name": "1 状态非失败",
+          "pass": true,
+          "detail": "success"
+        },
+        {
+          "name": "2 版式继承保持",
+          "pass": true,
+          "detail": "layouts=11"
+        },
+        {
+          "name": "3 主题字体保持",
+          "pass": true,
+          "detail": "['ArialMT', 'SimHei', 'SimSun', 'TimesNewRomanPSMT']"
+        },
+        {
+          "name": "4 页数在案例约束内",
+          "pass": true,
+          "detail": "slides=10 约束={'min': 8, 'max': 10, 'target': 9}"
+        },
+        {
+          "name": "5 无文本框溢出",
+          "pass": true,
+          "detail": "0"
+        },
+        {
+          "name": "6 正文最小字号 ≥14pt",
+          "pass": true,
+          "detail": "20.0"
+        },
+        {
+          "name": "7 图片等比（偏差<0.5%）",
+          "pass": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "8 引文可回源 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "9 证据定位覆盖 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "10 每页都有证据定位",
+          "pass": true,
+          "detail": "slides=10"
+        },
+        {
+          "name": "11 备注/讲稿齐备",
+          "pass": true,
+          "detail": "notes 见 pptx 备注页"
+        },
+        {
+          "name": "12 模板链可复核",
+          "pass": true,
+          "detail": "{'layouts_out': 11, 'layouts_template': 11, 'masters_out': 1, 'masters_template': 1, 'theme_out': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'theme_template': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'layouts_preserved': True, 'theme_preserved': True}"
+        },
+        {
+          "name": "13 渲染 PDF 页数=pptx 页数",
+          "pass": true,
+          "detail": "10 vs 10"
+        },
+        {
+          "name": "14 PDF 文本覆盖率 ≥97%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "15 字体替换已记录",
+          "pass": true,
+          "detail": "[]"
+        },
+        {
+          "name": "16 契约字段回显",
+          "pass": true,
+          "detail": "keys=['presentation', 'slide_plan', 'evidence_map', 'render', 'status'] unresolved=[]"
+        },
+        {
+          "name": "17 产物带 sha256",
+          "pass": true,
+          "detail": "artifacts=17"
+        },
+        {
+          "name": "18 变更记录可追",
+          "pass": true,
+          "detail": "6"
+        }
+      ],
+      "log_tail": "[run] DONE status=success → f2 (8.2s)\r\n",
+      "case_id": "FIXTURE-F2",
+      "status": "success",
+      "metrics": {
+        "slides": 10,
+        "overflow_boxes": 0,
+        "min_body_pt": 20.0,
+        "figures": 1,
+        "figure_aspect_max_deviation": 0.0,
+        "quote_verified_rate": 1.0,
+        "locator_coverage": 1.0,
+        "min_pdf_text_coverage": 1.0,
+        "pdf_backend": "powerpoint",
+        "font_substitutions": []
+      }
+    },
+    {
+      "case_dir": "f3",
+      "returncode": 0,
+      "elapsed_s": 10.0,
+      "checks": [
+        {
+          "name": "1 状态非失败",
+          "pass": true,
+          "detail": "success"
+        },
+        {
+          "name": "2 版式继承保持",
+          "pass": true,
+          "detail": "layouts=11"
+        },
+        {
+          "name": "3 主题字体保持",
+          "pass": true,
+          "detail": "['ArialMT', 'MicrosoftYaHei', 'TimesNewRomanPSMT']"
+        },
+        {
+          "name": "4 页数在案例约束内",
+          "pass": true,
+          "detail": "slides=12 约束={'min': 9, 'max': 12, 'target': 11}"
+        },
+        {
+          "name": "5 无文本框溢出",
+          "pass": true,
+          "detail": "0"
+        },
+        {
+          "name": "6 正文最小字号 ≥14pt",
+          "pass": true,
+          "detail": "20.0"
+        },
+        {
+          "name": "7 图片等比（偏差<0.5%）",
+          "pass": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "8 引文可回源 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "9 证据定位覆盖 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "10 每页都有证据定位",
+          "pass": true,
+          "detail": "slides=12"
+        },
+        {
+          "name": "11 备注/讲稿齐备",
+          "pass": true,
+          "detail": "notes 见 pptx 备注页"
+        },
+        {
+          "name": "12 模板链可复核",
+          "pass": true,
+          "detail": "{'layouts_out': 11, 'layouts_template': 11, 'masters_out': 1, 'masters_template': 1, 'theme_out': {'majorFont': {'latin': 'Source Sans Pro', 'ea': 'Source Han Sans SC', 'cs': 'Arial'}, 'minorFont': {'latin': 'Source Serif Pro', 'ea': 'Source Han Serif SC', 'cs': 'Times New Roman'}}, 'theme_template': {'majorFont': {'latin': 'Source Sans Pro', 'ea': 'Source Han Sans SC', 'cs': 'Arial'}, 'minorFont': {'latin': 'Source Serif Pro', 'ea': 'Source Han Serif SC', 'cs': 'Times New Roman'}}, 'layouts_preserved': True, 'theme_preserved': True}"
+        },
+        {
+          "name": "13 渲染 PDF 页数=pptx 页数",
+          "pass": true,
+          "detail": "12 vs 12"
+        },
+        {
+          "name": "14 PDF 文本覆盖率 ≥97%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "15 字体替换已记录",
+          "pass": true,
+          "detail": "['Source Han Serif SC']"
+        },
+        {
+          "name": "16 契约字段回显",
+          "pass": true,
+          "detail": "keys=['presentation', 'slide_plan', 'evidence_map', 'render', 'status'] unresolved=[]"
+        },
+        {
+          "name": "17 产物带 sha256",
+          "pass": true,
+          "detail": "artifacts=19"
+        },
+        {
+          "name": "18 变更记录可追",
+          "pass": true,
+          "detail": "6"
+        }
+      ],
+      "log_tail": "[run] DONE status=success → f3 (9.2s)\r\n",
+      "case_id": "FIXTURE-F3",
+      "status": "success",
+      "metrics": {
+        "slides": 12,
+        "overflow_boxes": 0,
+        "min_body_pt": 20.0,
+        "figures": 1,
+        "figure_aspect_max_deviation": 0.0,
+        "quote_verified_rate": 1.0,
+        "locator_coverage": 1.0,
+        "min_pdf_text_coverage": 1.0,
+        "pdf_backend": "powerpoint",
+        "font_substitutions": [
+          "Source Han Serif SC"
+        ]
+      }
+    },
+    {
+      "case_dir": "f4",
+      "returncode": 0,
+      "elapsed_s": 13.2,
+      "checks": [
+        {
+          "name": "1 状态非失败",
+          "pass": true,
+          "detail": "success"
+        },
+        {
+          "name": "2 版式继承保持",
+          "pass": true,
+          "detail": "layouts=11"
+        },
+        {
+          "name": "3 主题字体保持",
+          "pass": true,
+          "detail": "['ArialMT', 'SimHei', 'SimSun', 'TimesNewRomanPSMT']"
+        },
+        {
+          "name": "4 页数在案例约束内",
+          "pass": true,
+          "detail": "slides=11 约束={'min': 9, 'max': 12, 'target': 10, 'figure_slides': 2}"
+        },
+        {
+          "name": "5 无文本框溢出",
+          "pass": true,
+          "detail": "0"
+        },
+        {
+          "name": "6 正文最小字号 ≥14pt",
+          "pass": true,
+          "detail": "20.0"
+        },
+        {
+          "name": "7 图片等比（偏差<0.5%）",
+          "pass": true,
+          "detail": "0.0"
+        },
+        {
+          "name": "8 引文可回源 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "9 证据定位覆盖 100%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "10 每页都有证据定位",
+          "pass": true,
+          "detail": "slides=11"
+        },
+        {
+          "name": "11 备注/讲稿齐备",
+          "pass": true,
+          "detail": "notes 见 pptx 备注页"
+        },
+        {
+          "name": "12 模板链可复核",
+          "pass": true,
+          "detail": "{'layouts_out': 11, 'layouts_template': 11, 'masters_out': 1, 'masters_template': 1, 'theme_out': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'theme_template': {'majorFont': {'latin': 'Arial', 'ea': '黑体', 'cs': 'Arial'}, 'minorFont': {'latin': 'Times New Roman', 'ea': '宋体', 'cs': 'Times New Roman'}}, 'layouts_preserved': True, 'theme_preserved': True}"
+        },
+        {
+          "name": "13 渲染 PDF 页数=pptx 页数",
+          "pass": true,
+          "detail": "11 vs 11"
+        },
+        {
+          "name": "14 PDF 文本覆盖率 ≥97%",
+          "pass": true,
+          "detail": "1.0"
+        },
+        {
+          "name": "15 字体替换已记录",
+          "pass": true,
+          "detail": "[]"
+        },
+        {
+          "name": "16 契约字段回显",
+          "pass": true,
+          "detail": "keys=['presentation', 'slide_plan', 'evidence_map', 'render', 'status'] unresolved=[]"
+        },
+        {
+          "name": "17 产物带 sha256",
+          "pass": true,
+          "detail": "artifacts=18"
+        },
+        {
+          "name": "18 变更记录可追",
+          "pass": true,
+          "detail": "6"
+        }
+      ],
+      "log_tail": "[run] DONE status=success → f4 (12.4s)\r\n",
+      "case_id": "FIXTURE-F4",
+      "status": "success",
+      "metrics": {
+        "slides": 11,
+        "overflow_boxes": 0,
+        "min_body_pt": 20.0,
+        "figures": 1,
+        "figure_aspect_max_deviation": 0.0,
+        "quote_verified_rate": 1.0,
+        "locator_coverage": 1.0,
+        "min_pdf_text_coverage": 1.0,
+        "pdf_backend": "powerpoint",
+        "font_substitutions": []
+      }
+    }
+  ],
+  "modules": [
+    {
+      "name": "M1 units 自测",
+      "pass": true,
+      "detail": "units.py self-test ok  font=arial.ttf"
+    },
+    {
+      "name": "M2 模板生成（主题字体/配色/版式改名可改）",
+      "pass": true,
+      "detail": "}"
+    },
+    {
+      "name": "M3 模板解析（母版/版式/占位符）",
+      "pass": true,
+      "detail": "率赛3期\\questions\\q08\\runs\\selftest-pkg-vT6\\tm.json | 11 layouts | 16:9 | fonts-installed=4/4"
+    },
+    {
+      "name": "M4 中文占位符名识别（标题/副标题/内容占位符/正文/图片/页脚/编号/日期）",
+      "pass": true,
+      "detail": "OK []"
+    },
+    {
+      "name": "M5 中文母版/版式/占位符名 → 角色识别正确",
+      "pass": true,
+      "detail": "中文版式名=11 中文占位符名=52 roles=['blank', 'content', 'figure', 'section', 'title', 'title-only', 'two-column']"
+    },
+    {
+      "name": "M7 文本 template-spec.json → 运行时合成模板并与 expected 一致",
+      "pass": true,
+      "detail": "layout/theme/roles=True/True/True geometry_delta=0"
+    },
+    {
+      "name": "M8 包内无二进制资源（仅文本扩展名）",
+      "pass": true,
+      "detail": "全部为文本文件"
+    },
+    {
+      "name": "R1 零附加参数自足（4 夹具 status=success + spec 合成模板 + 契约键齐备）",
+      "pass": true,
+      "detail": "f1:success,f2:success,f3:success,f4:success | [{\"case\": \"f1\", \"status\": \"success\", \"template_source\": \"spec-synth(template-spec.json:academic-16x9)\", \"outputs\": 18, \"contract_keys\": true, \"pass\": true}, {\"case\": \"f2\", \"status\": \"success\", \"template_source\": \"spec-sy",
+      "expected": "status=success / 模板源 spec-synth / outputs>=2 / 契约键齐备",
+      "actual": "[{\"case\": \"f1\", \"status\": \"success\", \"template_source\": \"spec-synth(template-spec.json:academic-16x9)\", \"outputs\": 18, \"contract_keys\": true, \"pass\": true}, {\"case\": \"f2\", \"status\": \"success\", \"template_source\": \"spec-synth(template-spec.json:academic-16x9)\", \"outputs\": 17, \"contract_keys\": true, \"pass\": true}, {\"case\": \"f3\", \"status\": \"success\", \"template_source\": \"spec-synth(template-spec.json:a"
+    },
+    {
+      "name": "R3 只读审计器（不重跑生成，重算并与自述对照）",
+      "pass": true,
+      "detail": "checks=49 passed=49 high_failures=0",
+      "expected": "全部对照项 pass（high 不一致 0）",
+      "actual": "[]"
+    },
+    {
+      "name": "references/result.schema.json 校验真实 result.json（零依赖）",
+      "pass": true,
+      "detail": "errors=0",
+      "expected": "schema 校验 PASS（0 个问题）",
+      "actual": "[]"
+    },
+    {
+      "name": "删页后追加：zip 内无重复 partname（回避 PowerPoint 修复提示）",
+      "pass": true,
+      "detail": "stripped=3 slides_in_zip=11 dups=[]",
+      "expected": "stripped=3 / slides_in_zip=11 / dups=[]",
+      "actual": "{\"dups\": []}"
+    },
+    {
+      "name": "中文版式名+中文占位符名 → 7 类角色全部识别（template-mapping.md）",
+      "pass": true,
+      "detail": "roles=['blank', 'content', 'figure', 'section', 'title', 'title-only', 'two-column'] missing=[]",
+      "expected": "title/content/section/two-column/title-only/blank/figure 均在 roles",
+      "actual": "roles=['blank', 'content', 'figure', 'section', 'title', 'title-only', 'two-column'] missing=[]"
+    },
+    {
+      "name": "P0 无模板案例：显式 spec 合成 + 降级记录（不靠 isfile 静默兜底）",
+      "pass": true,
+      "detail": "status=success origin=spec-synth(template-spec.json:academic-16x9) degradations=1 uncertainty=True bundled_pptx=False",
+      "expected": "status=success / origin=spec-synth / degradations≥1 / uncertainty 有模板降级 / 包内无 pptx",
+      "actual": "{\"origin\": \"spec-synth(template-spec.json:academic-16x9)\", \"degradations\": [\"BUNDLED_TEMPLATE 不存在（templates/academic-16x9.pptx）：按设计走文本规格合成母版，不使用任何二进制 pptx\"], \"uncertainty_items\": [\"模板降级（BUNDLED_TEMPLATE_MISSING）\"]}"
+    },
+    {
+      "name": "兜底产物齐备：preview.html + preview.layout.md（不伪造 PDF/PNG）",
+      "pass": true,
+      "detail": "files=['preview.html', 'preview.layout.md'] fallback_keys=['backend', 'error', 'html', 'layout_md', 'note', 'ok']",
+      "expected": "backend=none / ok=false / html+layout.md 均在",
+      "actual": "[\"preview.html\", \"preview.layout.md\"]"
+    }
+  ],
+  "degradation": [
+    {
+      "name": "B1 缺材料 → partial 且写明原因",
+      "pass": true,
+      "detail": "源材料不可用：未找到源材料（case.source 缺失且目录里没有唯一候选）"
+    },
+    {
+      "name": "B2 缺模板 → 用自带模板 + uncertainty 记账",
+      "pass": true,
+      "detail": "template=template.pptx noted=True"
+    },
+    {
+      "name": "B3 无渲染后端 → partial + HTML 兜底 + 不伪造 PDF",
+      "pass": true,
+      "detail": "status=partial html=True pdf=[]"
+    }
+  ],
+  "counter_examples": [
+    {
+      "name": "C1 破坏 plan 被拦（缺定位/越界/引文篡改 → high）",
+      "pass": true,
+      "detail": "high=3 判定=False"
+    }
+  ],
+  "totals": {
+    "checks": 93,
+    "passed": 93,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "runtime_s": 146.6,
+    "ok": true
+  },
+  "cwd_independence": {
+    "name": "R1b cwd 无关（外部 cwd + 绝对路径调用 → success + resolved_from 记账）",
+    "foreign_cwd": "q08-cwd-36txc79f",
+    "returncode": 0,
+    "status": "success",
+    "resolved_from": {
+      "template": "case_dir",
+      "template_spec": "case_dir",
+      "source": "case_dir"
+    },
+    "template_origin": "spec-synth(template-spec.example.json:example-4x3-zh)",
+    "pass": true,
+    "detail": "_audit {\"status\": \"success\", \"elapsed_s\": 11.8, \"artifacts\": 17}\r\n[run] DONE status=success → out-example (11.8s)",
+    "artifacts_in_cwd": []
+  },
+  "copy_probe": {
+    "name": "copy_probe 整包拷到 .../stage/outputs 下仍自足（防路径段过滤吞输入）",
+    "copy_path_has_outputs": true,
+    "returncode": 0,
+    "status": "success",
+    "slides": 10,
+    "template_origin": "spec-synth(template-spec.example.json:example-4x3-zh)",
+    "resolved_from": {
+      "template": "case_dir",
+      "template_spec": "case_dir",
+      "source": "case_dir"
+    },
+    "artifacts_in_cwd": [],
+    "pass": true,
+    "detail": " 8_audit {\"status\": \"success\", \"elapsed_s\": 11.5, \"artifacts\": 17}\r\n[run] DONE status=success → out (11.5s)",
+    "rendered_pages": 10
+  },
+  "empty_guard": {
+    "name": "空产物守卫（0 内容块/0 页 → partial + 具体原因）",
+    "pass": true,
+    "detail": "d_s\": 0.4, \"artifacts\": 8}\r\n[run] DONE status=partial → out (0.4s)",
+    "expected": "status=partial 且 status_reason 含「空产物」",
+    "actual": {
+      "status": "partial",
+      "status_reason": "空产物守卫：材料解析出 0 个内容块（源文件可能是空文件/扫描件/路径未命中）（已产出物不作数）",
+      "guards": [
+        "材料解析出 0 个内容块（源文件可能是空文件/扫描件/路径未命中）"
+      ]
+    }
+  }
+}

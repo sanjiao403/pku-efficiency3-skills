@@ -1,0 +1,515 @@
+{
+  "what": "real two-arm comparison on identical case inputs (mechanism check, NOT a platform score)",
+  "arms": {
+    "baseline": "paragraph-order paste, fixed 14pt, no locator, notes = page text",
+    "skill": "scripts/run.py (this package)"
+  },
+  "shared": [
+    "material reader (papertext.py)",
+    "renderer (render.py)",
+    "measurement (benchmark_local.measure)",
+    "auditor (audit_deck.py)"
+  ],
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows",
+    "model_requests": 0,
+    "note": "both arms are deterministic code; no model is called in either arm, so the elapsed-time delta is pure wall clock"
+  },
+  "commands": [
+    "python3 scripts/run.py --case <case.json> --out <T>/skill",
+    "python3 scripts/benchmark_local.py --reps 3",
+    "python3 scripts/audit_deck.py --out <T>/<arm> --case <case.json>"
+  ],
+  "metrics": [
+    {
+      "key": "slides",
+      "label": "页数",
+      "field": "cases[i].{arm}.slides",
+      "aggregation": "sum"
+    },
+    {
+      "key": "page_budget_ok",
+      "label": "页数不超上限",
+      "field": "cases[i].{arm}.page_budget_ok",
+      "aggregation": "mean"
+    },
+    {
+      "key": "page_budget_over_by",
+      "label": "超出页数预算",
+      "field": "cases[i].{arm}.page_budget_over_by",
+      "aggregation": "sum"
+    },
+    {
+      "key": "verifiable_elements",
+      "label": "可核验图元数（数字 + 图/表号）",
+      "field": "cases[i].{arm}.verifiable_elements",
+      "aggregation": "sum"
+    },
+    {
+      "key": "source_traceability",
+      "label": "来源可追率（逐字回查命中）",
+      "field": "cases[i].{arm}.source_traceability",
+      "aggregation": "mean"
+    },
+    {
+      "key": "caption_number_consistency",
+      "label": "图注-数值一致率",
+      "field": "cases[i].{arm}.caption_number_consistency",
+      "aggregation": "mean"
+    },
+    {
+      "key": "layout_violations",
+      "label": "布局/溢出违规数",
+      "field": "cases[i].{arm}.layout_violations",
+      "aggregation": "sum"
+    },
+    {
+      "key": "max_page_chars",
+      "label": "单页最多字符数",
+      "field": "cases[i].{arm}.max_page_chars",
+      "aggregation": "sum"
+    },
+    {
+      "key": "notes_echo_pages",
+      "label": "备注复述页数",
+      "field": "cases[i].{arm}.notes_echo_pages",
+      "aggregation": "sum"
+    },
+    {
+      "key": "content_pages_located",
+      "label": "已核实 locator 的内容页",
+      "field": "cases[i].{arm}.content_pages_located",
+      "aggregation": "sum"
+    },
+    {
+      "key": "locator_rate",
+      "label": "来源定位覆盖率",
+      "field": "cases[i].{arm}.locator_rate",
+      "aggregation": "mean"
+    },
+    {
+      "key": "audit_deck_failed",
+      "label": "独立审计失败项数",
+      "field": "cases[i].{arm}.audit_deck_failed",
+      "aggregation": "sum"
+    },
+    {
+      "key": "e2e_seconds",
+      "label": "端到端耗时（秒）",
+      "field": "cases[i].{arm}.e2e_seconds",
+      "aggregation": "sum"
+    }
+  ],
+  "cases": [
+    {
+      "case": "case_zh_md",
+      "reps": 3,
+      "baseline": {
+        "slides": 20,
+        "slide_limit": 12,
+        "page_budget_ok": false,
+        "page_budget_over_by": 8,
+        "verifiable_elements": 87,
+        "traceable_elements": 86,
+        "source_traceability": 0.989,
+        "untraceable_examples": [
+          "p11 number 26"
+        ],
+        "caption_elements": 4,
+        "caption_number_consistency": 1.0,
+        "layout_violations": 0,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 0,
+        "min_font_pt": 14.0,
+        "max_page_chars": 227,
+        "mean_page_chars": 120,
+        "notes_echo_pages": 20,
+        "content_pages": 0,
+        "content_pages_located": 0,
+        "locator_rate": null,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 1,
+          "total": 8,
+          "failed": 6,
+          "failed_ids": [
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8"
+          ]
+        },
+        "material_readers": [
+          "md"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 0.13,
+        "e2e_seconds_all": [
+          0.15,
+          0.13,
+          0.12
+        ],
+        "e2e_seconds_spread": 0.03,
+        "run_error": null,
+        "out_dir": "baseline",
+        "audit_deck_failed": 6
+      },
+      "skill": {
+        "slides": 9,
+        "slide_limit": 12,
+        "page_budget_ok": true,
+        "page_budget_over_by": 0,
+        "verifiable_elements": 29,
+        "traceable_elements": 29,
+        "source_traceability": 1.0,
+        "untraceable_examples": [],
+        "caption_elements": 5,
+        "caption_number_consistency": 1.0,
+        "layout_violations": 0,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 0,
+        "min_font_pt": 11.0,
+        "max_page_chars": 306,
+        "mean_page_chars": 125,
+        "notes_echo_pages": 0,
+        "content_pages": 9,
+        "content_pages_located": 9,
+        "locator_rate": 1.0,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 8,
+          "total": 8,
+          "failed": 0,
+          "failed_ids": []
+        },
+        "material_readers": [
+          "md"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 11.62,
+        "e2e_seconds_all": [
+          11.62,
+          13.95,
+          8.36
+        ],
+        "e2e_seconds_spread": 5.59,
+        "run_error": null,
+        "out_dir": "skill",
+        "audit_deck_failed": 0
+      },
+      "delta": {
+        "slides": -11,
+        "page_budget_ok": null,
+        "page_budget_over_by": -8,
+        "verifiable_elements": -58,
+        "source_traceability": 0.011,
+        "caption_number_consistency": 0.0,
+        "layout_violations": 0,
+        "max_page_chars": 79,
+        "notes_echo_pages": -20,
+        "content_pages_located": 9,
+        "locator_rate": null,
+        "audit_deck_failed": -6,
+        "e2e_seconds": 11.49
+      }
+    },
+    {
+      "case": "case_latex",
+      "reps": 3,
+      "baseline": {
+        "slides": 15,
+        "slide_limit": 12,
+        "page_budget_ok": false,
+        "page_budget_over_by": 3,
+        "verifiable_elements": 50,
+        "traceable_elements": 50,
+        "source_traceability": 1.0,
+        "untraceable_examples": [],
+        "caption_elements": 7,
+        "caption_number_consistency": 0.857,
+        "layout_violations": 0,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 0,
+        "min_font_pt": 14.0,
+        "max_page_chars": 479,
+        "mean_page_chars": 256,
+        "notes_echo_pages": 15,
+        "content_pages": 0,
+        "content_pages_located": 0,
+        "locator_rate": null,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 2,
+          "total": 8,
+          "failed": 5,
+          "failed_ids": [
+            "A2",
+            "A3",
+            "A5",
+            "A6",
+            "A7",
+            "A8"
+          ]
+        },
+        "material_readers": [
+          "tex"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 0.13,
+        "e2e_seconds_all": [
+          0.14,
+          0.13,
+          0.13
+        ],
+        "e2e_seconds_spread": 0.01,
+        "run_error": null,
+        "out_dir": "baseline",
+        "audit_deck_failed": 5
+      },
+      "skill": {
+        "slides": 9,
+        "slide_limit": 12,
+        "page_budget_ok": true,
+        "page_budget_over_by": 0,
+        "verifiable_elements": 21,
+        "traceable_elements": 21,
+        "source_traceability": 1.0,
+        "untraceable_examples": [],
+        "caption_elements": 6,
+        "caption_number_consistency": 1.0,
+        "layout_violations": 0,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 0,
+        "min_font_pt": 11.0,
+        "max_page_chars": 483,
+        "mean_page_chars": 258,
+        "notes_echo_pages": 0,
+        "content_pages": 11,
+        "content_pages_located": 11,
+        "locator_rate": 1.0,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 8,
+          "total": 8,
+          "failed": 0,
+          "failed_ids": []
+        },
+        "material_readers": [
+          "tex"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 15.17,
+        "e2e_seconds_all": [
+          10.57,
+          15.17,
+          17.43
+        ],
+        "e2e_seconds_spread": 6.86,
+        "run_error": null,
+        "out_dir": "skill",
+        "audit_deck_failed": 0
+      },
+      "delta": {
+        "slides": -6,
+        "page_budget_ok": null,
+        "page_budget_over_by": -3,
+        "verifiable_elements": -29,
+        "source_traceability": 0.0,
+        "caption_number_consistency": 0.143,
+        "layout_violations": 0,
+        "max_page_chars": 4,
+        "notes_echo_pages": -15,
+        "content_pages_located": 11,
+        "locator_rate": null,
+        "audit_deck_failed": -5,
+        "e2e_seconds": 15.04
+      }
+    },
+    {
+      "case": "case_en_pdf",
+      "reps": 3,
+      "baseline": {
+        "slides": 23,
+        "slide_limit": 14,
+        "page_budget_ok": false,
+        "page_budget_over_by": 9,
+        "verifiable_elements": 76,
+        "traceable_elements": 76,
+        "source_traceability": 1.0,
+        "untraceable_examples": [],
+        "caption_elements": 6,
+        "caption_number_consistency": 0.667,
+        "layout_violations": 5,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 5,
+        "min_font_pt": 10.0,
+        "max_page_chars": 759,
+        "mean_page_chars": 256,
+        "notes_echo_pages": 22,
+        "content_pages": 0,
+        "content_pages_located": 0,
+        "locator_rate": null,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 2,
+          "total": 8,
+          "failed": 5,
+          "failed_ids": [
+            "A2",
+            "A3",
+            "A5",
+            "A6",
+            "A7",
+            "A8"
+          ]
+        },
+        "material_readers": [
+          "pdf"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 0.24,
+        "e2e_seconds_all": [
+          0.29,
+          0.24,
+          0.22
+        ],
+        "e2e_seconds_spread": 0.07,
+        "run_error": null,
+        "out_dir": "baseline",
+        "audit_deck_failed": 5
+      },
+      "skill": {
+        "slides": 9,
+        "slide_limit": 14,
+        "page_budget_ok": true,
+        "page_budget_over_by": 0,
+        "verifiable_elements": 30,
+        "traceable_elements": 30,
+        "source_traceability": 1.0,
+        "untraceable_examples": [],
+        "caption_elements": 6,
+        "caption_number_consistency": 1.0,
+        "layout_violations": 0,
+        "offscreen_shapes": 0,
+        "pages_below_floor": 0,
+        "min_font_pt": 11.0,
+        "max_page_chars": 417,
+        "mean_page_chars": 282,
+        "notes_echo_pages": 0,
+        "content_pages": 11,
+        "content_pages_located": 11,
+        "locator_rate": 1.0,
+        "self_declared_status": "success",
+        "audit_deck": {
+          "passed": 8,
+          "total": 8,
+          "failed": 0,
+          "failed_ids": []
+        },
+        "material_readers": [
+          "pdf"
+        ],
+        "unmeasurable": {},
+        "e2e_seconds": 10.81,
+        "e2e_seconds_all": [
+          7.48,
+          12.21,
+          10.81
+        ],
+        "e2e_seconds_spread": 4.73,
+        "run_error": null,
+        "out_dir": "skill",
+        "audit_deck_failed": 0
+      },
+      "delta": {
+        "slides": -14,
+        "page_budget_ok": null,
+        "page_budget_over_by": -9,
+        "verifiable_elements": -46,
+        "source_traceability": 0.0,
+        "caption_number_consistency": 0.333,
+        "layout_violations": -5,
+        "max_page_chars": -342,
+        "notes_echo_pages": -22,
+        "content_pages_located": 11,
+        "locator_rate": null,
+        "audit_deck_failed": -5,
+        "e2e_seconds": 10.57
+      }
+    }
+  ],
+  "totals": {
+    "baseline": {
+      "slides": 58.0,
+      "page_budget_ok": 0.0,
+      "page_budget_over_by": 20.0,
+      "verifiable_elements": 213.0,
+      "source_traceability": 0.996,
+      "caption_number_consistency": 0.841,
+      "layout_violations": 5.0,
+      "max_page_chars": 1465.0,
+      "notes_echo_pages": 57.0,
+      "content_pages_located": 0.0,
+      "locator_rate": null,
+      "audit_deck_failed": 16.0,
+      "e2e_seconds": 0.5,
+      "e2e_spread": 0.07
+    },
+    "skill": {
+      "slides": 27.0,
+      "page_budget_ok": 1.0,
+      "page_budget_over_by": 0.0,
+      "verifiable_elements": 80.0,
+      "source_traceability": 1.0,
+      "caption_number_consistency": 1.0,
+      "layout_violations": 0.0,
+      "max_page_chars": 1206.0,
+      "notes_echo_pages": 0.0,
+      "content_pages_located": 31.0,
+      "locator_rate": 1.0,
+      "audit_deck_failed": 0.0,
+      "e2e_seconds": 37.6,
+      "e2e_spread": 6.86
+    },
+    "delta": {
+      "slides": -31.0,
+      "page_budget_ok": 1.0,
+      "page_budget_over_by": -20.0,
+      "verifiable_elements": -133.0,
+      "source_traceability": 0.004,
+      "caption_number_consistency": 0.159,
+      "layout_violations": -5.0,
+      "max_page_chars": -259.0,
+      "notes_echo_pages": -57.0,
+      "content_pages_located": 31.0,
+      "locator_rate": null,
+      "audit_deck_failed": -16.0,
+      "e2e_seconds": 37.1
+    },
+    "aggregation": {
+      "slides": "sum",
+      "page_budget_ok": "mean",
+      "page_budget_over_by": "sum",
+      "verifiable_elements": "sum",
+      "source_traceability": "mean",
+      "caption_number_consistency": "mean",
+      "layout_violations": "sum",
+      "max_page_chars": "sum",
+      "notes_echo_pages": "sum",
+      "content_pages_located": "sum",
+      "locator_rate": "mean",
+      "audit_deck_failed": "sum",
+      "e2e_seconds": "sum"
+    }
+  },
+  "not_measured": {
+    "human_edit_pages": null,
+    "reason": "no human edit step exists in an automated comparison; recorded as null rather than estimated.",
+    "platform_score": null,
+    "reason_platform_score": "mechanism comparison; cannot be converted into an official score."
+  }
+}

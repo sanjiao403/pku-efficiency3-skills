@@ -1,0 +1,175 @@
+{
+ "note": "expected vs actual, produced by real runs of the main command",
+ "python": "3.14.3",
+ "tests": [
+  {
+   "test": "T1 generate: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "assed\": true, \"stages\": [[\"contract\", \"ok\"], [\"discover\", \"ok\"], [\"template\", \"ok\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"plan\", \"ok\"], [\"build\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+  },
+  {
+   "test": "T1 generate: result.status",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T1 generate: slides == case slide_count",
+   "expected": 8,
+   "actual": 8,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: contract keys echoed",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: outputs[] carries sha256",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T1 generate: body text is not empty (placeholder kept)",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": ": \"ok\", \"checks_passed\": true, \"stages\": [[\"contract\", \"ok\"], [\"discover\", \"ok\"], [\"template\", \"ok\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"edit\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+  },
+  {
+   "test": "T2 edit: result.status",
+   "expected": "success",
+   "actual": "success",
+   "ok": true,
+   "uncertainty": [],
+   "checks": {
+    "slides": 6,
+    "checks": 14,
+    "failed": 0,
+    "not_applicable": [
+     "C02",
+     "C06",
+     "C07",
+     "C12"
+    ],
+    "failed_ids": []
+   },
+   "failed_checks": []
+  },
+  {
+   "test": "T2 edit: slide count trimmed to the case instruction",
+   "expected": 6,
+   "actual": 6,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: template_preserved",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T2 edit: version snapshots written",
+   "expected": 2,
+   "actual": 2,
+   "ok": true
+  },
+  {
+   "test": "T3 recompute (generated deck) exits 0",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "\",\r\n    \"expected\": 2526,\r\n    \"actual\": 2526,\r\n    \"ok\": true\r\n   },\r\n   {\r\n    \"item\": \"outputs[] slide_plan.json bytes\",\r\n    \"expected\": 5975,\r\n    \"actual\": 5975,\r\n    \"ok\": true\r\n   }\r\n  ],\r\n  \"passed\": true\r\n },\r\n \"passed\": true\r\n}\r\n"
+  },
+  {
+   "test": "T3 recompute (edited deck) exits 0",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "tail": "   \"expected\": 14383,\r\n    \"actual\": 14383,\r\n    \"ok\": true\r\n   },\r\n   {\r\n    \"item\": \"outputs[] evidence_map.jsonl bytes\",\r\n    \"expected\": 2517,\r\n    \"actual\": 2517,\r\n    \"ok\": true\r\n   }\r\n  ],\r\n  \"passed\": true\r\n },\r\n \"passed\": true\r\n}\r\n"
+  },
+  {
+   "test": "T4 cwd independence: status success",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T4 cwd independence: material resolved from case_dir",
+   "expected": "case_dir",
+   "actual": "case_dir",
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: exit code",
+   "expected": 0,
+   "actual": 0,
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: status success",
+   "expected": "success",
+   "actual": "success",
+   "ok": true
+  },
+  {
+   "test": "T5 copy probe: slides == 8",
+   "expected": 8,
+   "actual": 8,
+   "ok": true
+  },
+  {
+   "test": "T6 empty input: status is not success",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  },
+  {
+   "test": "T6 empty input: a reason is recorded",
+   "expected": true,
+   "actual": true,
+   "ok": true
+  }
+ ],
+ "passed": true,
+ "cwd_independence": {
+  "command": "cd <external-cwd> && python3 <pkg>/scripts/deck.py --case <pkg>/examples/../in/case.json --out <external-cwd>/out",
+  "cwd": "<external temp dir, not the package dir and not /input>",
+  "exit_code": 0,
+  "status": "success",
+  "slides": 8,
+  "resolved_from": {
+   "material": "case_dir"
+  },
+  "tail": "k\"], [\"discover\", \"ok\"], [\"template\", \"ok\"], [\"ingest\", \"ok\"], [\"partial_result\", \"ok\"], [\"plan\", \"ok\"], [\"build\", \"ok\"], [\"render\", \"ok\"], [\"verify\", \"ok\"]]}\r\n"
+ },
+ "copy_probe": {
+  "why": "input discovery keys on file names only, never on absolute path segments: a package placed under a path containing 'outputs' still sees its inputs",
+  "copy_path_shape": "<tmp>/runs/q09-fire/stage/outputs/pkg-copy",
+  "command": "cd <external-cwd> && python3 <copy>/scripts/deck.py --case <copy>/examples/case.example.json --out <external-cwd>/out",
+  "exit_code": 0,
+  "status": "success",
+  "slides": 8,
+  "discover": "ok",
+  "uncertainty": []
+ },
+ "empty_artifact_guard": {
+  "exit_code": 1,
+  "status": "failed",
+  "slides": 0,
+  "uncertainty": [
+   "no material and no starting deck in the input directory"
+  ]
+ },
+ "runtime_workdir": "temporary (not shipped)"
+}

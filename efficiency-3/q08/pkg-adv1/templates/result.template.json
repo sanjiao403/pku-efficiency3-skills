@@ -1,0 +1,90 @@
+{
+  "_note": "结果契约（result.json）字段级模板。键的含义与取值规则见 README §3；本文件同时说明每个字段的证据来源，便于他人独立复核。",
+  "schema": "q08-result/1",
+  "case_id": "str —— 输入标识原样回写",
+  "task": "str —— 任务名",
+  "status": "success | partial —— 只有 pptx 可打开 + 渲染成功 + 无 high 问题 + 引文回源 100% + 定位覆盖 100% 才 success",
+  "status_reason": "str —— 具体原因（缺哪个文件 / 哪项不达标），禁止套话",
+  "summary": "str —— 一句话事实摘要：几页、几处证据、关键指标读数",
+  "generated_at": "ISO8601 带时区",
+  "results": {
+    "template": {
+      "source": { "path": "模板文件名", "bytes": 0, "sha256": "…" },
+      "slide_size": { "width_in": 13.333, "height_in": 7.5, "ratio_label": "16:9" },
+      "layout_count": 0,
+      "roles": { "title": [0], "content": [1], "two-column": [3], "figure": [8] },
+      "theme_fonts": { "majorFont": { "latin": "", "ea": "" }, "minorFont": {} },
+      "theme_colors": { "accent1": "2E74B5" },
+      "fonts": { "字体名": { "declared_by": [], "installed": true, "fallback_latin": "", "fallback_ea": "" } },
+      "warnings": [],
+      "inheritance": {
+        "layouts_out": 11, "layouts_template": 11, "layouts_preserved": true,
+        "masters_out": 1, "theme_out": {}, "theme_template": {}, "theme_preserved": true
+      }
+    },
+    "plan": {
+      "stats": { "slides": 0, "bullets": 0, "figures_used": 0, "sections_used": 0 },
+      "slide_count_constraint": { "min": 0, "max": 0 },
+      "dropped_content": [{ "section": "", "locator": "", "why": "" }],
+      "fonts": {}, "ladders": {}
+    },
+    "build": {
+      "slides": 0, "stripped_slides": 0, "mode": "build | adapt",
+      "warnings": [],
+      "font_scale": [{ "slide": 7, "body": 0.92 }],
+      "placeholders_synthesized": [{ "slide": 4, "detail": [] }]
+    },
+    "fit": {
+      "metrics": {
+        "slides": 0, "slides_with_text_overflow": 0, "textboxes_over_container": 0,
+        "min_body_pt": 20.0, "min_caption_pt": 12.0, "figure_aspect_max_deviation": 0.0,
+        "figures": 0, "geometry_inherited_slides": 0,
+        "locator_coverage": 1.0, "quote_verified_rate": 1.0,
+        "footer_slides": 0, "page_number_slides": 0
+      },
+      "issues": [{ "severity": "high|medium|low", "item": "", "slide": 0, "detail": "", "fix": "" }],
+      "consistency": { "title_geometry_groups": 0, "title_geometry_inconsistent": [] }
+    },
+    "render": {
+      "ok": true, "backend": "powerpoint | soffice | none",
+      "pdf": "preview/deck.pdf", "png_count": 0, "page_count": 0,
+      "pdf_fonts": [], "missing_fonts": [], "issues": [],
+      "pages": [{ "page": 1, "text_coverage": 1.0, "images": 0, "bbox_margins_pt": {}, "fonts": [] }]
+    },
+    "evidence_summary": { "total": 0, "verified": 0, "pages_with_evidence": 0 },
+    "metrics": {
+      "slides": 0, "template_layouts_preserved": true, "template_theme_preserved": true,
+      "layouts_in_output": 0, "slides_with_overflow": 0, "overflow_boxes": 0,
+      "min_body_pt": 0, "figure_aspect_max_deviation": 0, "figures": 0,
+      "locator_coverage": 1.0, "quote_verified_rate": 1.0,
+      "pdf_pages": 0, "pdf_backend": "", "pdf_fonts": [], "font_substitutions": [],
+      "min_pdf_text_coverage": 1.0, "page_number_slides": 0, "footer_slides": 0,
+      "baseline_comparison": { "overflow_slides": 0, "figure_aspect_max_deviation": 0 }
+    }
+  },
+  "slides": [
+    {
+      "page": 1, "role": "title", "layout": "Title Slide", "title": "", "claim": "",
+      "evidence_locs": [], "evidence_count": 0, "figure": null,
+      "font_sizes": [], "overflow": [], "notes_chars": 0,
+      "render": { "pdf_fonts": [], "text_coverage": 1.0, "images": 0 }
+    }
+  ],
+  "evidence": [
+    { "page": 3, "locator": "§3.2 ¶1", "block_id": "b012", "quote": "逐字原文", "verified": true, "source_kind": "pdf" }
+  ],
+  "sources": [
+    { "file": "", "kind": "pdf|md|docx", "sha256": "…", "pages": 0, "method": "" }
+  ],
+  "uncertainty": [{ "item": "字体缺失|材料抽取|渲染|内容裁剪", "why": "", "handling": "" }],
+  "change_log": [{ "step": "1 模板解析", "what": "", "evidence": "" }],
+  "artifacts": [
+    { "path": "", "exists": true, "kind": "editable-presentation|rendered-pdf|rendered-png|slide-plan|report", "bytes": 0, "sha256": "…" }
+  ],
+  "capability_boundary": ["技术检查证明什么", "不证明什么"],
+  "reproduce": "python scripts/run.py --input <case.json> --out out --backend auto",
+  "narrative": "agent 写的叙述；脚本不代写（narrative_source 标来源）",
+  "narrative_source": "agent-authored | missing (机器只产结构化事实；叙述应由 agent 补写)",
+  "output_contract_echo": { "输入 output_contract 里的每个字段": "值或 null" },
+  "contract_unresolved_fields": ["给不出值而被回显为 null 的字段名"]
+}

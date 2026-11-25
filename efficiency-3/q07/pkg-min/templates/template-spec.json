@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "_note": "模板的纯文本 spec：缺 .pptx 模板时，字体/色值取自本文件并写入生成母版的主题。不含任何案例内容。",
+  "name": "academic-talk-template",
+  "sample_title": "（模板占位标题）",
+  "slide_size_emu": [12192000, 6858000],
+  "theme": {
+    "major_font": "Microsoft YaHei",
+    "minor_font": "Microsoft YaHei",
+    "ea_font": "微软雅黑",
+    "colors": {"dk1": "12263A", "lt1": "FFFFFF", "dk2": "0B4F6C", "lt2": "F5F7FA", "accent1": "2F5B8C", "accent2": "0B4F6C"}
+  },
+  "typography": {
+    "title_pt": [24, 34],
+    "body_pt": [14, 20],
+    "rule": "不覆盖给定模板的主题字体/配色；文字继承 +mj-lt / +mn-lt；缺字体由渲染器替换并记录。"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_comment": "示例（非正式答案）。这是对 examples/case.example.json 真实运行一次后由 chart.py 重新解析 figure.pdf / figure.png 得到的导出证据；sha256 属于那次运行，重跑会变（钉住 SOURCE_DATE_EPOCH 后两次运行逐字节相同，见 README §7）。不是平台正式案例，也不含被测答案。",
+  "engine": "matplotlib 3.11.2 (Agg; pdf.fonttype=42)",
+  "dpi": 300,
+  "font_basis": "DejaVu Sans (bundled with matplotlib; latin, greek, symbols)",
+  "png_text_layer": "labels drawn with the same text list as the SVG",
+  "non_ascii_in_labels": [],
+  "target": {
+    "width_mm": 89.0,
+    "height_mm": 70.0,
+    "colour_space": "sRGB (PNG) / DeviceRGB (PDF)",
+    "expected_px_at_dpi": [
+      1051,
+      827
+    ]
+  },
+  "figure.pdf": {
+    "path": "figure.pdf",
+    "bytes": 13902,
+    "sha256": "a1ff081a0609c01416fd7bb861a8bdd701b5934cd62c65c05c38b83145076887",
+    "header": "%PDF-1.4",
+    "media_box_pt": [
+      252.2834645669,
+      198.4251968504
+    ],
+    "media_box_mm": [
+      89.0,
+      70.0
+    ],
+    "pages": 1,
+    "text_show_ops": 14,
+    "fonts": [
+      "BDTPEM+DejaVuSans"
+    ],
+    "font_subset_embedded": true,
+    "image_xobjects": 0,
+    "colour_space": "DeviceRGB"
+  },
+  "figure.png": {
+    "path": "figure.png",
+    "bytes": 38313,
+    "sha256": "9dd9975a671f4e2aa290eb7d3f138b038e56565d9b3a6d83d6a59c17dd6b5b43",
+    "chunks": [
+      "IHDR",
+      "tEXt",
+      "pHYs",
+      "IDAT",
+      "IEND"
+    ],
+    "width_px": 1051,
+    "height_px": 826,
+    "bit_depth": 8,
+    "colour_type": 6,
+    "dpi_metadata": [
+      300.0,
+      300.0
+    ]
+  },
+  "checks": {
+    "pdf_is_vector": true,
+    "pdf_text_preserved": true,
+    "pdf_size_matches_style": true,
+    "png_geometry_matches_dpi": true,
+    "png_colour_space": true
+  }
+}

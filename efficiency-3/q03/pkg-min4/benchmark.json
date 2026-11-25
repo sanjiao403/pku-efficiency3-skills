@@ -1,0 +1,285 @@
+{
+  "_comment": "示例（非正式答案）——由 scripts/benchmark.py 真实运行后写出：带标签案例的判定 + 两条路线在同样工单上的实测差异。",
+  "corpus": "tests/gain_cases.json",
+  "routes": {
+    "naive": "plain SVG bar writer inside scripts/benchmark.py (no map, no unit, no gates)",
+    "skill": "scripts/chart.py + scripts/verify.py"
+  },
+  "aggregate": {
+    "naive": {
+      "cases": 2,
+      "traceability_rate": 0.0,
+      "unit_correct_rate": 0.0,
+      "violations": 21,
+      "checks_total": 28,
+      "total_seconds": 0.005
+    },
+    "skill": {
+      "cases": 4,
+      "traceability_rate": 1.0,
+      "unit_correct_rate": 0.5,
+      "violations": 7,
+      "checks_total": 56,
+      "total_seconds": 0.068
+    }
+  },
+  "gain_cases": [
+    {
+      "id": "gain-01",
+      "label": "grounded",
+      "why": "分组柱状图：每个柱都能指回源表行与列（grounded 基线）",
+      "artifact": "tests/gain_cases.json#cases[gain-01].case -> figure.svg + figure.map.json + result.json + verification_report.json",
+      "tampered": false,
+      "expected_vs_actual": [
+        {
+          "field": "status",
+          "expected": "success",
+          "actual": "success"
+        },
+        {
+          "field": "value_fidelity",
+          "expected": "ok",
+          "actual": "ok"
+        },
+        {
+          "field": "traceability_rate",
+          "expected": 1.0,
+          "actual": 1.0
+        },
+        {
+          "field": "unit_on_axis",
+          "expected": true,
+          "actual": true
+        }
+      ],
+      "verdict": "pass",
+      "seconds": 0.022,
+      "verify_violations": []
+    },
+    {
+      "id": "gain-02",
+      "label": "fabricated_number",
+      "why": "把映射里的数值改成源表不存在的 7.77，要求只读产物即判出 value.mismatch",
+      "artifact": "tests/gain_cases.json#cases[gain-02].case -> figure.svg + figure.map.json + result.json + verification_report.json",
+      "tampered": true,
+      "expected_vs_actual": [
+        {
+          "field": "value_fidelity",
+          "expected": "fail",
+          "actual": "fail"
+        }
+      ],
+      "verdict": "pass",
+      "seconds": 0.021,
+      "verify_violations": [
+        "output_files_hashed",
+        "values_match_source"
+      ]
+    },
+    {
+      "id": "gain-03",
+      "label": "off_topic",
+      "why": "跑题工单 + 无数值列：必须拒绝出图、不编数字",
+      "artifact": "tests/gain_cases.json#cases[gain-03].case -> figure.svg + figure.map.json + result.json + verification_report.json",
+      "tampered": false,
+      "expected_vs_actual": [
+        {
+          "field": "status",
+          "expected": "failed",
+          "actual": "failed"
+        },
+        {
+          "field": "values_drawn",
+          "expected": 0,
+          "actual": 0
+        }
+      ],
+      "verdict": "pass",
+      "seconds": 0.004,
+      "verify_violations": [
+        "output_files_hashed",
+        "elements_in_svg",
+        "values_match_source"
+      ]
+    },
+    {
+      "id": "gain-04",
+      "label": "unit_missing",
+      "why": "数量轴是物理量却无单位：必须出图但报 partial 与 axis_units 失败",
+      "artifact": "tests/gain_cases.json#cases[gain-04].case -> figure.svg + figure.map.json + result.json + verification_report.json",
+      "tampered": false,
+      "expected_vs_actual": [
+        {
+          "field": "status",
+          "expected": "partial",
+          "actual": "partial"
+        },
+        {
+          "field": "unit_on_axis",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "field": "axis_units",
+          "expected": "fail",
+          "actual": "fail"
+        }
+      ],
+      "verdict": "pass",
+      "seconds": 0.011,
+      "verify_violations": [
+        "axis_unit_declared"
+      ]
+    }
+  ],
+  "routes_detail": [
+    {
+      "case": "gain-01",
+      "label": "grounded",
+      "naive": {
+        "elements": 6,
+        "series": 2,
+        "checks_total": 14,
+        "violations": 11,
+        "violation_names": [
+          "output_files_hashed",
+          "elements_in_svg",
+          "values_match_source"
+        ],
+        "drawn_marks": 6,
+        "traceable_marks": 0,
+        "traceability_rate": 0.0,
+        "unit_on_axis": false,
+        "value_fidelity": "fail",
+        "seconds": 0.003
+      },
+      "skill": {
+        "elements": 6,
+        "series": 2,
+        "status": "success",
+        "exit_code": 0,
+        "resolved_from": [],
+        "checks_total": 14,
+        "violations": 0,
+        "violation_names": [],
+        "drawn_marks": 6,
+        "traceable_marks": 6,
+        "traceability_rate": 1.0,
+        "unit_on_axis": true,
+        "value_fidelity": "ok",
+        "seconds": 0.018
+      }
+    },
+    {
+      "case": "gain-02",
+      "label": "fabricated_number",
+      "skill": {
+        "elements": 2,
+        "series": 2,
+        "status": "success",
+        "exit_code": 0,
+        "resolved_from": [],
+        "checks_total": 14,
+        "violations": 0,
+        "violation_names": [],
+        "drawn_marks": 2,
+        "traceable_marks": 2,
+        "traceability_rate": 1.0,
+        "unit_on_axis": true,
+        "value_fidelity": "ok",
+        "seconds": 0.023
+      }
+    },
+    {
+      "case": "gain-03",
+      "label": "off_topic",
+      "skill": {
+        "elements": 0,
+        "series": null,
+        "status": "failed",
+        "exit_code": 1,
+        "resolved_from": [],
+        "checks_total": 14,
+        "violations": 6,
+        "violation_names": [
+          "output_files_hashed",
+          "elements_in_svg",
+          "values_match_source"
+        ],
+        "drawn_marks": 0,
+        "traceable_marks": 0,
+        "traceability_rate": 0.0,
+        "unit_on_axis": false,
+        "value_fidelity": "fail",
+        "seconds": 0.011
+      }
+    },
+    {
+      "case": "gain-04",
+      "label": "unit_missing",
+      "naive": {
+        "elements": 4,
+        "series": 2,
+        "checks_total": 14,
+        "violations": 10,
+        "violation_names": [
+          "output_files_hashed",
+          "elements_in_svg",
+          "values_match_source"
+        ],
+        "drawn_marks": 4,
+        "traceable_marks": 0,
+        "traceability_rate": 0.0,
+        "unit_on_axis": false,
+        "value_fidelity": "fail",
+        "seconds": 0.002
+      },
+      "skill": {
+        "elements": 4,
+        "series": 2,
+        "status": "partial",
+        "exit_code": 0,
+        "resolved_from": [],
+        "checks_total": 14,
+        "violations": 1,
+        "violation_names": [
+          "axis_unit_declared"
+        ],
+        "drawn_marks": 4,
+        "traceable_marks": 4,
+        "traceability_rate": 1.0,
+        "unit_on_axis": false,
+        "value_fidelity": "ok",
+        "seconds": 0.016
+      }
+    }
+  ],
+  "copy_probe": {
+    "staged_path": "<TEMP>/runs/q03-fire/stage/outputs",
+    "case": "examples\\case-01.example.json",
+    "status": "success",
+    "elements": 6,
+    "verify": "14/14",
+    "seconds": 0.284,
+    "stdout_tail": [
+      "CHART_OK"
+    ],
+    "ok": true
+  },
+  "cwd_probe": {
+    "cwd": "<TEMP dir containing a decoy expression.csv>",
+    "status": "success",
+    "decoy_used": false,
+    "resolved_from": [],
+    "ok": true
+  },
+  "environment": {
+    "python": "3.14.3"
+  },
+  "caveats": [
+    "naive route = scripted unassisted plot (a lower bound, not a captured LLM trajectory)",
+    "same verifier rows count violations on both routes",
+    "fabricated_number tampers the element map after rendering (the machine-readable claim)",
+    "no score claimed: measurable differences on this example corpus only"
+  ]
+}

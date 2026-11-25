@@ -1,0 +1,19 @@
+{
+  "_status": "示例（非正式答案）· EXAMPLE case wrapper for the minimal skill. Synthetic material; not a platform case, and NOT a prepared answer.",
+  "_note": "Deliberately declares NO figure_spec: the model is derived heuristically from materials/. Anything under /input works the same way.",
+  "case_id": "example-min2-heuristic",
+  "task": "科研示意图生成与编辑 / scientific schematic generation (EXAMPLE, heuristic)",
+  "material_dir": "materials",
+  "output_contract": [
+    {"name": "case_id", "type": "string", "required": true},
+    {"name": "status", "type": "string", "required": true},
+    {"name": "summary", "type": "string", "required": true},
+    {"name": "editable_source", "type": "string", "required": true},
+    {"name": "exports", "type": "array", "required": true},
+    {"name": "element_sources", "type": "array", "required": false},
+    {"name": "data_mapping", "type": "object", "required": false},
+    {"name": "checks", "type": "object", "required": true},
+    {"name": "uncertainty", "type": "array", "required": true},
+    {"name": "changes", "type": "array", "required": false}
+  ]
+}

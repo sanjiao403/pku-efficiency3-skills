@@ -1,0 +1,20 @@
+{
+  "_note": "示例（非正式答案）· EXAMPLE ONLY — input shape: contract + figure hints + a material list. See BENCHMARK.md for the command that produced examples/result.example.json.",
+  "case_id": "example-not-a-formal-case",
+  "task": "示例：把 materials.md 中的机制画成可编辑机制图，并给出可核验结果。EXAMPLE ONLY, not a formal case.",
+  "output_contract": {
+    "figure_svg": "layered editable SVG source of the mechanism figure",
+    "preview_png": "raster preview produced at run time",
+    "entities": "entity table with type, compartment and source locator",
+    "interactions": "typed directed interaction table with evidence",
+    "legend": "legend rows binding each visual token to its meaning",
+    "status": "success | partial | failed with reason"
+  },
+  "figure": {
+    "title": "EXAMPLE ONLY · EGF-stimulated MAPK signalling",
+    "dpi": 300
+  },
+  "materials": [
+    "materials.md"
+  ]
+}

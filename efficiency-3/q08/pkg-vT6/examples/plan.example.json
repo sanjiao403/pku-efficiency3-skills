@@ -1,0 +1,172 @@
+{
+  "_note": "示例（非正式答案）· 【示意】页级计划骨架（不是正式案例答案）。真实计划由 plan_deck.py 现场生成，agent 可改写后再成册。",
+  "schema": "q08-deck-plan/1",
+  "case_id": "EXAMPLE-001",
+  "meta": {
+    "task": "示例任务：材料 → 10 分钟学术汇报",
+    "template": "../templates/academic-16x9.pptx",
+    "audience": "课题组组会（示例）",
+    "minutes": 10,
+    "language": "zh",
+    "slide_count_constraint": {
+      "min": 8,
+      "max": 10,
+      "target": 9
+    },
+    "slide_count_planned": 4,
+    "fonts": {
+      "title": {
+        "latin": "Arial",
+        "ea": "黑体",
+        "min_pt": 20
+      },
+      "body": {
+        "latin": "Times New Roman",
+        "ea": "宋体",
+        "min_pt": 14
+      },
+      "caption": {
+        "latin": "Times New Roman",
+        "ea": "宋体"
+      },
+      "policy": "中英文分别落 a:latin / a:ea"
+    },
+    "ladders": {
+      "body": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "title": [
+        40,
+        36,
+        32,
+        28,
+        24
+      ],
+      "caption": [
+        14,
+        12,
+        11,
+        10
+      ],
+      "min_body_pt": 14
+    },
+    "generated_by": "plan_deck.py（此处仅示意结构，页数被截断为 4 页以便阅读）"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "role": "title",
+      "layout_index": 0,
+      "layout_hint": "Title Slide",
+      "title": "（源材料标题，逐字）",
+      "subtitle": "EXAMPLE-001 | 示意",
+      "meta_line": "听众：课题组组会（示例） | 时长：10 分钟 | 材料：paper.md",
+      "bullets": [],
+      "figure": null,
+      "notes": "封面：一句话说明研究问题；证据定位：paper.md",
+      "budget": {
+        "size_pt": 32.0,
+        "capacity_chars": 96,
+        "fits": true
+      }
+    },
+    {
+      "index": 2,
+      "role": "agenda",
+      "layout_index": 1,
+      "layout_hint": "Title and Content",
+      "title": "提纲 / Outline",
+      "claim": "",
+      "bullets": [
+        {
+          "text": "（章节标题，逐字）",
+          "level": 0,
+          "bullet": true,
+          "locator": "§1",
+          "block_id": null,
+          "quote": "",
+          "kind": "nav",
+          "truncated": false
+        }
+      ],
+      "figure": null,
+      "notes": "按提纲推进；每节先主张、再数据、最后局限。",
+      "budget": {
+        "size_pt": 20.0,
+        "capacity_chars": 260,
+        "fits": true
+      }
+    },
+    {
+      "index": 3,
+      "role": "figure",
+      "layout_index": 3,
+      "layout_hint": "Two Content",
+      "title": "（结果章节标题，逐字）",
+      "claim": "（源材料中含数值的最强断言，逐字摘录、超长按小句边界截断）",
+      "claim_locator": "§3.2 ¶0",
+      "bullets": [
+        {
+          "text": "（证据句 1，逐字摘录）",
+          "level": 0,
+          "bullet": true,
+          "locator": "§3.2 ¶1",
+          "block_id": "b000",
+          "quote": "（未截断原文，供回源校验）",
+          "truncated": false
+        }
+      ],
+      "figure": {
+        "label": "Figure 1",
+        "caption": "（与源材料一致的图注）",
+        "path": "work/figures/fig1.png",
+        "source_locator": "Figure 1",
+        "origin": "generated",
+        "mode": "fit"
+      },
+      "notes": "讲解顺序：主张 → 数据（图 1）→ 局限；证据定位逐条见 bullet.locator。",
+      "budget": {
+        "size_pt": 20.0,
+        "capacity_chars": 240,
+        "fits": true
+      }
+    },
+    {
+      "index": 4,
+      "role": "closing",
+      "layout_index": 0,
+      "layout_hint": "Title Slide",
+      "title": "谢谢 / Q&A",
+      "claim": "",
+      "bullets": [],
+      "figure": null,
+      "notes": "留提问时间；复跑命令见 result.json.reproduce。",
+      "budget": {
+        "size_pt": 28.0,
+        "fits": true
+      }
+    }
+  ],
+  "dropped_content": [
+    {
+      "section": "（示意：被页数上限裁掉的章节）",
+      "locator": "§2.3",
+      "score": 2.4,
+      "why": "超出案例页数上限（示例）"
+    }
+  ],
+  "change_log": [],
+  "agent_todo": [
+    "用源材料原文核对每条 bullet 的表述（脚本只做逐字摘录，不改写事实）",
+    "把 claim 改成面向听众的一句话主张（改动时保持与 quote 一致）"
+  ],
+  "stats": {
+    "slides": 4,
+    "bullets": 2,
+    "figures_used": 1,
+    "body_chars": 0
+  }
+}

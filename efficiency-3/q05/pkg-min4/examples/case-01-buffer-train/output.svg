@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 示例（非正式答案）：由 apparatus.py 对同目录 material.txt 真跑得到的 SVG 输出。 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="108.37mm" viewBox="0 0 680.31 409.59" data-generator="apparatus.py" data-case="case-01-buffer-train" data-kind="schematic" data-trace="5/5">
+<title></title>
+<rect id="page" x="0" y="0" width="680.31" height="409.59" fill="#FFFFFF"/>
+<g id="layer-rulers">
+<polyline points="37.80,332.80 188.98,332.80" fill="none" stroke="#1A1A1A" stroke-width="1.60" data-role="scale-bar"/>
+<polyline points="37.80,329.80 37.80,335.80" fill="none" stroke="#1A1A1A" stroke-width="1.20" data-role="scale-bar"/>
+<polyline points="113.39,329.80 113.39,335.80" fill="none" stroke="#1A1A1A" stroke-width="1.20" data-role="scale-bar"/>
+<polyline points="188.98,329.80 188.98,335.80" fill="none" stroke="#1A1A1A" stroke-width="1.20" data-role="scale-bar"/>
+</g>
+<g id="layer-units">
+<rect x="67.06" y="55.80" width="131.04" height="21.70" rx="4" fill="#E8F4EC" stroke="#2C6E49" stroke-width="1.3" data-role="node-shape" data-node="U1" data-kind="unit.vessel" data-quote="| 缓冲液瓶 Buffer bottle | B-1 | 2 |" data-src="material.txt@L7"/>
+<rect x="268.16" y="55.80" width="132.00" height="21.70" rx="4" fill="#E3F0F7" stroke="#1F6E8C" stroke-width="1.3" data-role="node-shape" data-node="U2" data-kind="unit.instrument" data-quote="| 蠕动泵 Peristaltic pump | P-1 | 1 |" data-src="material.txt@L8"/>
+<rect x="512.73" y="55.80" width="46.00" height="21.70" rx="4" fill="#E3F0F7" stroke="#1F6E8C" stroke-width="1.3" data-role="node-shape" data-node="U3" data-kind="unit.instrument" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10"/>
+<rect x="109.58" y="117.80" width="46.00" height="21.70" rx="4" fill="#E3F0F7" stroke="#1F6E8C" stroke-width="1.3" data-role="node-shape" data-node="U4" data-kind="unit.instrument" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10"/>
+<rect x="43.80" y="222.80" width="13.00" height="12.00" rx="2" fill="#F2F7EE" stroke="#3F6B2C" stroke-width="1.3" data-role="node-shape" data-node="S1" data-kind="step.main" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10"/>
+</g>
+<g id="layer-connectors">
+<polyline points="198.10,66.65 268.16,66.65" fill="none" stroke="#1F4E79" stroke-width="2.00" data-role="connector" data-fid="E1" data-flow="material" data-from="U1" data-to="U2" data-quote="将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。"/>
+<polygon points="268.16,66.65 260.66,70.10 260.66,63.20" fill="#1F4E79" stroke="#1F4E79" stroke-width="1" data-role="arrowhead" data-fid="E1" data-flow="material" data-from="U1" data-to="U2" data-quote="将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。"/>
+</g>
+<g id="layer-labels">
+<text x="132.58" y="66.65" font-size="9.00" fill="#12351F" text-anchor="middle" xml:space="preserve" data-role="text" data-node="U1" data-kind="unit.vessel" data-quote="| 缓冲液瓶 Buffer bottle | B-1 | 2 |" data-src="material.txt@L7">缓冲液瓶 Buffer bottle</text>
+<text x="334.16" y="66.65" font-size="9.00" fill="#0E3547" text-anchor="middle" xml:space="preserve" data-role="text" data-node="U2" data-kind="unit.instrument" data-quote="| 蠕动泵 Peristaltic pump | P-1 | 1 |" data-src="material.txt@L8">蠕动泵 Peristaltic pump</text>
+<text x="535.73" y="66.65" font-size="9.00" fill="#0E3547" text-anchor="middle" xml:space="preserve" data-role="text" data-node="U3" data-kind="unit.instrument" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10">B-1</text>
+<text x="132.58" y="128.65" font-size="9.00" fill="#0E3547" text-anchor="middle" xml:space="preserve" data-role="text" data-node="U4" data-kind="unit.instrument" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10">P-1</text>
+<text x="50.30" y="231.80" font-size="7.50" fill="#24391A" text-anchor="middle" xml:space="preserve" data-role="node-label" data-node="S1" data-kind="step.main" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10">1</text>
+<text x="61.80" y="231.80" font-size="8.50" fill="#24391A" text-anchor="start" xml:space="preserve" data-role="node-label" data-node="S1" data-kind="step.main" data-quote="1. 将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。" data-src="material.txt@L10">将缓冲液瓶 B-1 接入蠕动泵 P-1 进口。</text>
+<text x="37.80" y="343.80" font-size="7.00" fill="#1A1A1A" text-anchor="middle" xml:space="preserve" data-role="scale-bar-text">0</text>
+<text x="188.98" y="343.80" font-size="7.00" fill="#1A1A1A" text-anchor="middle" xml:space="preserve" data-role="scale-bar-text">40 mm</text>
+</g>
+<g id="layer-legend">
+<text x="39.80" y="305.80" font-size="7.50" fill="#1A1A1A" text-anchor="start" xml:space="preserve" data-role="legend-title">图例 legend（按用到的语义自动生成，颜色与图形同源）</text>
+<rect x="39.80" y="312.80" width="17.00" height="8.40" rx="2" fill="#E8F4EC" stroke="#2C6E49" stroke-width="1.3" data-role="legend-swatch" data-legend="unit.vessel"/>
+<text x="61.80" y="319.80" font-size="7.50" fill="#1A1A1A" text-anchor="start" xml:space="preserve" data-role="legend-text" data-legend="unit.vessel">容器/vessel</text>
+<rect x="124.80" y="312.80" width="17.00" height="8.40" rx="2" fill="#E3F0F7" stroke="#1F6E8C" stroke-width="1.3" data-role="legend-swatch" data-legend="unit.instrument"/>
+<text x="146.80" y="319.80" font-size="7.50" fill="#1A1A1A" text-anchor="start" xml:space="preserve" data-role="legend-text" data-legend="unit.instrument">仪器/instrument</text>
+<polyline points="226.68,316.80 244.68,316.80" fill="none" stroke="#1F4E79" stroke-width="2.00" data-role="legend-line" data-legend="material"/>
+<polygon points="244.68,316.80 238.68,319.56 238.68,314.04" fill="#1F4E79" stroke="#1F4E79" stroke-width="1" data-role="legend-arrow" data-legend="material"/>
+<text x="248.68" y="319.80" font-size="7.50" fill="#1A1A1A" text-anchor="start" xml:space="preserve" data-role="legend-text" data-legend="material">物料/material</text>
+<rect x="320.13" y="312.80" width="17.00" height="8.40" rx="2" fill="#F2F7EE" stroke="#3F6B2C" stroke-width="1.3" data-role="legend-swatch" data-legend="step.main"/>
+<text x="342.13" y="319.80" font-size="7.50" fill="#1A1A1A" text-anchor="start" xml:space="preserve" data-role="legend-text" data-legend="step.main">主序列/step</text>
+</g>
+<g id="layer-annotations">
+<text x="39.80" y="46.80" font-size="9.50" fill="#1A1A1A" text-anchor="start" font-weight="bold" xml:space="preserve" data-role="panel-title" data-panel="A">A. 装置与流向 / apparatus &amp; flows</text>
+<text x="39.80" y="218.80" font-size="9.50" fill="#1A1A1A" text-anchor="start" font-weight="bold" xml:space="preserve" data-role="panel-title" data-panel="B">B. 步骤顺序 / numbered steps</text>
+<text x="37.80" y="356.80" font-size="7.00" fill="#5A6672" text-anchor="start" xml:space="preserve" data-role="figure-footer">画布 180×108.37 mm · 可编辑 SVG 源（真实文本 + data-* 溯源）</text>
+</g>
+</svg>

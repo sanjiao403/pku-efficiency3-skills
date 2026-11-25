@@ -1,0 +1,124 @@
+{
+  "_comment": "示例（非正式答案）",
+  "case": "_c.json",
+  "artefacts": {
+    "figure.svg": {
+      "bytes": 3813,
+      "sha256": "9ce7b88c1fa28e97"
+    },
+    "figure.map.json": {
+      "bytes": 3155,
+      "sha256": "98e9913c1531f5f7"
+    },
+    "result.json": {
+      "bytes": 3593,
+      "sha256": "03d80ff8137d54b0"
+    }
+  },
+  "checks": [
+    {
+      "check": "output_files_hashed",
+      "expected": "2 declared",
+      "actual": "0 mismatch",
+      "ok": true,
+      "note": "bytes/sha256 re-derived from disk"
+    },
+    {
+      "check": "elements_in_svg",
+      "expected": "6 mapped",
+      "actual": "0 missing",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "values_match_source",
+      "expected": "6 re-read",
+      "actual": "0 mismatch",
+      "ok": true,
+      "note": "unverifiable=0; []"
+    },
+    {
+      "check": "axis_unit_on_axis",
+      "expected": "units ['fold change']",
+      "actual": "ylabel='Relative mRNA expression (fold chang'",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "axis_unit_declared",
+      "expected": "unit or dimensionless",
+      "actual": "ylabel='Relative mRNA expression (fold chang'",
+      "ok": true,
+      "note": "a physical quantity without a unit is a defect"
+    },
+    {
+      "check": "cvd_grayscale_recomputed",
+      "expected": "dE>=12; dL*>=5 if colour is the only channel",
+      "actual": "dE=91.87 dL*=8.21 (1 pair(s), 2 colour(s))",
+      "ok": true,
+      "note": "Machado 2009 s1.0 + CIE76, from the SVG fills only"
+    },
+    {
+      "check": "legend_unique_present",
+      "expected": "2 unique",
+      "actual": "2 unique/2 drawn",
+      "ok": true,
+      "note": "Vehicle, LPS"
+    },
+    {
+      "check": "contract_keys_echoed",
+      "expected": "10 keys",
+      "actual": "missing=[]",
+      "ok": true,
+      "note": "resolved_from=0"
+    },
+    {
+      "check": "block_status",
+      "expected": "present",
+      "actual": "str",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "block_sources",
+      "expected": "present",
+      "actual": "list",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "block_uncertainty",
+      "expected": "present",
+      "actual": "list",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "block_changes",
+      "expected": "present",
+      "actual": "list",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "block_output_files",
+      "expected": "present",
+      "actual": "list",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "status_reported",
+      "expected": "success|partial|failed",
+      "actual": "success",
+      "ok": true,
+      "note": ""
+    }
+  ],
+  "checks_total": 14,
+  "checks_passed": 14,
+  "failed": [],
+  "verdict": "pass",
+  "calibration": "values re-read from source cells (physical line numbers); colours re-simulated",
+  "generated_by": "scripts/verify.py (reads only the artefacts above)"
+}

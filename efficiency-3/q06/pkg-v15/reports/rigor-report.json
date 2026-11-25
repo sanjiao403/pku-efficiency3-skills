@@ -1,0 +1,1668 @@
+{
+  "what": "evidence re-proof ledger, regenerated from the material",
+  "generated_by": "scripts/rigor.py --all --report reports/rigor-report.json",
+  "cases": [
+    {
+      "case": "examples/case_zh_md/case.json",
+      "case_id": "example-zh-md",
+      "material": [
+        "examples/case_zh_md/report.md"
+      ],
+      "rule": "every number / caption label / citation / claim / limit is re-extracted from the material and looked up verbatim; no plan state is read",
+      "found": 53,
+      "total": 53,
+      "items": [
+        {
+          "item": "number:12.8:%",
+          "kind": "number",
+          "value": "12.8",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:9.4:%",
+          "kind": "number",
+          "value": "9.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:11.1:%",
+          "kind": "number",
+          "value": "11.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:1560",
+          "kind": "number",
+          "value": "1560",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:2.3:%",
+          "kind": "number",
+          "value": "2.3",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §1 引言 · L14",
+          "line": 14,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:11.2:%",
+          "kind": "number",
+          "value": "11.2",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §2 相关工作 · L23",
+          "line": 23,
+          "reason": ""
+        },
+        {
+          "item": "number:13.5:%",
+          "kind": "number",
+          "value": "13.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §2 相关工作 · L23",
+          "line": 23,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:30",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §2 相关工作 · L28",
+          "line": 28,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:0.1",
+          "kind": "number",
+          "value": "0.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L33",
+          "line": 33,
+          "reason": ""
+        },
+        {
+          "item": "number:0.5",
+          "kind": "number",
+          "value": "0.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L33",
+          "line": 33,
+          "reason": ""
+        },
+        {
+          "item": "number:0.9",
+          "kind": "number",
+          "value": "0.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L33",
+          "line": 33,
+          "reason": ""
+        },
+        {
+          "item": "number:2023",
+          "kind": "number",
+          "value": "2023",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:0.002",
+          "kind": "number",
+          "value": "0.002",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:64",
+          "kind": "number",
+          "value": "64",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:40",
+          "kind": "number",
+          "value": "40",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:18",
+          "kind": "number",
+          "value": "18",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:12.8:%",
+          "kind": "number",
+          "value": "12.8",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:9.4:%",
+          "kind": "number",
+          "value": "9.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:26.6:%",
+          "kind": "number",
+          "value": "26.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L46",
+          "line": 46,
+          "reason": ""
+        },
+        {
+          "item": "number:11.1:%",
+          "kind": "number",
+          "value": "11.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:18.7:%",
+          "kind": "number",
+          "value": "18.7",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L46",
+          "line": 46,
+          "reason": ""
+        },
+        {
+          "item": "number:1560",
+          "kind": "number",
+          "value": "1560",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:15",
+          "kind": "number",
+          "value": "15",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:1560",
+          "kind": "number",
+          "value": "1560",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:15.6",
+          "kind": "number",
+          "value": "15.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L53",
+          "line": 53,
+          "reason": ""
+        },
+        {
+          "item": "number:22.4",
+          "kind": "number",
+          "value": "22.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L53",
+          "line": 53,
+          "reason": ""
+        },
+        {
+          "item": "number:14.1",
+          "kind": "number",
+          "value": "14.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L54",
+          "line": 54,
+          "reason": ""
+        },
+        {
+          "item": "number:20.9",
+          "kind": "number",
+          "value": "20.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L54",
+          "line": 54,
+          "reason": ""
+        },
+        {
+          "item": "number:18",
+          "kind": "number",
+          "value": "18",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "number:11.2",
+          "kind": "number",
+          "value": "11.2",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §2 相关工作 · L23",
+          "line": 23,
+          "reason": ""
+        },
+        {
+          "item": "number:17.3",
+          "kind": "number",
+          "value": "17.3",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L55",
+          "line": 55,
+          "reason": ""
+        },
+        {
+          "item": "number:46",
+          "kind": "number",
+          "value": "46",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L55",
+          "line": 55,
+          "reason": ""
+        },
+        {
+          "item": "number:10.5",
+          "kind": "number",
+          "value": "10.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L56",
+          "line": 56,
+          "reason": ""
+        },
+        {
+          "item": "number:15.8",
+          "kind": "number",
+          "value": "15.8",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L56",
+          "line": 56,
+          "reason": ""
+        },
+        {
+          "item": "number:63",
+          "kind": "number",
+          "value": "63",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L56",
+          "line": 56,
+          "reason": ""
+        },
+        {
+          "item": "number:9.4",
+          "kind": "number",
+          "value": "9.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:11.1",
+          "kind": "number",
+          "value": "11.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §摘要 · L7",
+          "line": 7,
+          "reason": ""
+        },
+        {
+          "item": "number:52",
+          "kind": "number",
+          "value": "52",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §4 结果 · L57",
+          "line": 57,
+          "reason": ""
+        },
+        {
+          "item": "number:0.9",
+          "kind": "number",
+          "value": "0.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L33",
+          "line": 33,
+          "reason": ""
+        },
+        {
+          "item": "number:5:%",
+          "kind": "number",
+          "value": "5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §5 局限 · L64",
+          "line": 64,
+          "reason": ""
+        },
+        {
+          "item": "number:4:%",
+          "kind": "number",
+          "value": "4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §5 局限 · L64",
+          "line": 64,
+          "reason": ""
+        },
+        {
+          "item": "figure:1",
+          "kind": "figure",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "report.md · §3 方法 · L42",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "table:1",
+          "kind": "table",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "report.md · §4 结果 · L49",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:训练使用 2023 年 1 月至 3 月的数据，学习率 0.002，批量大小 64，训练 40 轮后收敛。 模型输入包含",
+          "kind": "claim",
+          "value": "训练使用 2023 年 1 月至 3 月的数据，学习率 0.002，批量大小 64，训练 40 轮后收敛。 模型输入包含",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §3 方法 · L37",
+          "line": 37,
+          "reason": ""
+        },
+        {
+          "item": "limit:EXAMPLE ONLY — 合成示例材料，用于演示中文 Markdown + 单位约束模板的路径，不是任何评测案例的答",
+          "kind": "limit",
+          "value": "EXAMPLE ONLY — 合成示例材料，用于演示中文 Markdown + 单位约束模板的路径，不是任何评测案例的答",
+          "found": true,
+          "match": "verbatim",
+          "locator": "report.md · §面向城市路网的短时交通流预测：时空图注意力模型 · L3",
+          "line": 3,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "case": "examples/case_latex/case.json",
+      "case_id": "example-latex",
+      "material": [
+        "examples/case_latex/paper.tex"
+      ],
+      "rule": "every number / caption label / citation / claim / limit is re-extracted from the material and looked up verbatim; no plan state is read",
+      "found": 43,
+      "total": 43,
+      "items": [
+        {
+          "item": "number:18.4:%",
+          "kind": "number",
+          "value": "18.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.6:%",
+          "kind": "number",
+          "value": "2.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.1",
+          "kind": "number",
+          "value": "2.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:96",
+          "kind": "number",
+          "value": "96",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:18.4:%",
+          "kind": "number",
+          "value": "18.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.6:%",
+          "kind": "number",
+          "value": "2.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.1",
+          "kind": "number",
+          "value": "2.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:96",
+          "kind": "number",
+          "value": "96",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:40:%",
+          "kind": "number",
+          "value": "40",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §1 Introduction",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §3 Method",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:18.4:%",
+          "kind": "number",
+          "value": "18.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.6:%",
+          "kind": "number",
+          "value": "2.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:96",
+          "kind": "number",
+          "value": "96",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:14:days",
+          "kind": "number",
+          "value": "14",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:95",
+          "kind": "number",
+          "value": "95",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §3 Method",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:96",
+          "kind": "number",
+          "value": "96",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:14:days",
+          "kind": "number",
+          "value": "14",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1420",
+          "kind": "number",
+          "value": "1420",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para2",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:88.5",
+          "kind": "number",
+          "value": "88.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para2",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:22",
+          "kind": "number",
+          "value": "22",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para2",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1159",
+          "kind": "number",
+          "value": "1159",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:86.2",
+          "kind": "number",
+          "value": "86.2",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:29",
+          "kind": "number",
+          "value": "29",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1044",
+          "kind": "number",
+          "value": "1044",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para4",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:87.9",
+          "kind": "number",
+          "value": "87.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para4",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:25",
+          "kind": "number",
+          "value": "25",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results · para4",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:18.4:%",
+          "kind": "number",
+          "value": "18.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:14:day",
+          "kind": "number",
+          "value": "14",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "figure:1",
+          "kind": "figure",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "paper.tex · §2 Related Work · L25",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "table:1",
+          "kind": "table",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "paper.tex · §4 Results · L46",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "citation:chen2023",
+          "kind": "citation",
+          "value": "chen2023",
+          "found": true,
+          "match": "bib",
+          "locator": "paper.tex · §1 Introduction",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "citation:lin2022",
+          "kind": "citation",
+          "value": "lin2022",
+          "found": true,
+          "match": "bib",
+          "locator": "paper.tex · §2 Related Work",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "citation:okafor2021",
+          "kind": "citation",
+          "value": "okafor2021",
+          "found": true,
+          "match": "bib",
+          "locator": "paper.tex · §2 Related Work",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Table 1 reports the main comparison on a 96-GPU production t",
+          "kind": "claim",
+          "value": "Table 1 reports the main comparison on a 96-GPU production t",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §4 Results",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Our evaluation covers a single cluster and a 14 day trace, s",
+          "kind": "claim",
+          "value": "Our evaluation covers a single cluster and a 14 day trace, s",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §5 Limitations",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Batch workloads on shared GPU clusters are scheduled for thr",
+          "kind": "claim",
+          "value": "Batch workloads on shared GPU clusters are scheduled for thr",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Batch workloads on shared GPU clusters are scheduled for thr",
+          "kind": "claim",
+          "value": "Batch workloads on shared GPU clusters are scheduled for thr",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §Abstract",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Carbon-aware scheduling has been studied for geographically ",
+          "kind": "claim",
+          "value": "Carbon-aware scheduling has been studied for geographically",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §2 Related Work",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:We formulate the problem as a two-stage decision: a forecast",
+          "kind": "claim",
+          "value": "We formulate the problem as a two-stage decision",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §3 Method",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Shared GPU clusters now account for a large share of institu",
+          "kind": "limit",
+          "value": "Shared GPU clusters now account for a large share of institu",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §1 Introduction",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Carbon-aware scheduling has been studied for geographically ",
+          "kind": "limit",
+          "value": "Carbon-aware scheduling has been studied for geographically",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §2 Related Work",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Our evaluation covers a single cluster and a 14 day trace, s",
+          "kind": "limit",
+          "value": "Our evaluation covers a single cluster and a 14 day trace, s",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.tex · §5 Limitations",
+          "line": null,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "case": "case.json",
+      "case_id": "example-en-pdf",
+      "material": [
+        "paper.pdf"
+      ],
+      "rule": "every number / caption label / citation / claim / limit is re-extracted from the material and looked up verbatim; no plan state is read",
+      "found": 66,
+      "total": 66,
+      "items": [
+        {
+          "item": "number:1:km",
+          "kind": "number",
+          "value": "1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.9:degC",
+          "kind": "number",
+          "value": "4.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:3.7:degC",
+          "kind": "number",
+          "value": "3.7",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.71",
+          "kind": "number",
+          "value": "0.71",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.86",
+          "kind": "number",
+          "value": "0.86",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:24.5:%",
+          "kind": "number",
+          "value": "24.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2010",
+          "kind": "number",
+          "value": "2010",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2020",
+          "kind": "number",
+          "value": "2020",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1:km",
+          "kind": "number",
+          "value": "1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2.4:degC",
+          "kind": "number",
+          "value": "2.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:5.1:degC",
+          "kind": "number",
+          "value": "5.1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2019",
+          "kind": "number",
+          "value": "2019",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2020",
+          "kind": "number",
+          "value": "2020",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2021",
+          "kind": "number",
+          "value": "2021",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2022",
+          "kind": "number",
+          "value": "2022",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4.9 degC at 100 m over the same region and does not model bu · p1 · para9",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1:km",
+          "kind": "number",
+          "value": "1",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:12480",
+          "kind": "number",
+          "value": "12480",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §3. Method · p1 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2018",
+          "kind": "number",
+          "value": "2018",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §3. Method · p1 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2022",
+          "kind": "number",
+          "value": "2022",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4.9 degC at 100 m over the same region and does not model bu · p1 · para9",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:60:epochs",
+          "kind": "number",
+          "value": "60",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §3. Method · p1 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.001",
+          "kind": "number",
+          "value": "0.001",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §3. Method · p1 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:24.5:%",
+          "kind": "number",
+          "value": "24.5",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.86:R2",
+          "kind": "number",
+          "value": "0.86",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:3.7:degC",
+          "kind": "number",
+          "value": "3.7",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.4:degC",
+          "kind": "number",
+          "value": "4.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.6:degC",
+          "kind": "number",
+          "value": "4.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.9:degC",
+          "kind": "number",
+          "value": "4.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2021",
+          "kind": "number",
+          "value": "2021",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.86",
+          "kind": "number",
+          "value": "0.86",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:1.8:degC",
+          "kind": "number",
+          "value": "1.8",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "kind": "number",
+          "value": "30",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.9",
+          "kind": "number",
+          "value": "4.9",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.71",
+          "kind": "number",
+          "value": "0.71",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2021",
+          "kind": "number",
+          "value": "2021",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.4",
+          "kind": "number",
+          "value": "4.4",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.78",
+          "kind": "number",
+          "value": "0.78",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para10",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:4.6",
+          "kind": "number",
+          "value": "4.6",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.75",
+          "kind": "number",
+          "value": "0.75",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:3.7",
+          "kind": "number",
+          "value": "3.7",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:0.86",
+          "kind": "number",
+          "value": "0.86",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:3:%",
+          "kind": "number",
+          "value": "3",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §5. Discussion and Limitations · p2 · para14",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:12:stations",
+          "kind": "number",
+          "value": "12",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2019",
+          "kind": "number",
+          "value": "2019",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2020",
+          "kind": "number",
+          "value": "2020",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §1. Introduction · p1 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2021",
+          "kind": "number",
+          "value": "2021",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "number:2022",
+          "kind": "number",
+          "value": "2022",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4.9 degC at 100 m over the same region and does not model bu · p1 · para9",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "figure:1",
+          "kind": "figure",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "paper.pdf · p2 · para2",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "table:1",
+          "kind": "table",
+          "value": "1",
+          "found": true,
+          "match": "caption",
+          "locator": "paper.pdf · §4. Results · p2 · para6",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Land-surface temperature (LST) products from MODIS are too c",
+          "kind": "claim",
+          "value": "Land-surface temperature (LST) products from MODIS are too c",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §Abstract · p1 · para3",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Table 1 reports the ablation. Removing the attention module ",
+          "kind": "claim",
+          "value": "Table 1 reports the ablation. Removing the attention module",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4. Results · p2 · para5",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Thermal sharpening methods (Richardson et al., 2019; Alves a",
+          "kind": "claim",
+          "value": "Thermal sharpening methods (Richardson et al., 2019; Alves a",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:Deep super-resolution models (Du et al., 2022) improve the t",
+          "kind": "claim",
+          "value": "Deep super-resolution models (Du et al., 2022) improve the t",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4.9 degC at 100 m over the same region and does not model bu · p1 · para9",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:We propose a residual attention network (RAN) that takes fou",
+          "kind": "claim",
+          "value": "We propose a residual attention network (RAN) that takes fou",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §3. Method · p1 · para11",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:[1] Richardson, M., et al. (2019). Thermal sharpening of MOD",
+          "kind": "claim",
+          "value": "[1] Richardson, M., et al. (2019). Thermal sharpening of MOD",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §References · p2 · para16",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:[2] Alves, D., Sheng, Y. (2020). A sharpening index for urba",
+          "kind": "claim",
+          "value": "[2] Alves, D., Sheng, Y. (2020). A sharpening index for urba",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §References · p2 · para17",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "claim:[3] Smith, J., et al. (2021). Random-forest downscaling of l",
+          "kind": "claim",
+          "value": "[3] Smith, J., et al. (2021). Random-forest downscaling of l",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §References · p2 · para18",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Thermal sharpening methods (Richardson et al., 2019; Alves a",
+          "kind": "limit",
+          "value": "Thermal sharpening methods (Richardson et al., 2019; Alves a",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §2. Related Work · p1 · para7",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Deep super-resolution models (Du et al., 2022) improve the t",
+          "kind": "limit",
+          "value": "Deep super-resolution models (Du et al., 2022) improve the t",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §4.9 degC at 100 m over the same region and does not model bu · p1 · para9",
+          "line": null,
+          "reason": ""
+        },
+        {
+          "item": "limit:Performance degrades over water bodies and large parks, wher",
+          "kind": "limit",
+          "value": "Performance degrades over water bodies and large parks, wher",
+          "found": true,
+          "match": "verbatim",
+          "locator": "paper.pdf · §5. Discussion and Limitations · p2 · para14",
+          "line": null,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "cases": 3,
+    "items": 162,
+    "found": 162,
+    "missing": 0
+  }
+}

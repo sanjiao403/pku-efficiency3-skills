@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2400" height="1350" viewBox="0 0 2400 1350" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>Palmitoylation gates STING exit from the ER</title>
+  <desc>Graphical abstract for case example-a-mechanism; elements carry the ids used in result.json content_map.</desc>
+  <metadata>case_id=example-a-mechanism; generator=graphical-abstract-svg/1.0.0; layers=frame,panels,entities,relations,data,labels,legend,annotations</metadata>
+  <defs>
+  </defs>
+  <g id="layer-frame" data-layer="frame">
+    <rect id="canvas-bg" x="0" y="0" width="2400" height="1350" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+    <line id="hdr-rule" x1="67.2" y1="210.8" x2="2332.8" y2="210.8" stroke="#9AA0A6" stroke-width="1.2" stroke-linecap="round"/>
+    <line id="foot-rule" x1="67.2" y1="1226.3" x2="2332.8" y2="1226.3" stroke="#9AA0A6" stroke-width="1.2" stroke-linecap="round"/>
+    <text id="foot-caption0" x="67.2" y="1336.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="18.3" fill="#5A5F66" text-anchor="start" >Figure 1. DHHC3-dependent palmitoylation retains STING in the ER and sets the ceiling of the interferon response; removing the mark raises IFNB1 induction 2.2-fold.</text>
+  </g>
+  <g id="layer-panels" data-layer="panels">
+    <rect id="panel-1" x="67.2" y="225.2" width="521" height="685.8" rx="16.6" fill="#F7F8FA" stroke="#D5D9DE" stroke-width="1.1"/>
+    <rect id="panel-1-bar" x="67.2" y="225.2" width="521" height="44.3" rx="16.6" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="panel-2" x="648.7" y="225.2" width="521" height="685.8" rx="16.6" fill="#F7F8FA" stroke="#D5D9DE" stroke-width="1.1"/>
+    <rect id="panel-2-bar" x="648.7" y="225.2" width="521" height="44.3" rx="16.6" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="panel-3" x="1230.2" y="225.2" width="521" height="685.8" rx="16.6" fill="#F7F8FA" stroke="#D5D9DE" stroke-width="1.1"/>
+    <rect id="panel-3-bar" x="1230.2" y="225.2" width="521" height="44.3" rx="16.6" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="panel-4" x="1811.8" y="225.2" width="521" height="685.8" rx="16.6" fill="#F7F8FA" stroke="#D5D9DE" stroke-width="1.1"/>
+    <rect id="panel-4-bar" x="1811.8" y="225.2" width="521" height="44.3" rx="16.6" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+  </g>
+  <g id="layer-entities" data-layer="entities">
+    <circle id="el-1-b0" cx="104.3" cy="361.5" r="3.9" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <circle id="el-1-b0-2" cx="104.3" cy="482.9" r="3.9" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <circle id="el-1-b0-3" cx="104.3" cy="604.2" r="3.9" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="el-2-step0" x="676.6" y="284.6" width="212.8" height="130.7" rx="9.2" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <circle id="el-2-num0" cx="695.6" cy="350" r="15.3" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="el-2-step1" x="929" y="284.6" width="212.8" height="130.7" rx="9.2" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <circle id="el-2-num1" cx="948" cy="350" r="15.3" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="el-2-step2" x="676.6" y="476" width="212.8" height="166.3" rx="9.2" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <circle id="el-2-num2" cx="695.6" cy="559.2" r="15.3" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <rect id="ent-E1" x="1334.6" y="347.2" width="400.6" height="50.7" rx="10.4" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <rect id="ent-E2" x="1334.6" y="463.2" width="400.6" height="50.7" rx="10.4" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <rect id="ent-E3" x="1334.6" y="579.2" width="400.6" height="50.7" rx="10.4" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <rect id="ent-E4" x="1334.6" y="695.2" width="400.6" height="50.7" rx="10.4" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <rect id="ent-E5" x="1334.6" y="811.2" width="400.6" height="50.7" rx="10.4" fill="#FFFFFF" stroke="#D5D9DE" stroke-width="1"/>
+    <circle id="el-4-b0" cx="1848.9" cy="361.5" r="3.9" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+    <circle id="el-4-b0-2" cx="1848.9" cy="483" r="3.9" fill="#0B4F8A" stroke="none" stroke-width="1"/>
+  </g>
+  <g id="layer-relations" data-layer="relations">
+    <line id="el" x1="894.2" y1="350" x2="915" y2="350" stroke="#3C4043" stroke-width="1.6" stroke-linecap="round"/>
+    <polygon id="el-2" points="924.3,350 914.1,339.2 914.1,360.8" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <line id="edge-R1-a" x1="1270.3" y1="397.9" x2="1270.3" y2="456.4" stroke="#3C4043" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon id="edge-R1-head" points="1270.3,449 1279.7,461.9 1270.3,474.7 1260.8,461.9" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <line id="edge-R2-a" x1="1270.3" y1="513.9" x2="1270.3" y2="572.4" stroke="#3C4043" stroke-width="1.5" stroke-dasharray="5 3" stroke-linecap="round"/>
+    <polygon id="edge-R2-head" points="1270.3,577.9 1261.4,568.4 1261.4,587.3" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <line id="edge-R3-a" x1="1270.3" y1="629.9" x2="1270.3" y2="688.4" stroke="#3C4043" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon id="edge-R3-head" points="1270.3,693.9 1261.4,684.4 1261.4,703.3" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <line id="edge-R4-a" x1="1270.3" y1="745.9" x2="1270.3" y2="804.4" stroke="#3C4043" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon id="edge-R4-head" points="1270.3,809.9 1261.4,800.5 1261.4,819.3" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+  </g>
+  <g id="layer-data" data-layer="data">
+    <text id="ledger-title" x="67.2" y="952.9" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="18.7" fill="#5A5F66" text-anchor="start" font-weight="700">关键数值 → 图面编码（长度=数值，刻度线=对照值；每行右侧为来源定位）</text>
+    <text id="ledger-K1-label" x="67.2" y="1003.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >IFNB1 induction at 6 h</text>
+    <rect id="ledger-K1-track" x="497.7" y="981.6" width="1189.9" height="30.2" rx="5.4" fill="#EDEFF2" stroke="none" stroke-width="1"/>
+    <rect id="ledger-K1-bar" x="497.7" y="981.6" width="803.7" height="30.2" rx="5.4" fill="#0072B2" stroke="#1A1A1E" stroke-width="0.5"/>
+    <line id="ledger-K1-ref" x1="858.5" y1="975.1" x2="858.5" y2="1018.3" stroke="#1A1A1E" stroke-width="1.8" stroke-dasharray="4 2" stroke-linecap="round"/>
+    <text id="ledger-K1-reflab" x="858.5" y="970.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15.9" fill="#5A5F66" text-anchor="middle" >wild type</text>
+    <text id="ledger-K1-value" x="1696.2" y="1003.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" font-weight="700">41.2 fold</text>
+    <text id="ledger-K1-src" x="2038.3" y="1003.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="17.2" fill="#5A5F66" text-anchor="start" >S1 material.md#para6</text>
+    <text id="ledger-K2-label" x="67.2" y="1057.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >STING Golgi colocalisation</text>
+    <rect id="ledger-K2-track" x="497.7" y="1035.6" width="1189.9" height="30.2" rx="5.4" fill="#EDEFF2" stroke="none" stroke-width="1"/>
+    <rect id="ledger-K2-bar" x="497.7" y="1035.6" width="1189.9" height="30.2" rx="5.4" fill="#D55E00" stroke="#1A1A1E" stroke-width="0.5"/>
+    <line id="ledger-K2-bar-h0" x1="505.4" y1="1035.6" x2="497.7" y2="1043.4" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h1" x1="514.9" y1="1035.6" x2="497.7" y2="1052.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h2" x1="524.4" y1="1035.6" x2="497.7" y2="1062.4" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h3" x1="533.9" y1="1035.6" x2="503.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h4" x1="543.4" y1="1035.6" x2="513.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h5" x1="552.9" y1="1035.6" x2="522.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h6" x1="562.4" y1="1035.6" x2="532.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h7" x1="571.9" y1="1035.6" x2="541.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h8" x1="581.4" y1="1035.6" x2="551.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h9" x1="590.9" y1="1035.6" x2="560.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h10" x1="600.4" y1="1035.6" x2="570.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h11" x1="609.9" y1="1035.6" x2="579.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h12" x1="619.4" y1="1035.6" x2="589.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h13" x1="628.9" y1="1035.6" x2="598.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h14" x1="638.4" y1="1035.6" x2="608.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h15" x1="647.9" y1="1035.6" x2="617.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h16" x1="657.4" y1="1035.6" x2="627.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h17" x1="666.9" y1="1035.6" x2="636.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h18" x1="676.4" y1="1035.6" x2="646.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h19" x1="685.9" y1="1035.6" x2="655.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h20" x1="695.4" y1="1035.6" x2="665.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h21" x1="704.9" y1="1035.6" x2="674.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h22" x1="714.4" y1="1035.6" x2="684.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h23" x1="723.9" y1="1035.6" x2="693.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h24" x1="733.4" y1="1035.6" x2="703.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h25" x1="742.9" y1="1035.6" x2="712.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h26" x1="752.4" y1="1035.6" x2="722.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h27" x1="761.9" y1="1035.6" x2="731.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h28" x1="771.4" y1="1035.6" x2="741.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h29" x1="780.9" y1="1035.6" x2="750.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h30" x1="790.4" y1="1035.6" x2="760.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h31" x1="799.9" y1="1035.6" x2="769.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h32" x1="809.4" y1="1035.6" x2="779.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h33" x1="818.9" y1="1035.6" x2="788.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h34" x1="828.4" y1="1035.6" x2="798.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h35" x1="837.9" y1="1035.6" x2="807.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h36" x1="847.4" y1="1035.6" x2="817.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h37" x1="856.9" y1="1035.6" x2="826.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h38" x1="866.4" y1="1035.6" x2="836.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h39" x1="875.9" y1="1035.6" x2="845.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h40" x1="885.4" y1="1035.6" x2="855.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h41" x1="894.9" y1="1035.6" x2="864.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h42" x1="904.4" y1="1035.6" x2="874.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h43" x1="913.9" y1="1035.6" x2="883.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h44" x1="923.4" y1="1035.6" x2="893.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h45" x1="932.9" y1="1035.6" x2="902.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h46" x1="942.4" y1="1035.6" x2="912.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h47" x1="951.9" y1="1035.6" x2="921.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h48" x1="961.4" y1="1035.6" x2="931.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h49" x1="970.9" y1="1035.6" x2="940.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h50" x1="980.4" y1="1035.6" x2="950.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h51" x1="989.9" y1="1035.6" x2="959.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h52" x1="999.4" y1="1035.6" x2="969.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h53" x1="1008.9" y1="1035.6" x2="978.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h54" x1="1018.4" y1="1035.6" x2="988.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h55" x1="1027.9" y1="1035.6" x2="997.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h56" x1="1037.4" y1="1035.6" x2="1007.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h57" x1="1046.9" y1="1035.6" x2="1016.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h58" x1="1056.4" y1="1035.6" x2="1026.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h59" x1="1065.9" y1="1035.6" x2="1035.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h60" x1="1075.4" y1="1035.6" x2="1045.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h61" x1="1084.9" y1="1035.6" x2="1054.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h62" x1="1094.4" y1="1035.6" x2="1064.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h63" x1="1103.9" y1="1035.6" x2="1073.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h64" x1="1113.4" y1="1035.6" x2="1083.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h65" x1="1122.9" y1="1035.6" x2="1092.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h66" x1="1132.4" y1="1035.6" x2="1102.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h67" x1="1141.9" y1="1035.6" x2="1111.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h68" x1="1151.4" y1="1035.6" x2="1121.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h69" x1="1160.9" y1="1035.6" x2="1130.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h70" x1="1170.4" y1="1035.6" x2="1140.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h71" x1="1179.9" y1="1035.6" x2="1149.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h72" x1="1189.4" y1="1035.6" x2="1159.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h73" x1="1198.9" y1="1035.6" x2="1168.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h74" x1="1208.4" y1="1035.6" x2="1178.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h75" x1="1217.9" y1="1035.6" x2="1187.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h76" x1="1227.4" y1="1035.6" x2="1197.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h77" x1="1236.9" y1="1035.6" x2="1206.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h78" x1="1246.4" y1="1035.6" x2="1216.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h79" x1="1255.9" y1="1035.6" x2="1225.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h80" x1="1265.4" y1="1035.6" x2="1235.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h81" x1="1274.9" y1="1035.6" x2="1244.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h82" x1="1284.4" y1="1035.6" x2="1254.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h83" x1="1293.9" y1="1035.6" x2="1263.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h84" x1="1303.4" y1="1035.6" x2="1273.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h85" x1="1312.9" y1="1035.6" x2="1282.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h86" x1="1322.4" y1="1035.6" x2="1292.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h87" x1="1331.9" y1="1035.6" x2="1301.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h88" x1="1341.4" y1="1035.6" x2="1311.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h89" x1="1350.9" y1="1035.6" x2="1320.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h90" x1="1360.4" y1="1035.6" x2="1330.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h91" x1="1369.9" y1="1035.6" x2="1339.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h92" x1="1379.4" y1="1035.6" x2="1349.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h93" x1="1388.9" y1="1035.6" x2="1358.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h94" x1="1398.4" y1="1035.6" x2="1368.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h95" x1="1407.9" y1="1035.6" x2="1377.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h96" x1="1417.4" y1="1035.6" x2="1387.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h97" x1="1426.9" y1="1035.6" x2="1396.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h98" x1="1436.4" y1="1035.6" x2="1406.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h99" x1="1445.9" y1="1035.6" x2="1415.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h100" x1="1455.4" y1="1035.6" x2="1425.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h101" x1="1464.9" y1="1035.6" x2="1434.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h102" x1="1474.4" y1="1035.6" x2="1444.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h103" x1="1483.9" y1="1035.6" x2="1453.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h104" x1="1493.4" y1="1035.6" x2="1463.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h105" x1="1502.9" y1="1035.6" x2="1472.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h106" x1="1512.4" y1="1035.6" x2="1482.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h107" x1="1521.9" y1="1035.6" x2="1491.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h108" x1="1531.4" y1="1035.6" x2="1501.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h109" x1="1540.9" y1="1035.6" x2="1510.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h110" x1="1550.4" y1="1035.6" x2="1520.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h111" x1="1559.9" y1="1035.6" x2="1529.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h112" x1="1569.4" y1="1035.6" x2="1539.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h113" x1="1578.9" y1="1035.6" x2="1548.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h114" x1="1588.4" y1="1035.6" x2="1558.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h115" x1="1597.9" y1="1035.6" x2="1567.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h116" x1="1607.4" y1="1035.6" x2="1577.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h117" x1="1616.9" y1="1035.6" x2="1586.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h118" x1="1626.4" y1="1035.6" x2="1596.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h119" x1="1635.9" y1="1035.6" x2="1605.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h120" x1="1645.4" y1="1035.6" x2="1615.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h121" x1="1654.9" y1="1035.6" x2="1624.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h122" x1="1664.4" y1="1035.6" x2="1634.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h123" x1="1673.9" y1="1035.6" x2="1643.7" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-bar-h124" x1="1683.4" y1="1035.6" x2="1653.2" y2="1065.9" stroke="#1A1A1E" stroke-width="1.1" stroke-linecap="round"/>
+    <line id="ledger-K2-ref" x1="926.8" y1="1029.1" x2="926.8" y2="1072.3" stroke="#1A1A1E" stroke-width="1.8" stroke-dasharray="4 2" stroke-linecap="round"/>
+    <text id="ledger-K2-reflab" x="926.8" y="1024.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15.9" fill="#5A5F66" text-anchor="middle" >wild type</text>
+    <text id="ledger-K2-value" x="1696.2" y="1057.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" font-weight="700">61 %</text>
+    <text id="ledger-K2-src" x="2038.3" y="1057.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="17.2" fill="#5A5F66" text-anchor="start" >S1 material.md#para6</text>
+    <text id="ledger-K3-label" x="67.2" y="1111.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >ER residence time of STING</text>
+    <rect id="ledger-K3-track" x="497.7" y="1089.6" width="1189.9" height="30.2" rx="5.4" fill="#EDEFF2" stroke="none" stroke-width="1"/>
+    <rect id="ledger-K3-bar" x="497.7" y="1089.6" width="331.6" height="30.2" rx="5.4" fill="#009E73" stroke="#1A1A1E" stroke-width="0.5"/>
+    <circle id="ledger-K3-bar-h0" cx="502.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h1" cx="511.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h2" cx="521.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h3" cx="530.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h4" cx="540.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h5" cx="549.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h6" cx="559.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h7" cx="568.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h8" cx="578.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h9" cx="587.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h10" cx="597.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h11" cx="606.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h12" cx="616.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h13" cx="625.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h14" cx="635.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h15" cx="644.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h16" cx="654.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h17" cx="663.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h18" cx="673.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h19" cx="682.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h20" cx="692.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h21" cx="701.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h22" cx="711.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h23" cx="720.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h24" cx="730.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h25" cx="739.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h26" cx="749.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h27" cx="758.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h28" cx="768.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h29" cx="777.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h30" cx="787.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h31" cx="796.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h32" cx="806.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h33" cx="815.9" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h34" cx="825.4" cy="1094.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h35" cx="502.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h36" cx="511.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h37" cx="521.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h38" cx="530.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h39" cx="540.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h40" cx="549.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h41" cx="559.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h42" cx="568.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h43" cx="578.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h44" cx="587.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h45" cx="597.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h46" cx="606.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h47" cx="616.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h48" cx="625.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h49" cx="635.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h50" cx="644.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h51" cx="654.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h52" cx="663.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h53" cx="673.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h54" cx="682.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h55" cx="692.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h56" cx="701.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h57" cx="711.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h58" cx="720.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h59" cx="730.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h60" cx="739.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h61" cx="749.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h62" cx="758.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h63" cx="768.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h64" cx="777.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h65" cx="787.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h66" cx="796.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h67" cx="806.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h68" cx="815.9" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h69" cx="825.4" cy="1103.9" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h70" cx="502.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h71" cx="511.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h72" cx="521.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h73" cx="530.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h74" cx="540.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h75" cx="549.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h76" cx="559.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h77" cx="568.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h78" cx="578.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h79" cx="587.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h80" cx="597.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h81" cx="606.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h82" cx="616.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h83" cx="625.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h84" cx="635.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h85" cx="644.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h86" cx="654.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h87" cx="663.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h88" cx="673.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h89" cx="682.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h90" cx="692.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h91" cx="701.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h92" cx="711.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h93" cx="720.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h94" cx="730.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h95" cx="739.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h96" cx="749.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h97" cx="758.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h98" cx="768.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h99" cx="777.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h100" cx="787.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h101" cx="796.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h102" cx="806.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h103" cx="815.9" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <circle id="ledger-K3-bar-h104" cx="825.4" cy="1113.4" r="0.9" fill="#1A1A1E" stroke="none" stroke-width="1"/>
+    <line id="ledger-K3-ref" x1="1395" y1="1083.1" x2="1395" y2="1126.3" stroke="#1A1A1E" stroke-width="1.8" stroke-dasharray="4 2" stroke-linecap="round"/>
+    <text id="ledger-K3-reflab" x="1395" y="1078.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15.9" fill="#5A5F66" text-anchor="middle" >wild type</text>
+    <text id="ledger-K3-value" x="1696.2" y="1111.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" font-weight="700">17 min</text>
+    <text id="ledger-K3-src" x="2038.3" y="1111.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="17.2" fill="#5A5F66" text-anchor="start" >S1 material.md#para6</text>
+  </g>
+  <g id="layer-labels" data-layer="labels">
+    <text id="hdr-title" x="67.2" y="129" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="67.2" fill="#1A1A1E" text-anchor="start" font-weight="700">Palmitoylation gates STING exit from the ER</text>
+    <text id="hdr-subtitle" x="67.2" y="188" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="32.4" fill="#5A5F66" text-anchor="start" >DHHC3-dependent S-palmitoylation sets the threshold of the interferon response</text>
+    <text id="panel-1-badge" x="84.3" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#FFFFFF" text-anchor="start" font-weight="700">① PROBLEM</text>
+    <text id="panel-1-title" x="571.1" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#DCE7F2" text-anchor="end" >Unresolved step</text>
+    <text id="panel-1-claim0" x="84.3" y="306.7" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">STING must reach the Golgi, but what holds it in the</text>
+    <text id="panel-1-claim1" x="84.3" y="335.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">ER is unknown.</text>
+    <text id="p1i1-l0" x="121.4" y="374.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >Cytosolic DNA sensing converges on</text>
+    <text id="p1i1-l1" x="121.4" y="414.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >the adaptor STING</text>
+    <text id="p1i2-l0" x="121.4" y="496.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >STING must move from the ER to</text>
+    <text id="p1i2-l1" x="121.4" y="536.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >the Golgi to recruit TBK1</text>
+    <text id="p1i3-l0" x="121.4" y="617.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >Whether palmitoylation gates that exit</text>
+    <text id="p1i3-l1" x="121.4" y="657.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >was unresolved</text>
+    <text id="panel-2-badge" x="665.8" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#FFFFFF" text-anchor="start" font-weight="700">② METHOD</text>
+    <text id="panel-2-title" x="1152.6" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#DCE7F2" text-anchor="end" >Route</text>
+    <text id="el-2-numt0" x="695.6" y="360.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.1" fill="#FFFFFF" text-anchor="middle" font-weight="700">1</text>
+    <text id="el-2-w0-0" x="714.9" y="307.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >Map</text>
+    <text id="el-2-w0-1" x="714.9" y="342.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >palmitoylation</text>
+    <text id="el-2-w0-2" x="714.9" y="378.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >sites on</text>
+    <text id="el-2-w0-3" x="714.9" y="414.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >STING</text>
+    <text id="el-2-numt1" x="948" y="360.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.1" fill="#FFFFFF" text-anchor="middle" font-weight="700">2</text>
+    <text id="el-2-w1-0" x="967.3" y="307.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >Deplete</text>
+    <text id="el-2-w1-1" x="967.3" y="342.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >DHHC3 and</text>
+    <text id="el-2-w1-2" x="967.3" y="378.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >image ER-to-</text>
+    <text id="el-2-w1-3" x="967.3" y="414.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >Golgi traffic</text>
+    <text id="el-2-numt2" x="695.6" y="569.7" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.1" fill="#FFFFFF" text-anchor="middle" font-weight="700">3</text>
+    <text id="el-2-w2-0" x="714.9" y="498.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >Read out</text>
+    <text id="el-2-w2-1" x="714.9" y="534.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >TBK1</text>
+    <text id="el-2-w2-2" x="714.9" y="569.7" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >phosphorylation</text>
+    <text id="el-2-w2-3" x="714.9" y="605.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >and IFNB1</text>
+    <text id="el-2-w2-4" x="714.9" y="641" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26.4" fill="#1A1A1E" text-anchor="start" >induction</text>
+    <text id="panel-3-badge" x="1247.4" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#FFFFFF" text-anchor="start" font-weight="700">③ RESULTS</text>
+    <text id="panel-3-title" x="1734.2" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#DCE7F2" text-anchor="end" >Palmitoylation-gated route</text>
+    <text id="panel-3-claim0" x="1247.4" y="306.7" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">DHHC3 holds STING in the ER; removing the mark</text>
+    <text id="panel-3-claim1" x="1247.4" y="335.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">releases the route.</text>
+    <text id="edge-R1-label" x="1285.9" y="454.9" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15" fill="#5A5F66" text-anchor="start" >S-palmitoylation</text>
+    <text id="edge-R2-label" x="1285.9" y="570.9" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15" fill="#5A5F66" text-anchor="start" >ER exit</text>
+    <text id="edge-R3-label" x="1285.9" y="686.9" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15" fill="#5A5F66" text-anchor="start" >TBK1 binding</text>
+    <text id="edge-R4-label" x="1285.9" y="802.9" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="15" fill="#5A5F66" text-anchor="start" >phosphorylation</text>
+    <text id="ent-E1-label" x="1346.3" y="382.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="start" >DHHC3</text>
+    <text id="ent-E1-type" x="1724.9" y="380.3" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="16.8" fill="#5A5F66" text-anchor="end" >protein</text>
+    <text id="ent-E2-label" x="1346.3" y="498.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="start" >STING</text>
+    <text id="ent-E2-type" x="1724.9" y="496.3" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="16.8" fill="#5A5F66" text-anchor="end" >protein</text>
+    <text id="ent-E3-label" x="1346.3" y="614.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="start" >Golgi</text>
+    <text id="ent-E3-type" x="1724.9" y="612.3" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="16.8" fill="#5A5F66" text-anchor="end" >organelle</text>
+    <text id="ent-E4-label" x="1346.3" y="730.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="start" >TBK1</text>
+    <text id="ent-E4-type" x="1724.9" y="728.3" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="16.8" fill="#5A5F66" text-anchor="end" >protein</text>
+    <text id="ent-E5-label" x="1346.3" y="846.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="26" fill="#1A1A1E" text-anchor="start" >IRF3</text>
+    <text id="ent-E5-type" x="1724.9" y="844.3" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="16.8" fill="#5A5F66" text-anchor="end" >protein</text>
+    <text id="panel-4-badge" x="1828.9" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#FFFFFF" text-anchor="start" font-weight="700">④ CONCLUSION</text>
+    <text id="panel-4-title" x="2315.7" y="254.4" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.6" fill="#DCE7F2" text-anchor="end" >Translational claim</text>
+    <text id="panel-4-claim0" x="1828.9" y="306.7" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">Blocking the modification releases the brake on</text>
+    <text id="panel-4-claim1" x="1828.9" y="335.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="22" fill="#5A5F66" text-anchor="start" font-style="italic">antiviral signalling.</text>
+    <text id="p4i1-l0" x="1866" y="374.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >2-bromopalmitate blocks DHHC3 and</text>
+    <text id="p4i1-l1" x="1866" y="414.8" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >phenocopies depletion</text>
+    <text id="p4i2-l0" x="1866" y="496.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >IFNB1 induction rises from 18.5 to</text>
+    <text id="p4i2-l1" x="1866" y="536.2" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="27.6" fill="#1A1A1E" text-anchor="start" >41.2 fold</text>
+  </g>
+  <g id="layer-legend" data-layer="legend">
+    <line id="leg-rel-modification-line" x1="67.2" y1="1260.4" x2="99.6" y2="1260.4" stroke="#3C4043" stroke-width="1.6" stroke-linecap="round"/>
+    <polygon id="leg-rel-modification-head" points="102.2,1248.4 111,1260.4 102.2,1272.5 93.4,1260.4" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <text id="leg-rel-modification-lb" x="110.4" y="1263.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >修饰 / modification</text>
+    <line id="leg-rel-transport-line" x1="312" y1="1260.4" x2="344.4" y2="1260.4" stroke="#3C4043" stroke-width="1.6" stroke-dasharray="4 2" stroke-linecap="round"/>
+    <polygon id="leg-rel-transport-head" points="346.9,1260.4 338.6,1251.6 338.6,1269.3" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <text id="leg-rel-transport-lb" x="355.2" y="1263.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >转运 / transport</text>
+    <line id="leg-rel-activation-line" x1="528.5" y1="1260.4" x2="560.9" y2="1260.4" stroke="#3C4043" stroke-width="1.6" stroke-linecap="round"/>
+    <polygon id="leg-rel-activation-head" points="563.5,1260.4 555.2,1251.6 555.2,1269.3" fill="#3C4043" stroke="#3C4043" stroke-width="1"/>
+    <text id="leg-rel-activation-lb" x="571.7" y="1263.5" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="21.2" fill="#1A1A1E" text-anchor="start" >激活 / activation</text>
+    <text id="foot-notes" x="67.2" y="1304.1" font-family="'DejaVu Sans','Noto Sans CJK SC','Source Han Sans SC','Microsoft YaHei','PingFang SC',Helvetica,Arial,sans-serif" font-size="18.7" fill="#5A5F66" text-anchor="start" >单位: fold induction / % colocalisation / min   |   条件: primary macrophages, 6 h after cytosolic DNA stimulation, n = 4   |   来源: S1 material.md#para2</text>
+  </g>
+  <g id="layer-annotations" data-layer="annotations">
+    <line id="flow-arrow-1" x1="599.1" y1="568.1" x2="626.2" y2="568.1" stroke="#B0B6BC" stroke-width="2.2" stroke-linecap="round"/>
+    <polygon id="flow-head-1" points="637.8,568.1 622.4,551.7 622.4,584.5" fill="#B0B6BC" stroke="#B0B6BC" stroke-width="1"/>
+    <line id="flow-arrow-2" x1="1180.6" y1="568.1" x2="1207.8" y2="568.1" stroke="#B0B6BC" stroke-width="2.2" stroke-linecap="round"/>
+    <polygon id="flow-head-2" points="1219.4,568.1 1204,551.7 1204,584.5" fill="#B0B6BC" stroke="#B0B6BC" stroke-width="1"/>
+    <line id="flow-arrow-3" x1="1762.2" y1="568.1" x2="1789.3" y2="568.1" stroke="#B0B6BC" stroke-width="2.2" stroke-linecap="round"/>
+    <polygon id="flow-head-3" points="1800.9,568.1 1785.5,551.7 1785.5,584.5" fill="#B0B6BC" stroke="#B0B6BC" stroke-width="1"/>
+  </g>
+</svg>

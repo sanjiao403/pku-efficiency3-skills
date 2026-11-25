@@ -1,0 +1,20 @@
+{
+  "_disclaimer": "示例（非正式案例结果）。这是「期望形状」规格：只声明应该满足的结构与检查项，不含任何正式案例的实体名、数值或答案。",
+  "case_id": "example-c-edit",
+  "input_kind": "existing-editable-svg + change order",
+  "expected_shape": {
+    "mode": "edit",
+    "edit": {
+      "operations": {"min": 2, "kinds": ["set_text", "set_fill", "set_size", "move"]},
+      "preserve_untouched": true,
+      "source_sha256_recorded": true,
+      "record_per_operation": ["id", "op", "before", "after"],
+      "unresolved_ids": "reported in exceptions, never guessed"
+    },
+    "deliverables": ["figure.svg", "figure.png", "figure.pdf", "result.json", "edit-record.json"],
+    "expected_checks": ["editable_source_preserved", "edits_applied", "source_sha_recorded",
+                        "png_real", "pdf_real"]
+  },
+  "allowed_status": ["ok", "partial", "insufficient_evidence", "input_error"],
+  "how_to_verify": "ga_build.py edit 的 EDIT_OK + edit-record.json 的 applied/skipped 计数与 sha256 记录"
+}

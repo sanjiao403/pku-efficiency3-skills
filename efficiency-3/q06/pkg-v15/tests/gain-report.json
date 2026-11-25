@@ -1,0 +1,279 @@
+{
+  "what": "labeled gain cases judged by plan_validate.py (hard gates) + rigor.py (independent re-proof from the material)",
+  "cases_file": "tests/gain_cases.json",
+  "judge": [
+    "scripts/plan_validate.py",
+    "scripts/rigor.py"
+  ],
+  "cases": [
+    {
+      "id": "grounded",
+      "label": "grounded",
+      "note": "每一页的数字、图/表号、引文都能在材料里逐字找到；应当 0 error。",
+      "expect": {
+        "error_codes": [],
+        "rigor_missing": []
+      },
+      "observed": {
+        "error_codes": [],
+        "validation_status": "WARN",
+        "errors": 0,
+        "warnings": 12,
+        "rigor_items": 14,
+        "rigor_missing": [],
+        "rigor_found": 14
+      },
+      "verdict": "pass",
+      "rigor_rows": [
+        {
+          "item": "quote:Edge-aware downscaling of land-surface temperature",
+          "found": true,
+          "locator": "material_text · L1",
+          "reason": ""
+        },
+        {
+          "item": "quote:We propose a residual attention network that fuses thermal i",
+          "found": true,
+          "locator": "material_text · L4",
+          "reason": ""
+        },
+        {
+          "item": "figure:1",
+          "found": true,
+          "locator": "material_text · L5",
+          "reason": ""
+        },
+        {
+          "item": "quote:Figure 1 shows the network overview and the two attention bl",
+          "found": true,
+          "locator": "material_text · L5",
+          "reason": ""
+        },
+        {
+          "item": "number:30:m",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "table:1",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "quote:Table 1 reports the ablation at the 30 m block scale over 12",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "number:3.7:degC",
+          "found": true,
+          "locator": "material_text · L7",
+          "reason": ""
+        },
+        {
+          "item": "number:0.86:R2",
+          "found": true,
+          "locator": "material_text · L8",
+          "reason": ""
+        },
+        {
+          "item": "number:0.86",
+          "found": true,
+          "locator": "material_text · L8",
+          "reason": ""
+        },
+        {
+          "item": "quote:The proposed model reduces the mean absolute error to 3.7 de",
+          "found": true,
+          "locator": "material_text · L7",
+          "reason": ""
+        },
+        {
+          "item": "number:3:%",
+          "found": true,
+          "locator": "material_text · L9",
+          "reason": ""
+        },
+        {
+          "item": "quote:Performance degrades over water bodies, where only 3% of the",
+          "found": true,
+          "locator": "material_text · L9",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "fabricated_number",
+      "label": "fabricated_number",
+      "note": "把 result 页的 3.7 degC 换成材料里没有的 4.2 degC；证据锁必须报 NUMBER_NOT_IN_SOURCE，rigor 必须查不到。",
+      "expect": {
+        "error_codes": [
+          "NUMBER_NOT_IN_SOURCE"
+        ],
+        "rigor_missing": [
+          "number:4.2:degC"
+        ]
+      },
+      "observed": {
+        "error_codes": [
+          "NUMBER_NOT_IN_SOURCE"
+        ],
+        "validation_status": "FAIL",
+        "errors": 2,
+        "warnings": 13,
+        "rigor_items": 4,
+        "rigor_missing": [
+          "number:4.2:degC"
+        ],
+        "rigor_found": 3
+      },
+      "verdict": "pass",
+      "rigor_rows": [
+        {
+          "item": "number:4.2:degC",
+          "found": false,
+          "locator": null,
+          "reason": "number 4.2 degC not found in source (known values with this magnitude: none)"
+        },
+        {
+          "item": "number:12",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "number:3.7:degC",
+          "found": true,
+          "locator": "material_text · L7",
+          "reason": ""
+        },
+        {
+          "item": "quote:The proposed model reduces the mean absolute error to 3.7 de",
+          "found": true,
+          "locator": "material_text · L7",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "fabricated_figure_ref",
+      "label": "fabricated_figure_ref",
+      "note": "页面引用材料里不存在的 Figure 7（材料只有 Figure 1/Table 1）；证据锁必须报 REF_NOT_IN_SOURCE，rigor 必须查不到。",
+      "expect": {
+        "error_codes": [
+          "REF_NOT_IN_SOURCE"
+        ],
+        "rigor_missing": [
+          "figure:7"
+        ]
+      },
+      "observed": {
+        "error_codes": [
+          "REF_NOT_IN_SOURCE"
+        ],
+        "validation_status": "FAIL",
+        "errors": 4,
+        "warnings": 15,
+        "rigor_items": 4,
+        "rigor_missing": [
+          "figure:7"
+        ],
+        "rigor_found": 3
+      },
+      "verdict": "pass",
+      "rigor_rows": [
+        {
+          "item": "figure:7",
+          "found": false,
+          "locator": null,
+          "reason": "Figure 7 is not present in the source (highest figure number found: 1)"
+        },
+        {
+          "item": "number:30:m",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "figure:1",
+          "found": true,
+          "locator": "material_text · L5",
+          "reason": ""
+        },
+        {
+          "item": "quote:Figure 1 shows the network overview and the two attention bl",
+          "found": true,
+          "locator": "material_text · L5",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "unlocatable_quote",
+      "label": "fabricated_quote",
+      "note": "数字都真、图号也真，但引文不是材料原文（改写句）；证据锁必须报 QUOTE_NOT_FOUND，rigor 必须查不到。",
+      "expect": {
+        "error_codes": [
+          "QUOTE_NOT_FOUND"
+        ],
+        "rigor_missing": [
+          "quote:The proposed model reports a mean absolute error of 3.7 degC"
+        ]
+      },
+      "observed": {
+        "error_codes": [
+          "QUOTE_NOT_FOUND"
+        ],
+        "validation_status": "FAIL",
+        "errors": 1,
+        "warnings": 13,
+        "rigor_items": 3,
+        "rigor_missing": [
+          "quote:The proposed model reports a mean absolute error of 3.7 degC"
+        ],
+        "rigor_found": 2
+      },
+      "verdict": "pass",
+      "rigor_rows": [
+        {
+          "item": "number:3.7:degC",
+          "found": true,
+          "locator": "material_text · L7",
+          "reason": ""
+        },
+        {
+          "item": "number:12",
+          "found": true,
+          "locator": "material_text · L6",
+          "reason": ""
+        },
+        {
+          "item": "quote:The proposed model reports a mean absolute error of 3.7 degC",
+          "found": false,
+          "locator": null,
+          "reason": "quote not found verbatim in the material: 'The proposed model reports a mean absolute error of 3.7 degC'"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 4,
+    "failed": []
+  },
+  "labels_covered": [
+    "fabricated_figure_ref",
+    "fabricated_number",
+    "fabricated_quote",
+    "grounded"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_disclaimer": "示例 case（示例，非正式案例结果）。组织方 3 个固定案例不在此包内。",
+  "case_id": "example-b-results",
+  "title": "Palmitoylation sets the interferon ceiling",
+  "task_instruction": "从源数据表生成含真实数据编码（柱+误差线+单位+图例）的单页图形摘要，交付可编辑源文件与导出件。",
+  "output_contract": {
+    "case_id": "案例标识",
+    "status": "ok | partial | insufficient_evidence | input_error",
+    "editable_source": "{path, format, editable, layers, text_count, sha256}",
+    "export_artifact": "{png:{path,width,height,dpi,engine}, pdf:{path,pages,vector,engine}}",
+    "content_map": "元素级溯源：每个柱 -> 源表行列 + 逐字数值",
+    "compliance_checks": "尺寸/分辨率/字体/图例一致/导出真实性 逐项 measured vs required",
+    "exceptions": "未能满足项 + 原因 + 处置"
+  },
+  "canvas": {"width_px": 2400, "height_px": 1350, "dpi": 300, "min_font_px": 20},
+  "materials": ["material.md", "measurements.csv"],
+  "expected_figure": {
+    "roles": ["problem", "method", "results", "conclusion"],
+    "chart": {"kind": "bar", "unit": "pg/mL", "series": 3, "points_per_series": 4},
+    "must_include_legend": true,
+    "values_with_units": 3
+  }
+}

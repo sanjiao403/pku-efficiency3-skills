@@ -1,0 +1,22 @@
+{
+  "_note": "EXAMPLE ONLY - example case input (output_contract as a bare string array). Chinese material + an institutional .pptx template.",
+  "case_id": "example-zh-md",
+  "task": "把这份中文研究材料整理成 15 分钟课题组汇报，遵守单位模板，页数不超过 12 页。",
+  "language": "zh",
+  "audience": "课题组周会，交通与机器学习背景混合",
+  "duration_min": 15,
+  "slide_limit": 12,
+  "materials": ["report.md"],
+  "template": "group-template.pptx",
+  "_template_note": "build it first: python3 scripts/template_build.py --spec templates/template-spec.example.json --out work/example-zh-md/group-template.pptx",
+  "output_contract": [
+    "deliverable",
+    "deck",
+    "slides",
+    "evidence_map",
+    "notes",
+    "render",
+    "uncertainty",
+    "status"
+  ]
+}

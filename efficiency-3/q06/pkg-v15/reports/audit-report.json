@@ -1,0 +1,359 @@
+{
+  "what": "independent audit of the delivered artefacts (A1-A8), regenerated per run",
+  "generated_by": "scripts/audit_deck.py --out <run> --case <case.json> --report-out reports/audit-report.json",
+  "reads": [
+    "deck.pptx",
+    "result.json",
+    "the case material"
+  ],
+  "does_not_read": [
+    "plan.json",
+    "inventory.json",
+    "validation.json",
+    "layout.json"
+  ],
+  "cases": [
+    {
+      "case_id": "example-en-pdf",
+      "out_dir": "case_en_pdf",
+      "deck": {
+        "pptx": "deck.pptx",
+        "slides": 9,
+        "size_in": {
+          "w": 13.333,
+          "h": 7.5
+        },
+        "min_font_pt": 11.0
+      },
+      "passed": 8,
+      "failed": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "check": "result.json: every contract field present and non-null",
+          "verdict": "pass",
+          "expected": {
+            "fields": 8
+          },
+          "actual": {
+            "present": 8,
+            "nulls": []
+          }
+        },
+        {
+          "id": "A2",
+          "check": "outputs[]: every declared artefact exists with matching bytes and sha256",
+          "verdict": "pass",
+          "expected": {
+            "entries": 24
+          },
+          "actual": {
+            "verified": 24
+          }
+        },
+        {
+          "id": "A3",
+          "check": "page count: pptx == result.slides and within slide_limit",
+          "verdict": "pass",
+          "expected": {
+            "limit": 14
+          },
+          "actual": {
+            "pptx": 9,
+            "result.json": 9
+          }
+        },
+        {
+          "id": "A4",
+          "check": "every Figure/Table number and number in the pptx exists in the material",
+          "verdict": "pass",
+          "expected": {
+            "material_numbers": 53,
+            "material_captions": 2
+          },
+          "actual": {
+            "bad_refs": 0,
+            "bad_numbers": 0
+          }
+        },
+        {
+          "id": "A5",
+          "check": "each content page has a verified material locator or a declared reason",
+          "verdict": "pass",
+          "expected": {
+            "content_pages": 8
+          },
+          "actual": {
+            "unresolved": 0
+          }
+        },
+        {
+          "id": "A6",
+          "check": "notes exist and stay under 0.34 4-gram overlap",
+          "verdict": "pass",
+          "expected": {
+            "pages": 9
+          },
+          "actual": {
+            "bad": 0
+          }
+        },
+        {
+          "id": "A7",
+          "check": "no shape outside the page, type >= 11pt, slide numbers present",
+          "verdict": "pass",
+          "expected": {
+            "floor_pt": 11.0
+          },
+          "actual": {
+            "min_font_pt": 11.0,
+            "overflow": 0,
+            "pages_without_number": 0
+          }
+        },
+        {
+          "id": "A8",
+          "check": "status is consistent with the audit findings",
+          "verdict": "pass",
+          "expected": {
+            "expected": "success only if every check passes"
+          },
+          "actual": {
+            "status": "success",
+            "failed_checks": []
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "example-latex",
+      "out_dir": "case_latex",
+      "deck": {
+        "pptx": "deck.pptx",
+        "slides": 9,
+        "size_in": {
+          "w": 13.333,
+          "h": 7.5
+        },
+        "min_font_pt": 11.0
+      },
+      "passed": 8,
+      "failed": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "check": "result.json: every contract field present and non-null",
+          "verdict": "pass",
+          "expected": {
+            "fields": 8
+          },
+          "actual": {
+            "present": 8,
+            "nulls": []
+          }
+        },
+        {
+          "id": "A2",
+          "check": "outputs[]: every declared artefact exists with matching bytes and sha256",
+          "verdict": "pass",
+          "expected": {
+            "entries": 24
+          },
+          "actual": {
+            "verified": 24
+          }
+        },
+        {
+          "id": "A3",
+          "check": "page count: pptx == result.slides and within slide_limit",
+          "verdict": "pass",
+          "expected": {
+            "limit": 12
+          },
+          "actual": {
+            "pptx": 9,
+            "result.json": 9
+          }
+        },
+        {
+          "id": "A4",
+          "check": "every Figure/Table number and number in the pptx exists in the material",
+          "verdict": "pass",
+          "expected": {
+            "material_numbers": 29,
+            "material_captions": 2
+          },
+          "actual": {
+            "bad_refs": 0,
+            "bad_numbers": 0
+          }
+        },
+        {
+          "id": "A5",
+          "check": "each content page has a verified material locator or a declared reason",
+          "verdict": "pass",
+          "expected": {
+            "content_pages": 8
+          },
+          "actual": {
+            "unresolved": 0
+          }
+        },
+        {
+          "id": "A6",
+          "check": "notes exist and stay under 0.34 4-gram overlap",
+          "verdict": "pass",
+          "expected": {
+            "pages": 9
+          },
+          "actual": {
+            "bad": 0
+          }
+        },
+        {
+          "id": "A7",
+          "check": "no shape outside the page, type >= 11pt, slide numbers present",
+          "verdict": "pass",
+          "expected": {
+            "floor_pt": 11.0
+          },
+          "actual": {
+            "min_font_pt": 11.0,
+            "overflow": 0,
+            "pages_without_number": 0
+          }
+        },
+        {
+          "id": "A8",
+          "check": "status is consistent with the audit findings",
+          "verdict": "pass",
+          "expected": {
+            "expected": "success only if every check passes"
+          },
+          "actual": {
+            "status": "success",
+            "failed_checks": []
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "example-zh-md",
+      "out_dir": "case_zh_md",
+      "deck": {
+        "pptx": "deck.pptx",
+        "slides": 9,
+        "size_in": {
+          "w": 13.333,
+          "h": 7.5
+        },
+        "min_font_pt": 11.0
+      },
+      "passed": 8,
+      "failed": 0,
+      "checks": [
+        {
+          "id": "A1",
+          "check": "result.json: every contract field present and non-null",
+          "verdict": "pass",
+          "expected": {
+            "fields": 8
+          },
+          "actual": {
+            "present": 8,
+            "nulls": []
+          }
+        },
+        {
+          "id": "A2",
+          "check": "outputs[]: every declared artefact exists with matching bytes and sha256",
+          "verdict": "pass",
+          "expected": {
+            "entries": 24
+          },
+          "actual": {
+            "verified": 24
+          }
+        },
+        {
+          "id": "A3",
+          "check": "page count: pptx == result.slides and within slide_limit",
+          "verdict": "pass",
+          "expected": {
+            "limit": 12
+          },
+          "actual": {
+            "pptx": 9,
+            "result.json": 9
+          }
+        },
+        {
+          "id": "A4",
+          "check": "every Figure/Table number and number in the pptx exists in the material",
+          "verdict": "pass",
+          "expected": {
+            "material_numbers": 49,
+            "material_captions": 2
+          },
+          "actual": {
+            "bad_refs": 0,
+            "bad_numbers": 0
+          }
+        },
+        {
+          "id": "A5",
+          "check": "each content page has a verified material locator or a declared reason",
+          "verdict": "pass",
+          "expected": {
+            "content_pages": 8
+          },
+          "actual": {
+            "unresolved": 0
+          }
+        },
+        {
+          "id": "A6",
+          "check": "notes exist and stay under 0.34 4-gram overlap",
+          "verdict": "pass",
+          "expected": {
+            "pages": 9
+          },
+          "actual": {
+            "bad": 0
+          }
+        },
+        {
+          "id": "A7",
+          "check": "no shape outside the page, type >= 11pt, slide numbers present",
+          "verdict": "pass",
+          "expected": {
+            "floor_pt": 11.0
+          },
+          "actual": {
+            "min_font_pt": 11.0,
+            "overflow": 0,
+            "pages_without_number": 0
+          }
+        },
+        {
+          "id": "A8",
+          "check": "status is consistent with the audit findings",
+          "verdict": "pass",
+          "expected": {
+            "expected": "success only if every check passes"
+          },
+          "actual": {
+            "status": "success",
+            "failed_checks": []
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "cases": 3,
+    "checks_per_case": 8,
+    "passed": 24,
+    "failed": 0
+  }
+}

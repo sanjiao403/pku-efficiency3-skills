@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "q08 academic-slide result.json",
+  "description": "本 Skill 的 result.json 契约（机器可读版）。规则：字段不允许缺失——产不出写 null 并在 uncertainty 说明。校验：python3 scripts/verify.py --out <out> --check-schema（内置零依赖校验器）。",
+  "type": "object",
+  "required": ["case_id", "status", "status_reason", "summary", "generated_at", "outputs",
+               "artifacts", "results", "slides", "evidence", "sources", "uncertainty",
+               "changes", "change_log", "capability_boundary", "reproduce",
+               "output_contract_echo", "contract_unresolved_fields", "resolution", "pipeline"],
+  "properties": {
+    "case_id": { "type": "string", "minLength": 1 },
+    "task": { "type": ["string", "null"] },
+    "status": { "enum": ["success", "partial"] },
+    "status_reason": { "type": "string" },
+    "summary": { "type": "string" },
+    "generated_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T" },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "kind"],
+        "properties": {
+          "path": { "type": "string" },
+          "bytes": { "type": ["integer", "null"] },
+          "sha256": { "type": ["string", "null"] },
+          "kind": { "type": "string" },
+          "exists": { "type": ["boolean", "null"] }
+        }
+      }
+    },
+    "artifacts": { "type": "array" },
+    "results": {
+      "type": "object",
+      "required": ["template", "plan", "build", "fit", "render"],
+      "properties": {
+        "template": {
+          "type": "object",
+          "required": ["path", "origin", "slide_size", "layout_count", "roles", "theme_fonts",
+                       "inheritance"],
+          "properties": {
+            "origin": { "type": ["string", "null"] },
+            "layout_count": { "type": "integer" },
+            "inheritance": {
+              "type": "object",
+              "required": ["layouts_out", "layouts_template", "layouts_preserved",
+                           "theme_preserved"],
+              "properties": {
+                "layouts_out": { "type": "integer" },
+                "layouts_template": { "type": "integer" },
+                "layouts_preserved": { "type": "boolean" },
+                "theme_preserved": { "type": "boolean" }
+              }
+            }
+          }
+        },
+        "plan": {
+          "type": "object",
+          "required": ["stats", "dropped_content"],
+          "properties": {
+            "stats": {
+              "type": "object",
+              "required": ["slides"],
+              "properties": { "slides": { "type": "integer", "minimum": 0 } }
+            },
+            "dropped_content": { "type": "array" }
+          }
+        },
+        "build": {
+          "type": "object",
+          "required": ["slides", "warnings", "sha256"],
+          "properties": {
+            "slides": { "type": "integer" },
+            "warnings": { "type": "array" },
+            "sha256": { "type": ["string", "null"] }
+          }
+        },
+        "fit": {
+          "type": "object",
+          "required": ["metrics", "issues"],
+          "properties": {
+            "metrics": {
+              "type": "object",
+              "required": ["slides", "overflow_boxes", "min_body_pt",
+                           "figure_aspect_max_deviation", "locator_coverage",
+                           "quote_verified_rate", "geometry_inherited_slides"],
+              "properties": {
+                "slides": { "type": "integer", "minimum": 0 },
+                "overflow_boxes": { "type": "integer", "minimum": 0 },
+                "min_body_pt": { "type": ["number", "null"] },
+                "figure_aspect_max_deviation": { "type": ["number", "null"] },
+                "locator_coverage": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+                "quote_verified_rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+                "geometry_inherited_slides": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["severity", "item"],
+                "properties": {
+                  "severity": { "enum": ["high", "medium", "low"] },
+                  "item": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "render": {
+          "type": "object",
+          "required": ["ok", "backend", "page_count"],
+          "properties": {
+            "ok": { "type": "boolean" },
+            "backend": { "enum": ["soffice", "powerpoint", "none", "skipped"] },
+            "page_count": { "type": ["integer", "null"] },
+            "text_coverage_min": { "type": ["number", "null"] }
+          }
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page", "role"],
+        "properties": {
+          "page": { "type": "integer", "minimum": 1 },
+          "role": { "type": "string" },
+          "title": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page", "locator", "quote", "verified"],
+        "properties": {
+          "page": { "type": "integer" },
+          "locator": { "type": ["string", "null"] },
+          "block_id": { "type": ["string", "null"] },
+          "quote": { "type": "string" },
+          "verified": { "type": "boolean" }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "properties": {
+          "file": { "type": ["string", "null"] },
+          "kind": { "type": "string" },
+          "sha256": { "type": ["string", "null"] },
+          "chars": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "why", "handling"],
+        "properties": {
+          "item": { "type": "string" },
+          "why": { "type": ["string", "null"] },
+          "handling": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "changes": { "type": "array" },
+    "change_log": { "type": "array" },
+    "capability_boundary": { "type": "array", "items": { "type": "string" } },
+    "reproduce": { "type": "string" },
+    "narrative": { "type": ["string", "null"] },
+    "narrative_source": { "type": ["string", "null"] },
+    "output_contract_echo": { "type": "object" },
+    "contract_unresolved_fields": { "type": "array", "items": { "type": "string" } },
+    "resolution": {
+      "type": "object",
+      "required": ["cwd", "case_dir", "entries"],
+      "properties": {
+        "cwd": { "type": "string" },
+        "case_json": { "type": ["string", "null"] },
+        "case_dir": { "type": "string" },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "resolved_from"],
+            "properties": {
+              "kind": { "type": "string" },
+              "given": { "type": ["string", "null"] },
+              "resolved": { "type": ["string", "null"] },
+              "resolved_from": {
+                "enum": ["case_dir", "cwd", "input", "absolute", "case_dir_scan", "not_found"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "required": ["steps"],
+      "properties": {
+        "steps": { "type": "array" },
+        "guards": { "type": "array" },
+        "errors": { "type": "array" },
+        "elapsed_s": { "type": ["number", "null"] }
+      }
+    }
+  }
+}

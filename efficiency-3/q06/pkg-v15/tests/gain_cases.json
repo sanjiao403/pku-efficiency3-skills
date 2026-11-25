@@ -1,0 +1,60 @@
+{
+  "_note": "带标签的判定案例（labeled gain cases）· 示例（非正式答案）。每个案例=一小段材料 + 一份页级计划；判定器 scripts/gain_check.py 用 plan_validate.py（证据锁四道硬闸）与 rigor.py（逐条材料回查）独立复算，不读生成器的自评。expect 是预期结论，verdict 由判定器写进 tests/gain-report.json。",
+  "material_default": "Edge-aware downscaling of land-surface temperature\nLand-surface temperature products are too coarse for street-level heat mapping.\nExisting downscaling studies report a mean absolute error between 2.4 degC and 5.1 degC.\nWe propose a residual attention network that fuses thermal imagery with reflectance and building-height layers.\nFigure 1 shows the network overview and the two attention blocks.\nTable 1 reports the ablation at the 30 m block scale over 12 validation stations.\nThe proposed model reduces the mean absolute error to 3.7 degC on 12 validation stations.\nThe coefficient of determination reaches R2 = 0.86.\nPerformance degrades over water bodies, where only 3% of the training patches fall.",
+  "cases": [
+    {
+      "id": "grounded",
+      "label": "grounded",
+      "expect": {"error_codes": [], "rigor_missing": []},
+      "note": "每一页的数字、图/表号、引文都能在材料里逐字找到；应当 0 error。",
+      "material_text": "@material_default",
+      "slides": [
+        {"id": "s01", "role": "title", "title": "Edge-aware downscaling of land-surface temperature", "claim": "", "bullets": [], "numbers": [],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L1", "quote": "Edge-aware downscaling of land-surface temperature"}]},
+        {"id": "s02", "role": "approach", "title": "What we did", "claim": "We propose a residual attention network that fuses thermal imagery with reflectance and building-height layers.", "bullets": ["fuses thermal imagery with reflectance"], "numbers": [],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L4", "quote": "We propose a residual attention network that fuses thermal imagery with reflectance and building-height layers."}]},
+        {"id": "s03", "role": "evidence", "title": "Figure 1 · network overview", "claim": "", "bullets": ["Figure 1 shows the network overview and the two attention blocks."], "numbers": [],
+         "evidence": [{"kind": "figure", "label": "Figure 1", "locator": "material_text · L5", "quote": "Figure 1 shows the network overview and the two attention blocks."}]},
+        {"id": "s04", "role": "evidence", "title": "Table 1 · ablation at 30 m", "claim": "", "bullets": ["Table 1 reports the ablation at the 30 m block scale over 12 validation stations."], "numbers": ["30 m", "12"],
+         "evidence": [{"kind": "table", "label": "Table 1", "locator": "material_text · L6", "quote": "Table 1 reports the ablation at the 30 m block scale over 12 validation stations."}]},
+        {"id": "s05", "role": "result", "title": "Main result", "claim": "The proposed model reduces the mean absolute error to 3.7 degC on 12 validation stations.", "bullets": ["R2 = 0.86"], "numbers": ["3.7 degC", "12", "R2 = 0.86"],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L7", "quote": "The proposed model reduces the mean absolute error to 3.7 degC on 12 validation stations."}]},
+        {"id": "s06", "role": "limits", "title": "Limits and scope", "claim": "Performance degrades over water bodies, where only 3% of the training patches fall.", "bullets": ["3% of training patches over water"], "numbers": ["3%"],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L9", "quote": "Performance degrades over water bodies, where only 3% of the training patches fall."}]}
+      ]
+    },
+    {
+      "id": "fabricated_number",
+      "label": "fabricated_number",
+      "expect": {"error_codes": ["NUMBER_NOT_IN_SOURCE"], "rigor_missing": ["number:4.2:degC"]},
+      "note": "把 result 页的 3.7 degC 换成材料里没有的 4.2 degC；证据锁必须报 NUMBER_NOT_IN_SOURCE，rigor 必须查不到。",
+      "material_text": "@material_default",
+      "slides": [
+        {"id": "s05", "role": "result", "title": "Main result", "claim": "The proposed model reduces the mean absolute error to 4.2 degC on 12 validation stations.", "bullets": [], "numbers": ["4.2 degC"],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L7", "quote": "The proposed model reduces the mean absolute error to 3.7 degC on 12 validation stations."}]}
+      ]
+    },
+    {
+      "id": "fabricated_figure_ref",
+      "label": "fabricated_figure_ref",
+      "expect": {"error_codes": ["REF_NOT_IN_SOURCE"], "rigor_missing": ["figure:7"]},
+      "note": "页面引用材料里不存在的 Figure 7（材料只有 Figure 1/Table 1）；证据锁必须报 REF_NOT_IN_SOURCE，rigor 必须查不到。",
+      "material_text": "@material_default",
+      "slides": [
+        {"id": "s03", "role": "evidence", "title": "Figure 7 · attention blocks", "claim": "", "bullets": ["Figure 7 shows the ablation at the 30 m block scale."], "numbers": [],
+         "evidence": [{"kind": "figure", "label": "Figure 7", "locator": "material_text · L5", "quote": "Figure 1 shows the network overview and the two attention blocks."}]}
+      ]
+    },
+    {
+      "id": "unlocatable_quote",
+      "label": "fabricated_quote",
+      "expect": {"error_codes": ["QUOTE_NOT_FOUND"], "rigor_missing": ["quote:The proposed model reports a mean absolute error of 3.7 degC"]},
+      "note": "数字都真、图号也真，但引文不是材料原文（改写句）；证据锁必须报 QUOTE_NOT_FOUND，rigor 必须查不到。",
+      "material_text": "@material_default",
+      "slides": [
+        {"id": "s05", "role": "result", "title": "Main result", "claim": "", "bullets": [], "numbers": ["3.7 degC", "12"],
+         "evidence": [{"kind": "paragraph", "locator": "material_text · L7", "quote": "The proposed model reports a mean absolute error of 3.7 degC on 12 blocks."}]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "case_id": "FIXTURE-F1",
+  "task": "把合成论文《单原子纳米酶比色检测平台》组织成 12 分钟组会汇报 PPT，套用 templates/academic-16x9.pptx 模板",
+  "language": "zh",
+  "audience": "交叉学科课题组组会（含非分析化学背景听众）",
+  "minutes": 12,
+  "slide_count": {"min": 9, "max": 12, "target": 10},
+  "template": "../../templates/academic-16x9.pptx",
+  "starting_deck": null,
+  "source": {"path": "paper.md", "kind": "md"},
+  "figure_specs": [
+    {
+      "label": "Figure 1",
+      "csv": "dose_response.csv",
+      "kind": "line",
+      "x": "conc_nM",
+      "y": "rel_absorbance",
+      "title": "Hg2+ dose-response (A652/A0)",
+      "xlabel": "Hg2+ concentration (nM)",
+      "ylabel": "Relative absorbance",
+      "width_in": 6.0,
+      "height_in": 3.4
+    }
+  ],
+  "footer": "FIXTURE-F1 · 流水线自检",
+  "output_contract": {
+    "presentation": "可编辑 pptx（母版/版式继承）",
+    "slide_plan": "页级主张与结构",
+    "evidence_map": "每页 → 论文图/表/章节定位",
+    "render": "PDF/PNG 预览与字体替换记录",
+    "status": "success|partial + uncertainty"
+  }
+}

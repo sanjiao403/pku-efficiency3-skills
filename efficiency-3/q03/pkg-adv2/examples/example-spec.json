@@ -1,0 +1,45 @@
+{
+  "_comment": "示例（非正式答案）。这是 examples/case.example.json 对应的图规范最小形状：说明 chart.categories / chart.series[].values[] / x / y / error_bar 的字段含义，字段可被人工修改后重跑 chart.py 复现同一张图。运行期导出的 figure.pdf / figure.png 与导出证据（export_check.json）由同一份 layout 生成，形状见 examples/export_check.example.json。不是平台正式案例，也不含被测答案。",
+  "spec_version": "1.0-adv2",
+  "figure_id": "example-inline-grouped-bar",
+  "mode": "chart",
+  "workorder": "source_value_chart",
+  "journal": "nature",
+  "title": "LPS-induced inflammatory gene expression (example data)",
+  "caption": "Bars are means of n = 3 independent cultures; error bars show s.d. Example data.",
+  "style": { "width_mm": 89.0, "height_mm": 70.0, "base_font_pt": 7.0 },
+  "chart": {
+    "type": "grouped_bar",
+    "categories": [
+      { "id": "cat1", "display": "Il6" },
+      { "id": "cat2", "display": "Tnf" }
+    ],
+    "series": [
+      {
+        "id": "s1", "name": "Vehicle", "legend": "Vehicle", "color": "#0072B2",
+        "values": [
+          { "cat": "cat1", "value": 1.0, "error": 0.11, "n": 3,
+            "source": { "file": "case.inline", "row": 2, "col": "mean", "row_key": { "gene": "Il6", "condition": "Vehicle" } } },
+          { "cat": "cat2", "value": 1.0, "error": 0.08, "n": 3,
+            "source": { "file": "case.inline", "row": 4, "col": "mean", "row_key": { "gene": "Tnf", "condition": "Vehicle" } } }
+        ]
+      },
+      {
+        "id": "s2", "name": "LPS", "legend": "LPS", "color": "#D55E00",
+        "values": [
+          { "cat": "cat1", "value": 8.42, "error": 0.94, "n": 3,
+            "source": { "file": "case.inline", "row": 3, "col": "mean", "row_key": { "gene": "Il6", "condition": "LPS" } } },
+          { "cat": "cat2", "value": 5.31, "error": 0.61, "n": 3,
+            "source": { "file": "case.inline", "row": 5, "col": "mean", "row_key": { "gene": "Tnf", "condition": "LPS" } } }
+        ]
+      }
+    ],
+    "x": { "label": "Gene" },
+    "y": { "label": "Relative mRNA expression", "unit": "fold change" },
+    "error_bar": { "present": true, "meaning": "s.d.", "n": 3 }
+  },
+  "provenance": {
+    "builder": "scripts/chart.py",
+    "note": "两条 series = 两个处理条件；values[].source 指回源表的物理行/列，row_key 用于检测表被重排。"
+  }
+}

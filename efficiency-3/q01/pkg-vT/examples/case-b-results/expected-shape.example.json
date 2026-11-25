@@ -1,0 +1,21 @@
+{
+  "_disclaimer": "示例（非正式案例结果）。这是「期望形状」规格：只声明应该满足的结构与检查项，不含任何正式案例的实体名、数值或答案。",
+  "case_id": "example-b-results",
+  "input_kind": "text + source-data-table",
+  "expected_shape": {
+    "panels": {"count": 4, "roles": ["problem", "method", "results", "conclusion"]},
+    "panel_kinds": {"results": "chart", "method": "chain"},
+    "chart": {"kind": "bar", "unit_required": true, "x_label_required": true,
+              "series": 3, "points_per_series": 4, "error_bars": true,
+              "value_labels": "raw table values", "in_chart_legend": true},
+    "data_points": {"locator_required": true, "raw_value_required": true},
+    "claims": {"min": 2, "unit_required": true, "compare_tick_required": true},
+    "legend": {"entries_equal_categories": true, "pattern_per_series": true},
+    "notes": {"units": true, "conditions": true, "caption": true, "figure_no": true},
+    "edit_mode": false,
+    "expected_checks": ["four_beats", "quotes_verbatim", "workorder_coverage",
+                        "no_overflow", "legend_consistent"]
+  },
+  "allowed_status": ["ok", "partial", "insufficient_evidence", "input_error"],
+  "how_to_verify": "result.json.content_map[kind=data_point] 每个柱都有 file+row+逐字 raw_value；invariants.legend.ok 为 true"
+}

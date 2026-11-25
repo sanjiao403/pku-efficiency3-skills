@@ -1,0 +1,30 @@
+{
+  "_note": "示例（非正式答案）：说明运行时 result.json 的形状——真实字段名与值由 /input/case.json 的 output_contract 与当次材料决定，本文件不是任何正式案例的结果。",
+  "_example": true,
+  "case_id": "example-groupmeeting-6min",
+  "outline": {"file": "outline.json", "pages": 6, "backup_slides": 2},
+  "editable_deck": {"file": "deck.pptx", "slides": 8, "engine": "stdlib-ooxml", "editable": true},
+  "evidence_map": {"file": "outline.json#pages[].evidence_refs", "anchors": 11},
+  "uncertainty": [
+    {"item": "材料未提供图 1 的图片文件", "why": "paper.md 只有图注", "handling": "页面不画图，保留图注引用"}
+  ],
+  "status": "partial",
+  "status_reason": "材料侧缺口已如实登记",
+  "summary": "6 pages + 2 backup; 14 anchored atom(s) from 1 readable file(s)",
+  "outputs": [
+    {"path": "deck.pptx", "exists": true, "bytes": 24000, "sha256": "<runtime sha256>"},
+    {"path": "outline.json", "exists": true, "bytes": 8000, "sha256": "<runtime sha256>"},
+    {"path": "speaker-notes.md", "exists": true, "bytes": 3000, "sha256": "<runtime sha256>"}
+  ],
+  "contract_passthrough": {"source": "output_contract", "declared": 5, "resolved": 5},
+  "contract_unresolved_fields": [],
+  "sample_page": {
+    "index": 4, "role": "result-1",
+    "title": "冻结前 3 个 stage 提升 +4.2%",
+    "claim": "相对全量微调平均提升 +4.2%，配对 t 检验 p=0.03（3 个种子，统计效力有限）。",
+    "claim_strength": "moderate",
+    "bullets": ["宏 F1 0.87±0.01 对 0.83±0.02"],
+    "seconds": 58,
+    "evidence_refs": [{"material": "paper.md", "line": 6, "numbers": ["+4.2", "0.03", "3"]}]
+  }
+}

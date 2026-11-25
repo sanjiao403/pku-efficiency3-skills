@@ -1,0 +1,51 @@
+{
+  "$comment": "Machine-readable arrow semantics for the q04 compact arm. Orthogonal visual channels: head = regulation sign / direction, line dash = interaction family or 'direction not stated', badge = covalent modification type, line width = evidence strength. Never overload one channel with two meanings. Loaded by scripts/pathway.py (rendering, legend, compliance checks) and scripts/verify.py (independent geometry audit).",
+  "version": "1.0.0",
+  "head_shapes": {
+    "tri": "filled triangle = positive regulation (activation)",
+    "tbar": "blunt T-bar = negative regulation (inhibition)",
+    "circ": "open circle = physical binding / association, direction as drawn",
+    "tri_o": "hollow triangle = transport / translocation",
+    "chev": "double chevron = transcription / expression",
+    "none": "NO head = the source does not state who acts on whom (direction not stated)"
+  },
+  "line_styles": {
+    "solid": "direct statement in the source",
+    "dash": "interaction family of the modification class, or direction not stated in the source",
+    "dashdot": "transport / translocation",
+    "dot": "degradation / unknown-direction interaction"
+  },
+  "badges": {
+    "P": "phosphorylation",
+    "Ub": "ubiquitination",
+    "Me": "methylation",
+    "Ac": "acetylation",
+    "OH": "hydroxylation"
+  },
+  "edge_types": {
+    "activates": {"zh": "激活", "head": "tri", "line": "solid", "requires_direction": true, "sign": "positive"},
+    "inhibits": {"zh": "抑制", "head": "tbar", "line": "solid", "requires_direction": true, "sign": "negative"},
+    "binds": {"zh": "结合", "head": "circ", "line": "solid", "requires_direction": false, "sign": "neutral",
+              "note": "partner order is stated by the source (A 与 B 结合); the head marks binding, not activation"},
+    "modifies": {"zh": "修饰", "head": "tri", "line": "dash", "requires_direction": true, "sign": "by-badge",
+                 "badge_from": ["P", "Ub", "Me", "Ac", "OH"]},
+    "transports": {"zh": "转运", "head": "tri_o", "line": "dashdot", "requires_direction": true, "sign": "neutral"},
+    "expresses": {"zh": "转录/表达", "head": "chev", "line": "solid", "requires_direction": true, "sign": "positive"},
+    "degrades": {"zh": "降解", "head": "tri", "line": "dot", "requires_direction": true, "sign": "negative"},
+    "regulates_unknown": {"zh": "调控（方向未说明）", "head": "none", "line": "dash", "requires_direction": false,
+                          "sign": "unknown", "annotation": "?",
+                          "note": "the source says one entity regulates/affects the other without saying which way"},
+    "unspecified": {"zh": "相互作用（类型未说明）", "head": "none", "line": "dash", "requires_direction": false,
+                    "sign": "unknown", "annotation": "?",
+                    "note": "the source states a relation but neither its mechanism nor its direction"}
+  },
+  "direction_policy": {
+    "requires_direction_true": "the evidence quote must contain a directional cue (activates/inhibits/phosphorylates/promotes/blocks/激活/抑制/促进/阻断 …); otherwise the edge is downgraded to 'unspecified' and one entry is appended to result.json.uncertainty[] with handling='undirected'",
+    "direction_not_stated": "render 'unspecified': dashed line, NO arrowhead, '?' annotation, legend note 'no arrowhead = direction not stated in source'",
+    "forbidden": "guessing a direction from biological plausibility (e.g. a kinase phosphorylates whatever it binds); such background knowledge may go into notes/uncertainty, never onto the canvas as an arrow"
+  },
+  "legend_requirements": {
+    "no_head_note": "no arrowhead / '?' = direction not stated in source",
+    "coverage": "the legend lists exactly the types used, and a test fails if a type is advertised but unused"
+  }
+}

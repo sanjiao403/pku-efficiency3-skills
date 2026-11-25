@@ -1,0 +1,185 @@
+{
+  "generated_by": "tests/ab_harness.py",
+  "design": {
+    "arms": [
+      "skill",
+      "baseline"
+    ],
+    "baseline_definition": "同一入口 + 同一 IR，通过 GA_ABLATE=provenance,encoding,legend 关闭 元素级溯源/数据编码/图例派生",
+    "why_fair": "两条臂共用材料、canvas、版式引擎与时间预算，唯一变量是能力开关；任何人可用同命令复现。",
+    "real_base_agent_protocol": "见 METHOD.md 第 4 节：用同一 /input/case.json 让基础 Agent 自由出图，把其产物放进 tests/ab-real/<case>/ 后重跑本脚本。",
+    "limits": "消融臂不等于真实基础 Agent 的最终质量；它量化的是本包能力带来的可核验增量。"
+  },
+  "cases": [
+    {
+      "case": "case-a-mechanism",
+      "arms": {
+        "skill": {
+          "status": "ok",
+          "seconds": 0.79,
+          "content_map_elements": 19,
+          "verbatim_source_ratio": 0.947,
+          "legend_entries": 3,
+          "legend_ok": true,
+          "numbers_traced_ratio": 1.0,
+          "numbers_untraced": 0,
+          "compliance_pass": 14,
+          "compliance_total": 14,
+          "canvas_overflow": 0,
+          "svg_text_elements": 74,
+          "layers": 8,
+          "png_verified": true,
+          "pdf_verified": true,
+          "repair_records": 0,
+          "exceptions": 2,
+          "arm": "skill",
+          "exit": 0,
+          "wall_seconds": 1.11,
+          "build_ok": true
+        },
+        "baseline": {
+          "status": "ok",
+          "seconds": 0.73,
+          "content_map_elements": 4,
+          "verbatim_source_ratio": 0.0,
+          "legend_entries": 0,
+          "legend_ok": true,
+          "numbers_traced_ratio": 1.0,
+          "numbers_untraced": 0,
+          "compliance_pass": 13,
+          "compliance_total": 14,
+          "canvas_overflow": 0,
+          "svg_text_elements": 33,
+          "layers": 6,
+          "png_verified": true,
+          "pdf_verified": true,
+          "repair_records": 0,
+          "exceptions": 2,
+          "arm": "baseline",
+          "exit": 0,
+          "wall_seconds": 1.03,
+          "build_ok": true
+        }
+      },
+      "delta": {
+        "content_map_elements": 15,
+        "verbatim_source_ratio": 0.947,
+        "legend_entries": 3,
+        "numbers_traced_ratio": 0.0,
+        "compliance_pass": 1,
+        "compliance_total": 0,
+        "svg_text_elements": 41,
+        "layers": 2,
+        "png_verified": false,
+        "pdf_verified": false,
+        "legend_ok": false
+      }
+    },
+    {
+      "case": "case-b-results",
+      "arms": {
+        "skill": {
+          "status": "ok",
+          "seconds": 0.77,
+          "content_map_elements": 22,
+          "verbatim_source_ratio": 0.955,
+          "legend_entries": 0,
+          "legend_ok": true,
+          "numbers_traced_ratio": 0.88,
+          "numbers_untraced": 3,
+          "compliance_pass": 13,
+          "compliance_total": 14,
+          "canvas_overflow": 0,
+          "svg_text_elements": 84,
+          "layers": 8,
+          "png_verified": true,
+          "pdf_verified": true,
+          "repair_records": 0,
+          "exceptions": 2,
+          "arm": "skill",
+          "exit": 0,
+          "wall_seconds": 1.08,
+          "build_ok": true
+        },
+        "baseline": {
+          "status": "ok",
+          "seconds": 0.74,
+          "content_map_elements": 4,
+          "verbatim_source_ratio": 0.0,
+          "legend_entries": 0,
+          "legend_ok": true,
+          "numbers_traced_ratio": 1.0,
+          "numbers_untraced": 0,
+          "compliance_pass": 13,
+          "compliance_total": 14,
+          "canvas_overflow": 0,
+          "svg_text_elements": 28,
+          "layers": 6,
+          "png_verified": true,
+          "pdf_verified": true,
+          "repair_records": 0,
+          "exceptions": 2,
+          "arm": "baseline",
+          "exit": 0,
+          "wall_seconds": 1.04,
+          "build_ok": true
+        }
+      },
+      "delta": {
+        "content_map_elements": 18,
+        "verbatim_source_ratio": 0.955,
+        "legend_entries": 0,
+        "numbers_traced_ratio": -0.12,
+        "compliance_pass": 0,
+        "compliance_total": 0,
+        "svg_text_elements": 56,
+        "layers": 2,
+        "png_verified": false,
+        "pdf_verified": false,
+        "legend_ok": false
+      }
+    }
+  ],
+  "aggregate": {
+    "content_map_elements": {
+      "skill_mean": 20.5,
+      "baseline_mean": 4.0,
+      "delta_mean": 16.5
+    },
+    "verbatim_source_ratio": {
+      "skill_mean": 0.951,
+      "baseline_mean": 0.0,
+      "delta_mean": 0.951
+    },
+    "numbers_traced_ratio": {
+      "skill_mean": 0.94,
+      "baseline_mean": 1.0,
+      "delta_mean": -0.06
+    },
+    "compliance_pass": {
+      "skill_mean": 13.5,
+      "baseline_mean": 13.0,
+      "delta_mean": 0.5
+    },
+    "svg_text_elements": {
+      "skill_mean": 79.0,
+      "baseline_mean": 30.5,
+      "delta_mean": 48.5
+    },
+    "checkable_elements": {
+      "skill_total": 41,
+      "baseline_total": 8
+    },
+    "export_verified": {
+      "skill": {
+        "png": true,
+        "pdf": true
+      },
+      "baseline": {
+        "png": true,
+        "pdf": true
+      }
+    }
+  },
+  "verdict": "skill arm produces strictly more checkable elements and full export verification"
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "FIXTURE-F2",
+  "task": "Adapt the randomized-trial paper into a 4:3 Chinese-named template; the venue demands an English deck with a strict 10-slide cap and an oversized working title that must not be shrunk below readability.",
+  "language": "en",
+  "audience": "Clinical research seminar (methods-literate)",
+  "minutes": 10,
+  "slide_count": {"min": 8, "max": 10, "target": 9},
+  "template": "template.pptx",
+  "starting_deck": null,
+  "source": {"path": "paper.md", "kind": "md"},
+  "deck_title": "Digital sleep-coaching versus sleep-hygiene leaflet in adults with chronic insomnia: a two-arm randomized controlled trial with actigraphy-measured secondary endpoints and intention-to-treat analysis",
+  "deck_subtitle": "FIXTURE-F2 | seminar deck (10 min)",
+  "figure_specs": [
+    {
+      "label": "Figure 1",
+      "csv": "se_by_week.csv",
+      "kind": "line",
+      "x": "week",
+      "y": "coaching_SE",
+      "series": "coaching_SE",
+      "title": "Sleep efficiency by week",
+      "xlabel": "Study week",
+      "ylabel": "Sleep efficiency (%)",
+      "width_in": 5.2,
+      "height_in": 3.6
+    }
+  ],
+  "footer": "FIXTURE-F2",
+  "output_contract": {
+    "presentation": "editable pptx",
+    "slide_plan": "page-level claims",
+    "evidence_map": "page → source locator",
+    "render": "pdf/png + font substitution log",
+    "status": "success|partial + uncertainty"
+  }
+}

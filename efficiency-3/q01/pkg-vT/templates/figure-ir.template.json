@@ -1,0 +1,104 @@
+{
+  "_readme": "figure IR 模板（ASCII 字段名，值可中英混排）。写到 /app/work/figure-ir.json 后运行 ga_build.py check/build。所有 source.quote 必须是材料中的逐字片段；agent 可从 ga_build.py show 的输出直接复制。示例值来自包内 examples/（标「示例」），请全部替换为实际案例内容。",
+  "case_id": "<照抄 /input/case.json 的 case_id>",
+  "origin": "curated",
+  "mode": "create",
+  "title": "一句话结论式标题（≤ 90 字符）",
+  "subtitle": "一句补充：方法 + 量级/条件",
+  "canvas": {
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300,
+    "background": "#FFFFFF",
+    "min_font_px": 20
+  },
+  "panels": [
+    {
+      "order": 1,
+      "role": "problem",
+      "title": "短标题（≤ 12 字符）",
+      "claim": "一句话研究问题",
+      "kind": "bullets",
+      "items": [
+        {"id": "p1i1", "text": "要点一", "priority": "normal",
+         "source": {"id": "S1", "locator": "material.md#para2", "quote": "材料中的逐字片段"}}
+      ]
+    },
+    {
+      "order": 2,
+      "role": "method",
+      "title": "Route",
+      "claim": "",
+      "kind": "chain",
+      "items": [
+        {"id": "p2i1", "text": "步骤 1", "source": {"id": "S1", "locator": "material.md#para3", "quote": "…"}},
+        {"id": "p2i2", "text": "步骤 2", "source": {"id": "S1", "locator": "material.md#para3", "quote": "…"}},
+        {"id": "p2i3", "text": "步骤 3", "source": {"id": "S1", "locator": "material.md#para3", "quote": "…"}}
+      ]
+    },
+    {
+      "order": 3,
+      "role": "results",
+      "title": "Gain",
+      "claim": "一句话结果",
+      "kind": "relations",
+      "relations": ["R1", "R2"],
+      "chart": "",
+      "items": []
+    },
+    {
+      "order": 4,
+      "role": "conclusion",
+      "title": "Impact",
+      "claim": "一句话结论",
+      "kind": "bullets",
+      "items": [
+        {"id": "p4i1", "text": "意义/限制", "source": {"id": "S1", "locator": "material.md#para5", "quote": "…"}}
+      ]
+    }
+  ],
+  "entities": [
+    {"id": "E1", "label": "逐字实体名", "type": "protein", "compartment": "membrane",
+     "italic": false, "source": {"id": "S1", "locator": "material.md#para2", "quote": "…"}},
+    {"id": "E2", "label": "GENE1", "type": "gene", "compartment": "nucleus",
+     "italic": true, "source": {"id": "S1", "locator": "material.md#para4", "quote": "…"}}
+  ],
+  "relations": [
+    {"id": "R1", "from": "E1", "to": "E2", "type": "activation", "label": "短语（≤ 14 字符）",
+     "source": {"id": "S1", "locator": "material.md#para4", "quote": "…"}}
+  ],
+  "charts": [
+    {"id": "CH1", "kind": "bar", "title": "图表标题", "x_label": "分组", "y_label": "指标", "unit": "pg/mL",
+     "series": [
+       {"name": "series 名（逐字来自表头）", "color_key": "c1", "points": [
+         {"x": "2 h", "y": 96, "raw": "96", "err": 14,
+          "source": {"id": "S2", "locator": "measurements.csv#row1", "quote": "2,96,14"}}
+       ]}
+     ]}
+  ],
+  "claims": [
+    {"id": "K1", "label": "指标描述", "value": 41.2, "unit": "fold",
+     "compare": {"label": "对照", "value": 18.5},
+     "source": {"id": "S1", "locator": "material.md#para6", "quote": "…18.5 fold…41.2 fold…"}}
+  ],
+  "legend": [
+    {"key": "c9", "label": "补充图例项（脚本派生不到的才写）", "channel": "fill",
+     "color": "#0072B2", "pattern": "none", "marker": ""}
+  ],
+  "notes": {
+    "units": "fold induction / % / min",
+    "conditions": "细胞/时间/重复数等条件",
+    "scale_bar": "10 µm（仅有空间尺度时填）",
+    "caption": "图注：一句结论 + 关键数值",
+    "figure_no": "Figure 1"
+  },
+  "sources": [
+    {"id": "S1", "path": "material.md", "locator": "material.md#para2", "quote": "材料首段逐字片段"},
+    {"id": "S2", "path": "measurements.csv", "locator": "measurements.csv#row1", "quote": "2,96,14,151,22,101,17"}
+  ],
+  "edit": {"source_svg": "", "operations": []},
+  "must_include": ["必须上图的实体或词（脚本会核对）"],
+  "uncertainty": [
+    {"item": "不确定项", "why": "为什么不确定", "handling": "如何处置/需要什么"}
+  ]
+}

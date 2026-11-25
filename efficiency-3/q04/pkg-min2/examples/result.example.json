@@ -1,0 +1,196 @@
+{
+  "case_id": "demo-c-hypoxia-zh",
+  "task": "biological mechanism / pathway figure",
+  "status": "success",
+  "status_reason": "12/12 checks pass, 0 advisory warning(s)",
+  "summary": "16 entities, 10 edges, 2 excluded, 11 unresolved -> SVG + PNG + result.json",
+  "figure": {
+    "title": "缺氧条件下 HIF1A 的稳定性调控与下游转录输出",
+    "dpi": 300
+  },
+  "deliverables": [
+    {
+      "kind": "editable_source",
+      "format": "svg",
+      "path": "figure.svg",
+      "editable": true
+    },
+    {
+      "kind": "preview",
+      "format": "svg",
+      "path": "figure.svg",
+      "editable": true,
+      "note": "vector preview; no raster in this arm"
+    }
+  ],
+  "data_encoding": {
+    "rows_matched": 8
+  },
+  "checks": {
+    "ok": true,
+    "n_checks": 12,
+    "n_errors": 0,
+    "n_warnings": 0,
+    "errors": [],
+    "warnings": [],
+    "checks": [
+      {
+        "id": "entities.unique",
+        "ok": true,
+        "level": "error",
+        "detail": "entity ids unique"
+      },
+      {
+        "id": "entities.typed",
+        "ok": true,
+        "level": "error",
+        "detail": "every entity typed/labelled"
+      },
+      {
+        "id": "trace.entities",
+        "ok": true,
+        "level": "error",
+        "detail": "every entity has a source locator"
+      },
+      {
+        "id": "trace.edges",
+        "ok": true,
+        "level": "error",
+        "detail": "every edge has a source locator"
+      },
+      {
+        "id": "semantics.distinct",
+        "ok": true,
+        "level": "error",
+        "detail": "one arrow shape per interaction type"
+      },
+      {
+        "id": "semantics.matches",
+        "ok": true,
+        "level": "error",
+        "detail": "arrow geometry equals the grammar"
+      },
+      {
+        "id": "direction.forward",
+        "ok": true,
+        "level": "warning",
+        "detail": "non-feedback edges point rightwards"
+      },
+      {
+        "id": "honesty.negated",
+        "ok": true,
+        "level": "error",
+        "detail": "2 negated claim(s) recorded and not drawn"
+      },
+      {
+        "id": "honesty.reasons",
+        "ok": true,
+        "level": "error",
+        "detail": "excluded edges state why"
+      },
+      {
+        "id": "localisation.receptor",
+        "ok": true,
+        "level": "error",
+        "detail": "transmembrane receptors on the membrane band"
+      },
+      {
+        "id": "legend.coverage",
+        "ok": true,
+        "level": "error",
+        "detail": "legend covers every token drawn"
+      },
+      {
+        "id": "data.sourced",
+        "ok": true,
+        "level": "error",
+        "detail": "painted values have a source"
+      }
+    ]
+  },
+  "metrics": {
+    "n_entities": 16,
+    "n_edges": 10,
+    "n_excluded": 2,
+    "n_unresolved": 11,
+    "n_checks": 12,
+    "n_errors": 0
+  },
+  "exports": {
+    "svg": {
+      "path": "figure.svg",
+      "bytes": 30108
+    },
+    "raster": {
+      "produced": false,
+      "backend": "not_produced",
+      "why": "this arm ships the editable SVG as its preview; the full package adds PNG/PDF export"
+    }
+  },
+  "materials_resolution": [
+    {
+      "path": "materials.md",
+      "resolved_from": "input_scan",
+      "kind": "md",
+      "chars": 481
+    },
+    {
+      "path": "expression.csv",
+      "resolved_from": "input_scan",
+      "kind": "csv",
+      "chars": 240
+    }
+  ],
+  "generated_at": "2026-11-22T04:53:42+08:00",
+  "generator": "pathway.py 1.0.0-min",
+  "self_scored": false,
+  "_note": "示例（非正式答案）· EXAMPLE ONLY — a real (trimmed) result.json produced by `python3 scripts/pathway.py --case <fixture>/case.json --out <out>` on the Chinese synthetic fixture; entity/edge rows and the evidence index are omitted here for size, see BENCHMARK.md for the measured counts.",
+  "entities_count": 16,
+  "edges_count": 10,
+  "excluded_count": 2,
+  "unresolved_count": 11,
+  "sources": [
+    {
+      "id": "mat01",
+      "path": "materials.md",
+      "kind": "md",
+      "resolved_from": "case_dir"
+    },
+    {
+      "id": "mat02",
+      "path": "expression.csv",
+      "kind": "csv",
+      "resolved_from": "case_dir"
+    }
+  ],
+  "legend": [
+    {
+      "token": "protein",
+      "channel": "shape",
+      "meaning": "Protein"
+    },
+    {
+      "token": "gene",
+      "channel": "shape",
+      "meaning": "Gene"
+    },
+    {
+      "token": "modifies",
+      "channel": "arrow",
+      "meaning": "covalent modification",
+      "sample": "tri/dash"
+    },
+    {
+      "token": "inhibits",
+      "channel": "arrow",
+      "meaning": "inhibition",
+      "sample": "tbar/solid"
+    },
+    {
+      "token": "moderate",
+      "channel": "line-width",
+      "meaning": "moderate",
+      "sample": "width=1.9"
+    }
+  ]
+}

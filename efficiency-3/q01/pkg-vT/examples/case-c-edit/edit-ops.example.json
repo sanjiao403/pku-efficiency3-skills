@@ -1,0 +1,8 @@
+{
+  "_disclaimer": "示例操作单（示例，非正式案例结果）。正式案例请按工单写 /app/work/edit-ops.json 或直接传数组。",
+  "ops": [
+    {"id": "box-2-label", "op": "set_text", "value": "ER exit"},
+    {"id": "box-3", "op": "set_fill", "value": "#0B4F8A"},
+    {"id": "box-2-label", "op": "set_size", "value": "30"}
+  ]
+}

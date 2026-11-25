@@ -1,0 +1,18 @@
+{
+ "case_id": "EXAMPLE-CASE-01",
+ "task": "把材料做成 8 分钟组会汇报 PPT，8 页",
+ "audience": "group_meeting",
+ "language": "zh",
+ "duration_min": 8,
+ "slide_count": 8,
+ "materials": [
+  "material.example.md"
+ ],
+ "output_contract": {
+  "deliverable": "可编辑 pptx",
+  "slide_plan": "页级结构",
+  "evidence_map": "页级证据定位",
+  "notes": "讲稿"
+ },
+ "_comment": "示例（非正式答案）：输入形状示例，主命令真实跑通；正式案例由平台注入 /input/case.json"
+}

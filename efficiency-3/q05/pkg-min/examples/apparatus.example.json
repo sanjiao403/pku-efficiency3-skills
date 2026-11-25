@@ -1,0 +1,37 @@
+{
+  "_comment": "示例（非正式答案）：apparatus.py 在示例材料上的 result.json 节选。真实运行由脚本生成。",
+  "case_id": "example-apparatus",
+  "status": "success",
+  "status_reason": "结构/连线/来源/导出自检通过（见 scripts/verify.py）",
+  "summary": "schematic：2 面板 / 8 图元 / 3 连线；溯源 8/8",
+  "figure_kind": "schematic",
+  "canvas_mm": [180.0, 126.4],
+  "deliverable": {
+    "editable_source": {"path": "figures/figure.svg",
+                        "why": "分层 SVG，真实 <text> 未转曲，每块带 data-node/data-quote"},
+    "exports": [{"path": "figures/figure.pdf", "format": "pdf"},
+                {"path": "figures/figure.png", "format": "png", "dpi": 300}],
+    "render_backend": "pymupdf"
+  },
+  "elements": [
+    {"id": "U1", "label": "培养基储液瓶 Medium reservoir", "kind": "unit.vessel",
+     "source": {"locator": "example-material.md#L6", "quote": "| 培养基储液瓶 Medium reservoir | 1000 mL | 1 |"}},
+    {"id": "S1", "label": "将培养基储液瓶接入蠕动泵 P-1 进口。", "kind": "step.main", "seq": 1,
+     "source": {"locator": "example-material.md#L11", "quote": "1. 将培养基储液瓶接入蠕动泵 P-1 进口。"}}
+  ],
+  "relations": [
+    {"id": "E1", "from": "U1", "to": "U2", "kind": "material",
+     "source": {"locator": "example-material.md#L14",
+                "quote": "The culture medium is fed from the medium reservoir to the peristaltic pump P-1."}}
+  ],
+  "data_mapping": [{"label": "1000 mL", "value": "1000", "unit": "mL",
+                    "source": {"locator": "example-material.md#L6", "quote": "1000 mL"}}],
+  "provenance": {"materials": ["case.example.json", "example-material.md"], "unreadable": [],
+                 "trace_ok": 8, "trace_total": 8, "ambiguities": [], "rule_based": true},
+  "checks": {"connections": {"edges": 3, "direction_from_sentence": true, "ambiguous_skipped": 0},
+             "render": {"backend": "pymupdf", "notes": []},
+             "independent": "python3 scripts/verify.py --svg figures/figure.svg --result result.json"},
+  "uncertainty": [],
+  "gaps": [],
+  "contract_echo": {"elements": "filled from computed result", "exports": "filled from computed result"}
+}

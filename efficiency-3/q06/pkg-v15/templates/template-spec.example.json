@@ -1,0 +1,30 @@
+{
+  "_note": "Declarative template spec. The package ships text, so the demo master/layout .pptx is generated from this file by scripts/template_build.py. Replace with the organiser's real .pptx when one is supplied - deck.py reads either.",
+  "name": "institutional-16-9",
+  "slide_size_in": { "w": 13.333, "h": 7.5 },
+  "theme": {
+    "accent": "1F4E79",
+    "text": "1A1A1A",
+    "minor_font": "inherit",
+    "major_font": "inherit"
+  },
+  "geometry": {
+    "margin_x": 0.62,
+    "margin_top": 0.45,
+    "margin_bottom": 0.34,
+    "title_h": 1.06,
+    "footer_h": 0.30,
+    "gutter": 0.28,
+    "body_top": 1.62
+  },
+  "layout_names": {
+    "0": "Title Slide",
+    "1": "Title and Content",
+    "5": "Title Only",
+    "2": "Section Header"
+  },
+  "font_floor_pt": 11,
+  "body_ladder_pt": [22, 20, 18, 16],
+  "title_ladder_pt": [34, 32, 30, 28, 26, 24],
+  "footer_rule": "footer keeps the template's own text box; the deck adds the slide-number field only"
+}
